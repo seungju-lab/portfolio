@@ -42,3 +42,14 @@ pnpm exec wrangler dev --local --port 8787
 실제 배포 명령은 `pnpm exec wrangler deploy`다. Cloudflare Workers Builds의
 Git 연결·빌드 명령·배포 인증은 `central-infra`가 관리하며, 운영 연결과 배포 검증은
 별도 인프라 작업에서 완료한다.
+
+### 캐시 정책
+
+`public/_headers`는 빌드 시 `out/_headers`로 복사된다. 해시 또는 빌드 ID가 경로에
+포함되는 `/_next/static/*`에만 `public, max-age=31536000, immutable`을 적용한다.
+HTML과 파일명이 고정된 이미지·문서는 Workers Static Assets의 기본값인
+`public, max-age=0, must-revalidate`를 유지한다.
+
+이는 브라우저 캐시 정책이며 Cloudflare의 자동 CDN 캐시와 구분한다. 로컬에서는
+응답 헤더와 HTML의 ETag 재검증을 확인하고, 운영 도메인의 CDN 캐시 동작은
+central-infra 배포 검증에서 확인한다.
