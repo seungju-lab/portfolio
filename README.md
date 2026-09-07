@@ -60,8 +60,8 @@ pnpm exec wrangler dev --local --port 8787
 `/index.html` URL은 `/`로 정규화된다. `out/`과 Wrangler 로컬 상태는 Git에서 제외한다.
 
 실제 배포 명령은 `pnpm exec wrangler deploy`다. Cloudflare Workers Builds의
-Git 연결·빌드 명령·배포 인증은 `central-infra`가 관리하며, 운영 연결과 배포 검증은
-별도 인프라 작업에서 완료한다.
+Git 연결·빌드 명령·배포 인증은 `central-infra`가 관리한다. 일반적인 운영 배포는
+아래 Git 빌드 계약에 따라 Cloudflare에서 실행한다.
 
 ### Cloudflare Git 빌드 계약
 
@@ -72,8 +72,13 @@ Builds 설정도 다시 적용한다.
 
 빌드 명령은 `pnpm check`, 배포 명령은 `pnpm exec wrangler deploy`다. Cloudflare는
 코드 변경을 받아 검증한 `out/`을 배포하며, 빌드 명령이 실패하면 배포 단계로
-진행하지 않아야 한다. 실제 Git 연동과 실패 시 배포 차단, 운영 도메인 검증은
-central-infra의 자동 배포 작업에서 확인한다.
+진행하지 않는다. `main`에 push한 뒤 Cloudflare의 **portfolio → Builds**에서
+해당 커밋의 검사·빌드·배포 결과를 확인한다. 실패하면 로그에서 중단된 단계를
+확인하고 수정한 커밋을 push한다. 성공 여부는 Git push 완료와 별도로 확인한다.
+
+운영 설정 재적용과 복구 절차는 central-infra의
+`cloudflare/builds/README.md`와 `cloudflare/builds/activation.md`를 따른다.
+최초 설정, 검증한 배포 버전과 빌드 실행 근거도 해당 문서에서 관리한다.
 
 앱 저장소는 정적 빌드·Wrangler·캐시 헤더를 관리한다. central-infra의 Terraform은
 Worker·Custom Domain을, Builds API 스크립트는 Git 연결·트리거·빌드 환경을 관리한다.
