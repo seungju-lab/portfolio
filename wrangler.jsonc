@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio",
+  "account_id": "e2021a691c68751e621312db4d664aec",
+  "compatibility_date": "2026-09-07",
+  // central-infra Terraform owns portfolio.seungju.dev; omit route/routes.
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./out",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+}
