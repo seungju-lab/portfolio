@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 3001",
-    "build": "next build",
+    "build": "next build && pnpm check:export",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm build"
+    "check:toolchain": "node scripts/check-toolchain.mjs",
+    "check:export": "node scripts/check-export.mjs",
+    "check": "pnpm check:toolchain && pnpm format:check && pnpm lint && pnpm typecheck && pnpm build"
   },
   "dependencies": {
     "next": "16.3.2",
@@ -23,7 +25,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.2",
     "prettier": "3.9.6",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "4.129.0"
   },
   "packageManager": "pnpm@11.18.0"
 }

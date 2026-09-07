@@ -10,7 +10,11 @@ services:
       - bash
       - -lc
       - |
+        set -e
         sudo chown node:node node_modules /home/node/.local/share/pnpm/store
+        source /usr/local/share/nvm/nvm.sh --no-use
+        nvm install
+        nvm use
         corepack enable --install-directory /usr/local/share/npm-global/bin
         pnpm install --frozen-lockfile
         exec pnpm dev --hostname 0.0.0.0
