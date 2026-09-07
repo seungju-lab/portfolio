@@ -18,7 +18,7 @@ services:
       COREPACK_ENABLE_DOWNLOAD_PROMPT: "0"
       pnpm_config_store_dir: /home/node/.local/share/pnpm/store
     ports:
-      - "3001:3000"
+      - "3001:3001"
     volumes:
       - .:/workspace
       - node-modules:/workspace/node_modules

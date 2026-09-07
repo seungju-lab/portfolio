@@ -6,9 +6,9 @@
   "overrideCommand": false,
   "shutdownAction": "none",
   "remoteUser": "node",
-  "forwardPorts": [3000],
+  "forwardPorts": [3001],
   "portsAttributes": {
-    "3000": {
+    "3001": {
       "label": "Portfolio Frontend",
       "onAutoForward": "openBrowser",
       "requireLocalPort": true

@@ -14,5 +14,5 @@ Next.js로 백엔드 개발자 포트폴리오 웹사이트를 제작한다. 이
 
 - 빌드 결과물: Next.js Static Export로 생성되는 `out/` 디렉터리
 - CDN: Cloudflare를 통해 정적 파일 서빙
-- 도메인: `portfolio.seunju.dev`
+- 도메인: `portfolio.seungju.dev`
 - 제약: 서버 사이드 렌더링과 서버 API를 사용하지 않는 정적 웹사이트로 구현
