@@ -10,6 +10,26 @@ Next.js로 백엔드 개발자 포트폴리오 웹사이트를 제작한다. 이
 - Pencil: 포트폴리오 화면 구성과 디자인
 - Docker Dev Container: 일관된 개발 환경 구성
 
+## 빌드 환경
+
+- Node: `.nvmrc`에 고정한 `24.18.1`
+- pnpm: `package.json`의 `packageManager`에 고정한 `11.18.0`
+- Wrangler: 개발 의존성과 lockfile에 고정한 `4.129.0`
+
+Linux 호스트에서 nvm을 사용한다면 `nvm install && nvm use`로 Node를 선택한다.
+개발 컨테이너도 시작할 때 `.nvmrc`를 읽어 같은 버전을 설치·선택한다. 이후
+`pnpm install --frozen-lockfile`로 의존성을 설치한다. pnpm은 Corepack으로
+`packageManager`에 지정된 버전을 사용한다.
+
+`pnpm check`는 도구 버전 확인, 포맷 검사, lint, 타입 검사, 정적 빌드와 산출물
+검증을 순서대로 실행한다. Node·pnpm이 지정한 버전과 다르거나 어느 단계든 실패하면
+명령이 실패 코드로 종료된다. `pnpm build`에도 산출물 검증이 포함된다.
+
+산출물 검증은 `out/index.html`, `out/404.html`, 원본과 동일한 `out/_headers`,
+두 HTML이 참조하는 정적 자산을 확인한다. 비어 있거나 누락된 파일을 거부하고,
+브라우저 JS와 CSS 참조가 모두 있어야 한다. 기존 빌드만 검사할 때는
+`pnpm check:export`, 별도 출력 디렉터리는 `pnpm check:export /path/to/export`를 사용한다.
+
 ## 배포
 
 - 빌드 결과물: Next.js Static Export로 생성되는 `out/` 디렉터리
@@ -42,6 +62,22 @@ pnpm exec wrangler dev --local --port 8787
 실제 배포 명령은 `pnpm exec wrangler deploy`다. Cloudflare Workers Builds의
 Git 연결·빌드 명령·배포 인증은 `central-infra`가 관리하며, 운영 연결과 배포 검증은
 별도 인프라 작업에서 완료한다.
+
+### Cloudflare Git 빌드 계약
+
+Cloudflare Workers Builds는 저장소 루트에서 운영 브랜치 `main`을 빌드한다.
+`central-infra`는 `.nvmrc`의 Node 버전과 `packageManager`의 pnpm 버전을 읽어
+`NODE_VERSION`·`PNPM_VERSION` 빌드 환경변수에 적용한다. 버전을 바꾸면 인프라의
+Builds 설정도 다시 적용한다.
+
+빌드 명령은 `pnpm check`, 배포 명령은 `pnpm exec wrangler deploy`다. Cloudflare는
+코드 변경을 받아 검증한 `out/`을 배포하며, 빌드 명령이 실패하면 배포 단계로
+진행하지 않아야 한다. 실제 Git 연동과 실패 시 배포 차단, 운영 도메인 검증은
+central-infra의 자동 배포 작업에서 확인한다.
+
+앱 저장소는 정적 빌드·Wrangler·캐시 헤더를 관리한다. central-infra의 Terraform은
+Worker·Custom Domain을, Builds API 스크립트는 Git 연결·트리거·빌드 환경을 관리한다.
+`out/`을 커밋하거나 GitHub Actions 배포 워크플로를 추가하지 않는다.
 
 ### 캐시 정책
 
