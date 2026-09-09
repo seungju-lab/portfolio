@@ -1,3 +1,4 @@
+import { PointerInteractions } from "@/components/pointer-interactions";
 import type { ReactNode } from "react";
 import type { ProjectSummary } from "@/content/portfolio";
 
@@ -49,6 +50,7 @@ export function PortfolioShell({
 }) {
   return (
     <div className={`portfolio-shell portfolio-shell-${variant}`}>
+      <PointerInteractions />
       <header className="portfolio-identity">{identity}</header>
       <main className="portfolio-main" id="main-content">
         {children}

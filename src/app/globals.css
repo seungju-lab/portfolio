@@ -459,6 +459,143 @@ svg {
   }
 }
 
+:root {
+  --motion-duration: 150ms;
+  --motion-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-entry {
+  position: relative;
+  isolation: isolate;
+  transition: opacity var(--motion-duration) var(--motion-easing);
+}
+.project-entry::before {
+  content: "";
+  position: absolute;
+  inset: -1rem -1.5rem;
+  z-index: -1;
+  border-radius: 0.375rem;
+  pointer-events: none;
+  transition: background-color var(--motion-duration) var(--motion-easing);
+}
+.entry-title,
+.text-link,
+.portfolio-footer a,
+.section-link {
+  transition: color var(--motion-duration) var(--motion-easing);
+}
+.section-link-line {
+  transition:
+    width var(--motion-duration) var(--motion-easing),
+    background-color var(--motion-duration) var(--motion-easing);
+}
+.icon {
+  transition: transform var(--motion-duration) var(--motion-easing);
+}
+.text-link:has(.icon-back) {
+  padding-left: 0.5rem;
+}
+.project-entry:focus-visible .entry-title,
+:is(.text-link, .portfolio-footer a):focus-visible {
+  color: var(--color-accent);
+}
+.project-entry:focus-visible .icon-arrow,
+.text-link:focus-visible .icon-arrow {
+  transform: translateX(4px);
+}
+.text-link:focus-visible .icon-back {
+  transform: translateX(-4px);
+}
+.text-link:focus-visible .icon-external {
+  transform: translate(4px, -4px);
+}
+.section-link:focus-visible {
+  color: var(--color-heading);
+}
+.section-link:focus-visible .section-link-line {
+  width: 4rem;
+  background-color: currentColor;
+}
+@media (width >= 64rem) {
+  .project-entry:focus-visible::before {
+    background-color: var(--color-row-highlight);
+  }
+}
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  [data-pointer-input="fine"]
+    .entry-list:not(:has(.project-entry:focus-visible)) {
+    .project-entry:hover::before {
+      background-color: var(--color-row-highlight);
+    }
+    .project-entry:hover .entry-title {
+      color: var(--color-accent);
+    }
+    .project-entry:hover .icon-arrow {
+      transform: translateX(4px);
+    }
+    &:has(.project-entry:hover) .project-entry:not(:hover) {
+      opacity: 0.9;
+    }
+  }
+  [data-pointer-input="fine"] :is(.text-link, .portfolio-footer a):hover {
+    color: var(--color-accent);
+  }
+  [data-pointer-input="fine"] .text-link:hover {
+    .icon-arrow {
+      transform: translateX(4px);
+    }
+    .icon-back {
+      transform: translateX(-4px);
+    }
+    .icon-external {
+      transform: translate(4px, -4px);
+    }
+  }
+  [data-pointer-input="fine"] .section-link:hover {
+    color: var(--color-heading);
+    .section-link-line {
+      width: 4rem;
+      background-color: currentColor;
+    }
+  }
+}
+@media (width < 64rem) {
+  .project-entry::before {
+    display: none;
+  }
+  .section-link:focus-visible {
+    border-bottom-color: currentColor;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-shell *,
+  .portfolio-shell *::before {
+    transition: none !important;
+  }
+  :root {
+    --motion-duration: 0ms;
+  }
+  .portfolio-shell .icon {
+    transform: none !important;
+  }
+}
+@media print {
+  :root {
+    --motion-duration: 0ms;
+  }
+  .portfolio-shell .project-entry {
+    opacity: 1 !important;
+  }
+  .project-entry::before {
+    display: none;
+  }
+  .portfolio-shell .icon {
+    transform: none !important;
+  }
+  .portfolio-shell :focus {
+    outline: none;
+  }
+}
+
 @page {
   size: A4;
   margin: 16mm;
