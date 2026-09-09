@@ -1,4 +1,963 @@
 {
   "version": "2.17",
-  "children": []
+  "children": [
+    {
+      "type": "frame",
+      "id": "w2UW1",
+      "x": 0,
+      "y": 0,
+      "name": "Profile",
+      "theme": {},
+      "reusable": true,
+      "width": 448,
+      "fill": "$color.canvas",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "text",
+          "id": "OsyCr",
+          "name": "Name",
+          "fill": "$color.text",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "이승주",
+          "lineHeight": "$line.heading",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.name",
+          "fontWeight": "$weight.heading"
+        },
+        {
+          "type": "frame",
+          "id": "PM0Qf",
+          "name": "Role",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            "$space.sm",
+            0,
+            "$space.md",
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "zs71B",
+              "name": "Role label",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Backend Developer",
+              "lineHeight": "$line.meta",
+              "fontFamily": "$font.latin",
+              "fontSize": "$type.role",
+              "fontWeight": "$weight.medium"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "dmSuU",
+          "name": "Introduction",
+          "fill": "$color.body",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Java와 Spring으로 서비스를 만들고,\n요청이 흐르는 과정을 끝까지 살핍니다.",
+          "lineHeight": "$line.body",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.body",
+          "fontWeight": "$weight.body"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "DU54K",
+      "x": 520,
+      "y": 0,
+      "name": "SectionLink / default",
+      "theme": {},
+      "reusable": true,
+      "width": 200,
+      "height": 44,
+      "fill": "$color.canvas",
+      "gap": "$space.md",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "SsIlW",
+          "name": "Indicator",
+          "fill": "$color.rule",
+          "width": 32,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "X8xyR8",
+          "name": "Label",
+          "fill": "$color.muted",
+          "content": "프로젝트",
+          "lineHeight": "$line.meta",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.tag",
+          "fontWeight": "$weight.heading",
+          "letterSpacing": 1
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hgWBD",
+      "x": 760,
+      "y": 0,
+      "name": "SectionLink / active",
+      "theme": {},
+      "reusable": true,
+      "width": 200,
+      "height": 44,
+      "fill": "$color.canvas",
+      "gap": "$space.md",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "dSGXP",
+          "name": "Indicator",
+          "fill": "$color.text",
+          "width": 64,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "baDk0",
+          "name": "Label",
+          "fill": "$color.text",
+          "content": "소개",
+          "lineHeight": "$line.meta",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.tag",
+          "fontWeight": "$weight.heading",
+          "letterSpacing": 1
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "sHYjZ",
+      "x": 1040,
+      "y": 0,
+      "name": "TextLink",
+      "theme": {},
+      "reusable": true,
+      "height": 44,
+      "fill": "$color.canvas",
+      "gap": "$space.sm",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon",
+          "id": "ain5n",
+          "name": "Icon",
+          "width": 16,
+          "height": 16,
+          "icon": "arrow-up-right",
+          "library": "lucide",
+          "fill": "$color.text"
+        },
+        {
+          "type": "text",
+          "id": "A8C0m",
+          "name": "Label",
+          "fill": "$color.text",
+          "content": "GitHub",
+          "lineHeight": "$line.meta",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.meta",
+          "fontWeight": "$weight.label"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "XkAXW",
+      "x": 1320,
+      "y": 0,
+      "name": "SkillTag",
+      "theme": {},
+      "reusable": true,
+      "fill": "$color.accent-soft",
+      "cornerRadius": "$radius.tag",
+      "layout": "vertical",
+      "padding": [
+        "$space.xs",
+        12
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "E2lqSi",
+          "name": "Label",
+          "fill": "$color.accent",
+          "content": "Spring Boot",
+          "lineHeight": "$line.meta",
+          "fontFamily": "$font.latin",
+          "fontSize": "$type.tag",
+          "fontWeight": "$weight.medium"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "h0MPp8",
+      "x": 0,
+      "y": 320,
+      "name": "ArticleSection",
+      "theme": {},
+      "reusable": true,
+      "width": 608,
+      "fill": "$color.canvas",
+      "layout": "vertical",
+      "gap": "$space.md",
+      "children": [
+        {
+          "type": "text",
+          "id": "uXXMm",
+          "name": "Heading",
+          "fill": "$color.text",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "서비스와 담당 범위",
+          "lineHeight": "$line.heading",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.section",
+          "fontWeight": "$weight.label"
+        },
+        {
+          "type": "text",
+          "id": "h4R2zW",
+          "name": "Body",
+          "fill": "$color.body",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "일기와 일상을 기록하고 감정 분석 결과를 확인하는 서비스입니다. 저는 인증·사용자·그룹·API Gateway를 단독 설계하고 구현했습니다.",
+          "lineHeight": "$line.body",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.body",
+          "fontWeight": "$weight.body"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "m4UfU",
+      "x": 0,
+      "y": 650,
+      "name": "ProjectEntry / desktop",
+      "theme": {},
+      "reusable": true,
+      "width": 608,
+      "fill": "$color.canvas",
+      "gap": "$space.lg",
+      "children": [
+        {
+          "type": "text",
+          "id": "qmO8d",
+          "name": "Period",
+          "fill": "$color.muted",
+          "textGrowth": "fixed-width",
+          "width": 112,
+          "content": "2025.10 — 11",
+          "lineHeight": "$line.body",
+          "fontFamily": "$font.latin",
+          "fontSize": "$type.tag",
+          "fontWeight": "$weight.medium"
+        },
+        {
+          "type": "frame",
+          "id": "Qfgfx",
+          "name": "Content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$space.sm",
+          "children": [
+            {
+              "type": "text",
+              "id": "qDWpd",
+              "name": "Project title",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "ILOG ↗",
+              "lineHeight": "$line.heading",
+              "fontFamily": "$font.family",
+              "fontSize": "$type.item",
+              "fontWeight": "$weight.label"
+            },
+            {
+              "type": "text",
+              "id": "n40fhP",
+              "name": "Contribution",
+              "fill": "$color.muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "인증·사용자·그룹·Gateway",
+              "lineHeight": "$line.meta",
+              "fontFamily": "$font.family",
+              "fontSize": "$type.meta",
+              "fontWeight": "$weight.body"
+            },
+            {
+              "type": "text",
+              "id": "CP9gf",
+              "name": "Summary",
+              "fill": "$color.body",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "일기와 감정 분석 서비스에서 네 서비스를 단독 설계·구현했습니다. 로그인 후 사용자 조회가 다시 로그인으로 돌아가던 문제를 인증 경계를 정리해 해결했습니다.",
+              "lineHeight": "$line.body",
+              "fontFamily": "$font.family",
+              "fontSize": "$type.summary",
+              "fontWeight": "$weight.body"
+            },
+            {
+              "type": "frame",
+              "id": "P5xBrz",
+              "name": "Technologies",
+              "width": "fill_container",
+              "gap": "$space.sm",
+              "padding": [
+                "$space.xs",
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "id": "m4nuH",
+                  "type": "ref",
+                  "ref": "XkAXW",
+                  "name": "Java",
+                  "descendants": {
+                    "E2lqSi": {
+                      "content": "Java"
+                    }
+                  }
+                },
+                {
+                  "id": "V8u5k5",
+                  "type": "ref",
+                  "ref": "XkAXW",
+                  "name": "Spring Security",
+                  "descendants": {
+                    "E2lqSi": {
+                      "content": "Spring Security"
+                    }
+                  }
+                },
+                {
+                  "id": "cgiVm",
+                  "type": "ref",
+                  "ref": "XkAXW",
+                  "name": "Gateway",
+                  "descendants": {
+                    "E2lqSi": {
+                      "content": "Gateway"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "B9uWl",
+      "x": 800,
+      "y": 650,
+      "name": "ProjectEntry / mobile",
+      "theme": {},
+      "reusable": true,
+      "width": 342,
+      "fill": "$color.canvas",
+      "layout": "vertical",
+      "gap": "$space.sm",
+      "children": [
+        {
+          "type": "text",
+          "id": "W7I10",
+          "name": "Period",
+          "fill": "$color.muted",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "2025.10 — 11",
+          "lineHeight": "$line.body",
+          "fontFamily": "$font.latin",
+          "fontSize": "$type.tag",
+          "fontWeight": "$weight.medium"
+        },
+        {
+          "type": "frame",
+          "id": "SY4GA",
+          "name": "Content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$space.sm",
+          "children": [
+            {
+              "type": "text",
+              "id": "gVS8X",
+              "name": "Project title",
+              "fill": "$color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "ILOG ↗",
+              "lineHeight": "$line.heading",
+              "fontFamily": "$font.family",
+              "fontSize": "$type.item",
+              "fontWeight": "$weight.label"
+            },
+            {
+              "type": "text",
+              "id": "K9KAc",
+              "name": "Contribution",
+              "fill": "$color.muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "인증·사용자·그룹·Gateway",
+              "lineHeight": "$line.meta",
+              "fontFamily": "$font.family",
+              "fontSize": "$type.meta",
+              "fontWeight": "$weight.body"
+            },
+            {
+              "type": "text",
+              "id": "YRx6O",
+              "name": "Summary",
+              "fill": "$color.body",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "일기와 감정 분석 서비스에서 네 서비스를 단독 설계·구현했습니다. 로그인 후 사용자 조회가 다시 로그인으로 돌아가던 문제를 인증 경계를 정리해 해결했습니다.",
+              "lineHeight": "$line.body",
+              "fontFamily": "$font.family",
+              "fontSize": "$type.summary",
+              "fontWeight": "$weight.body"
+            },
+            {
+              "type": "frame",
+              "id": "nD92o",
+              "name": "Technologies",
+              "width": "fill_container",
+              "gap": "$space.sm",
+              "padding": [
+                "$space.xs",
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "id": "CYTD2",
+                  "type": "ref",
+                  "ref": "XkAXW",
+                  "name": "Java",
+                  "descendants": {
+                    "E2lqSi": {
+                      "content": "Java"
+                    }
+                  }
+                },
+                {
+                  "id": "EVqPL",
+                  "type": "ref",
+                  "ref": "XkAXW",
+                  "name": "Spring Security",
+                  "descendants": {
+                    "E2lqSi": {
+                      "content": "Spring Security"
+                    }
+                  }
+                },
+                {
+                  "id": "XEnNF",
+                  "type": "ref",
+                  "ref": "XkAXW",
+                  "name": "Gateway",
+                  "descendants": {
+                    "E2lqSi": {
+                      "content": "Gateway"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "d0fFl",
+      "x": 1240,
+      "y": 650,
+      "name": "EducationEntry",
+      "theme": {},
+      "reusable": true,
+      "width": 608,
+      "fill": "$color.canvas",
+      "layout": "vertical",
+      "gap": "$space.sm",
+      "children": [
+        {
+          "type": "text",
+          "id": "zhQXL",
+          "name": "Period",
+          "fill": "$color.muted",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "2026.05 — 2026.11 예정",
+          "lineHeight": "$line.body",
+          "fontFamily": "$font.latin",
+          "fontSize": "$type.tag",
+          "fontWeight": "$weight.body"
+        },
+        {
+          "type": "text",
+          "id": "a4w7p",
+          "name": "Title",
+          "fill": "$color.text",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "SW마에스트로 17기",
+          "lineHeight": "$line.heading",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.item",
+          "fontWeight": "$weight.label"
+        },
+        {
+          "type": "text",
+          "id": "iJBrv",
+          "name": "Description",
+          "fill": "$color.body",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발",
+          "lineHeight": "$line.body",
+          "fontFamily": "$font.family",
+          "fontSize": "$type.summary",
+          "fontWeight": "$weight.body"
+        }
+      ]
+    }
+  ],
+  "themes": {
+    "presentation": [
+      "desktop",
+      "mobile",
+      "print"
+    ]
+  },
+  "variables": {
+    "color.canvas": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#0F172A",
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": "#0F172A",
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "color.text": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E2E8F0",
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": "#E2E8F0",
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "color.body": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#94A3B8",
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": "#94A3B8",
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": "#242424",
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "color.muted": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#8897AF",
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": "#8897AF",
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": "#444444",
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "color.accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#5EEAD4",
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": "#5EEAD4",
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "color.accent-soft": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#163337",
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": "#163337",
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": "#F1F3F5",
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "color.hover": {
+      "type": "color",
+      "value": "#162238"
+    },
+    "color.rule": {
+      "type": "color",
+      "value": "#475569"
+    },
+    "font.family": {
+      "type": "string",
+      "value": "Noto Sans KR"
+    },
+    "font.latin": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "weight.body": {
+      "type": "string",
+      "value": "400"
+    },
+    "weight.medium": {
+      "type": "string",
+      "value": "500"
+    },
+    "weight.label": {
+      "type": "string",
+      "value": "600"
+    },
+    "weight.heading": {
+      "type": "string",
+      "value": "700"
+    },
+    "type.name": {
+      "type": "number",
+      "value": [
+        {
+          "value": 48,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 38,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 28,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "type.title": {
+      "type": "number",
+      "value": [
+        {
+          "value": 40,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 32,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 28,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "type.role": {
+      "type": "number",
+      "value": 20
+    },
+    "type.item": {
+      "type": "number",
+      "value": 18
+    },
+    "type.section": {
+      "type": "number",
+      "value": [
+        {
+          "value": 20,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 20,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 17,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "type.body": {
+      "type": "number",
+      "value": [
+        {
+          "value": 16,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 16,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 14,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "type.summary": {
+      "type": "number",
+      "value": [
+        {
+          "value": 15,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 15,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 14,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "type.meta": {
+      "type": "number",
+      "value": 13
+    },
+    "type.tag": {
+      "type": "number",
+      "value": 12
+    },
+    "line.body": {
+      "type": "number",
+      "value": [
+        {
+          "value": 1.8,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 1.8,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 1.6,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "line.heading": {
+      "type": "number",
+      "value": 1.3
+    },
+    "line.meta": {
+      "type": "number",
+      "value": 1.5
+    },
+    "space.xs": {
+      "type": "number",
+      "value": 4
+    },
+    "space.sm": {
+      "type": "number",
+      "value": 8
+    },
+    "space.md": {
+      "type": "number",
+      "value": 16
+    },
+    "space.paragraph": {
+      "type": "number",
+      "value": 20
+    },
+    "space.lg": {
+      "type": "number",
+      "value": 24
+    },
+    "space.xl": {
+      "type": "number",
+      "value": 40
+    },
+    "space.section": {
+      "type": "number",
+      "value": [
+        {
+          "value": 80,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 64,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 32,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
+    },
+    "radius.tag": {
+      "type": "number",
+      "value": 99
+    },
+    "radius.hover": {
+      "type": "number",
+      "value": 6
+    },
+    "stroke.rule": {
+      "type": "number",
+      "value": 1
+    },
+    "stroke.focus": {
+      "type": "number",
+      "value": 2
+    },
+    "control.min": {
+      "type": "number",
+      "value": 44
+    }
+  },
+  "fileToken": "c7cb49c5-1e62-4491-9f21-9abf3d0ceebd"
 }
