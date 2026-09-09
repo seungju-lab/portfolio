@@ -1,0 +1,279 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "O5S1Z",
+      "x": 0,
+      "y": 0,
+      "name": "ju1115.github.io · Desktop 1440",
+      "metadata": {
+        "type": "website-extraction",
+        "source": "https://ju1115.github.io/",
+        "viewKey": "home-desktop-1440"
+      },
+      "clip": true,
+      "width": 1440,
+      "height": 3915.609375,
+      "fill": "$m:page",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "qmDwR",
+          "type": "ref",
+          "ref": "m:Iws7e",
+          "name": "Header",
+          "width": 1440,
+          "height": 81
+        },
+        {
+          "id": "qTiy5",
+          "type": "ref",
+          "ref": "m:WhXQf",
+          "name": "Hero",
+          "width": 1440,
+          "height": 800
+        },
+        {
+          "id": "GAban",
+          "type": "ref",
+          "ref": "m:JnCdS",
+          "name": "About & Skills",
+          "width": 1440,
+          "height": 892.34375
+        },
+        {
+          "id": "SO6eb",
+          "type": "ref",
+          "ref": "m:Sf1MD",
+          "name": "Projects",
+          "width": 1440,
+          "height": 1841.390625
+        },
+        {
+          "id": "lYTsn",
+          "type": "ref",
+          "ref": "m:X5qLzd",
+          "name": "Footer",
+          "width": 1440,
+          "height": 300.875
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nk4o1",
+      "x": 1580,
+      "y": 0,
+      "name": "ju1115.github.io · Mobile 390",
+      "metadata": {
+        "type": "website-extraction",
+        "source": "https://ju1115.github.io/",
+        "viewKey": "home-mobile-390"
+      },
+      "clip": true,
+      "width": 390,
+      "height": 5018.984375,
+      "fill": "$m:page",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "f81CCm",
+          "type": "ref",
+          "ref": "m:n68go",
+          "name": "Header",
+          "width": 390,
+          "height": 65
+        },
+        {
+          "id": "EG3he",
+          "type": "ref",
+          "ref": "m:lG0rk",
+          "name": "Hero",
+          "width": 390,
+          "height": 963.453125
+        },
+        {
+          "id": "xSPdY",
+          "type": "ref",
+          "ref": "m:C4nSZ",
+          "name": "About & Skills",
+          "width": 390,
+          "height": 1306.515625
+        },
+        {
+          "id": "X6bFbj",
+          "type": "ref",
+          "ref": "m:QDUpw",
+          "name": "Projects",
+          "width": 390,
+          "height": 2303.140625
+        },
+        {
+          "id": "S0lM5g",
+          "type": "ref",
+          "ref": "m:Ffzr1",
+          "name": "Footer",
+          "width": 390,
+          "height": 380.875
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Ekkb9",
+      "x": 2110,
+      "y": 0,
+      "name": "ju1115.github.io · Mobile menu open 390",
+      "metadata": {
+        "type": "website-extraction",
+        "source": "https://ju1115.github.io/",
+        "viewKey": "home-mobile-390-menu-open"
+      },
+      "clip": true,
+      "width": 390,
+      "height": 1028.453125,
+      "fill": "$m:page",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "gDm6K",
+          "type": "ref",
+          "ref": "m:n68go",
+          "name": "Header · menu open",
+          "width": 390,
+          "height": 65,
+          "descendants": {
+            "m:wQAtn": {
+              "type": "icon",
+              "id": "DNECo",
+              "x": 346,
+              "y": 20,
+              "name": "Close menu",
+              "width": 24,
+              "height": 24,
+              "icon": "x",
+              "library": "lucide",
+              "fill": "$m:ink"
+            }
+          }
+        },
+        {
+          "id": "HoVJp",
+          "type": "ref",
+          "ref": "m:lG0rk",
+          "name": "Hero · behind mobile menu",
+          "width": 390,
+          "height": 963.453125
+        },
+        {
+          "id": "c4XuE",
+          "type": "ref",
+          "ref": "m:Ur40T",
+          "name": "Mobile navigation · expanded",
+          "width": 390,
+          "height": 264.5625,
+          "x": 0,
+          "y": 64,
+          "layoutPosition": "absolute"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lKr6T",
+      "x": 2110,
+      "y": 1160,
+      "name": "추출 기준과 원본 동작",
+      "width": 600,
+      "fill": "$m:badge",
+      "layout": "vertical",
+      "gap": "$m:note-gap",
+      "padding": "$m:note-padding",
+      "children": [
+        {
+          "type": "text",
+          "id": "AOzAJ",
+          "name": "제목",
+          "fill": "$m:ink",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "ju1115.github.io 디자인 추출",
+          "lineHeight": "$m:line-height-note",
+          "fontFamily": "$m:font",
+          "fontSize": "$m:font-size-24",
+          "fontWeight": "$m:font-weight-bold"
+        },
+        {
+          "type": "text",
+          "id": "zeMh9",
+          "name": "출처",
+          "fill": "$m:ink",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "원본: https://ju1115.github.io/\n저장소: github.com/ju1115/ju1115.github.io",
+          "lineHeight": "$m:line-height-note",
+          "fontFamily": "$m:font",
+          "fontSize": "$m:font-size-16",
+          "fontWeight": "$m:font-weight-regular"
+        },
+        {
+          "type": "text",
+          "id": "G7tt0",
+          "name": "범위",
+          "fill": "$m:ink",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "실제 렌더를 기준으로 데스크톱 1440px, 모바일 390px 전체 화면과 모바일 메뉴 펼침 상태를 옮겼습니다. 텍스트·도형·아이콘을 편집할 수 있으며 사진은 backup-assets에 보관합니다.",
+          "lineHeight": "$m:line-height-note",
+          "fontFamily": "$m:font",
+          "fontSize": "$m:font-size-16",
+          "fontWeight": "$m:font-weight-regular"
+        },
+        {
+          "type": "text",
+          "id": "W1Trca",
+          "name": "서체",
+          "fill": "$m:ink",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "원본 Pretendard는 현재 Pencil에서 지원하지 않아 Noto Sans KR로 대체했습니다. 원본의 줄바꿈과 텍스트 폭에 맞춰 자간을 조정했습니다.",
+          "lineHeight": "$m:line-height-note",
+          "fontFamily": "$m:font",
+          "fontSize": "$m:font-size-16",
+          "fontWeight": "$m:font-weight-regular"
+        },
+        {
+          "type": "text",
+          "id": "Q0RcK",
+          "name": "원본 상태",
+          "fill": "$m:ink",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Matching SSAFY의 이미지 주소는 원본에서도 로드되지 않습니다. 회색 이미지 영역과 대체 텍스트를 유지했습니다. BISKIT·ILOG 이미지는 원본 사이트가 사용하는 사진입니다.",
+          "lineHeight": "$m:line-height-note",
+          "fontFamily": "$m:font",
+          "fontSize": "$m:font-size-16",
+          "fontWeight": "$m:font-weight-regular"
+        },
+        {
+          "type": "text",
+          "id": "M7frhy",
+          "name": "반응",
+          "fill": "$m:ink",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "원본 코드: 헤더 상단 고정, 앵커 부드러운 이동, 모바일 메뉴 열기·닫기, 링크의 초록색 hover, 기술 아이콘 4px 상승(300ms), 프로젝트 이미지 1.05배 확대(500ms). 이 파일은 정적 시안이며 브라우저 동작은 포함하지 않습니다.",
+          "lineHeight": "$m:line-height-note",
+          "fontFamily": "$m:font",
+          "fontSize": "$m:font-size-16",
+          "fontWeight": "$m:font-weight-regular"
+        }
+      ]
+    }
+  ],
+  "imports": {
+    "m": "backup.lib.pen"
+  },
+  "fileToken": "46eb9662-2e3b-4fdb-95b9-9f35b9cf1d6b"
+}
