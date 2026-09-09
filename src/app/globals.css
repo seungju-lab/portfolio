@@ -596,6 +596,47 @@ svg {
   }
 }
 
+.portfolio-shell {
+  position: relative;
+  isolation: isolate;
+}
+.portfolio-identity,
+.portfolio-main {
+  position: relative;
+  z-index: 1;
+}
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    600px at var(--glow-x, 0px) var(--glow-y, 0px),
+    rgba(29, 78, 216, 0.15),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity var(--motion-duration) var(--motion-easing);
+}
+.cursor-glow[data-active] {
+  opacity: 1;
+}
+.cursor-glow[data-suppressed] {
+  visibility: hidden;
+  opacity: 0;
+  transition: none;
+}
+@media not all and (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .cursor-glow {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .cursor-glow {
+    display: none;
+  }
+}
+
 @page {
   size: A4;
   margin: 16mm;
