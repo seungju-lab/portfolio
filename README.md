@@ -30,10 +30,14 @@ Linux 호스트에서 nvm을 사용한다면 `nvm install && nvm use`로 Node를
 검증을 순서대로 실행한다. Node·pnpm이 지정한 버전과 다르거나 어느 단계든 실패하면
 명령이 실패 코드로 종료된다. `pnpm build`에도 산출물 검증이 포함된다.
 
-산출물 검증은 `out/index.html`, `out/404.html`, 원본과 동일한 `out/_headers`,
-두 HTML이 참조하는 정적 자산을 확인한다. 비어 있거나 누락된 파일을 거부하고,
-브라우저 JS와 CSS 참조가 모두 있어야 한다. 기존 빌드만 검사할 때는
-`pnpm check:export`, 별도 출력 디렉터리는 `pnpm check:export /path/to/export`를 사용한다.
+산출물 검증은 홈·세 프로젝트 상세·전체 열람의 HTML과 `404.html`, 원본과 같은
+`_headers`를 확인한다. 각 HTML의 JS·CSS·폰트와 CSS가 참조하는 정적 자산도
+검사한다. 파일 누락·빈 파일을 거부하고, HTML과 자산이 같은 빌드의 `.next/`
+원본과 바이트 단위로 일치하는지 비교해 손상을 확인한다.
+기존 빌드는 `pnpm check:export`, 그 빌드의 별도 출력 복사본은
+`pnpm check:export /path/to/export`로 검사한다. 비교 기준인 `.next/`가 없거나
+다른 빌드라면 `pnpm build`를 먼저 실행한다. `pnpm check:export:test`는 빌드 후
+임시 복사본에 누락·빈 파일·내용 변경을 만들어 실패를 확인하고 복사본을 제거한다.
 
 ## 배포
 

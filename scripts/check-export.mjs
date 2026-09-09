@@ -4,6 +4,15 @@ import { fileURLToPath } from "node:url";
 
 const projectRoot = fileURLToPath(new URL("../", import.meta.url));
 const outputRoot = resolve(process.argv[2] ?? resolve(projectRoot, "out"));
+const buildRoot = resolve(projectRoot, ".next");
+const pages = [
+  ["index.html", "index.html"],
+  ["projects/ilog/index.html", "projects/ilog.html"],
+  ["projects/lorekeeper/index.html", "projects/lorekeeper.html"],
+  ["projects/matching-ssafy/index.html", "projects/matching-ssafy.html"],
+  ["print/index.html", "print.html"],
+  ["404.html", "_not-found.html"],
+];
 
 function readRequired(relativePath) {
   const path = resolve(outputRoot, relativePath);
@@ -19,45 +28,78 @@ function readRequired(relativePath) {
   if (!stat.isFile() || stat.size === 0) {
     throw new Error(`Required export must be a nonempty file: ${relativePath}`);
   }
-  return readFileSync(path, "utf8");
+  return readFileSync(path);
+}
+
+function compareBuild(relativePath, buildPath) {
+  const exported = readRequired(relativePath);
+  let original;
+  try {
+    original = readFileSync(resolve(buildRoot, buildPath));
+  } catch {
+    throw new Error(
+      `Missing build reference: ${buildPath}; run pnpm build first`,
+    );
+  }
+  if (!exported.equals(original)) {
+    throw new Error(`Export differs from build reference: ${relativePath}`);
+  }
+  return exported;
 }
 
 try {
-  const pages = [readRequired("index.html"), readRequired("404.html")];
   const headers = readRequired("_headers");
-  const expectedHeaders = readFileSync(
-    resolve(projectRoot, "public/_headers"),
-    "utf8",
-  );
-  if (headers !== expectedHeaders) {
+  if (!headers.equals(readFileSync(resolve(projectRoot, "public/_headers")))) {
     throw new Error("Exported _headers differs from public/_headers");
   }
 
   const assets = new Set();
-  for (const page of pages) {
-    if (!/<html[\s>]/i.test(page)) {
-      throw new Error("Required HTML export is not an HTML document");
+  function verifyAsset(reference, base = "https://portfolio.invalid/") {
+    const url = new URL(reference, base);
+    if (
+      url.origin !== "https://portfolio.invalid" ||
+      !url.pathname.startsWith("/_next/static/")
+    )
+      return;
+    const path = decodeURIComponent(url.pathname).slice(1);
+    if (assets.has(path)) return path;
+    const content = compareBuild(path, path.slice("_next/".length));
+    assets.add(path);
+    if (path.endsWith(".css")) {
+      for (const [, value] of content
+        .toString("utf8")
+        .matchAll(/url\(([^)]+)\)/g)) {
+        verifyAsset(value.trim().replace(/^["']|["']$/g, ""), url.href);
+      }
     }
+    return path;
+  }
+
+  for (const [path, source] of pages) {
+    const page = compareBuild(path, `server/app/${source}`).toString("utf8");
+    if (
+      !/^<!doctype html>/i.test(page) ||
+      !/<html[\s>]/i.test(page) ||
+      !/<body[\s>]/i.test(page) ||
+      !/<\/body>\s*<\/html>\s*$/i.test(page)
+    ) {
+      throw new Error(`Invalid HTML document: ${path}`);
+    }
+    const references = new Set();
     for (const [, reference] of page.matchAll(
       /(?:src|href)=["']([^"']+)["']/g,
     )) {
-      if (!reference.startsWith("/_next/static/")) continue;
-      const path = decodeURIComponent(
-        new URL(reference, "https://portfolio.invalid").pathname,
-      ).slice(1);
-      readRequired(path);
-      assets.add(path);
+      const asset = verifyAsset(reference);
+      if (asset) references.add(asset);
     }
-  }
-  for (const extension of [".js", ".css"]) {
-    if (![...assets].some((path) => path.endsWith(extension))) {
-      throw new Error(
-        `Exported HTML must reference browser ${extension} assets`,
-      );
+    for (const extension of [".js", ".css"]) {
+      if (![...references].some((asset) => asset.endsWith(extension))) {
+        throw new Error(`${path} must reference browser ${extension} assets`);
+      }
     }
   }
   console.log(
-    `Static export verified: index.html, 404.html, _headers and ${assets.size} referenced assets`,
+    `Static export verified: ${pages.length} HTML pages, _headers and ${assets.size} referenced assets match the build`,
   );
 } catch (error) {
   console.error(`Static export validation failed: ${error.message}`);
