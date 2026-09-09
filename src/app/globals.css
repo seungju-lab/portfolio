@@ -637,6 +637,50 @@ svg {
   }
 }
 
+.content-section {
+  scroll-margin-top: 6rem;
+}
+@media (width >= 64rem) {
+  .portfolio-identity[data-sticky] {
+    position: sticky;
+    top: 6rem;
+  }
+}
+@media (width < 64rem) {
+  .content-section {
+    scroll-margin-top: 5rem;
+  }
+  .portfolio-shell-home .section-heading {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-height: 60px;
+    height: auto;
+    margin-inline: -1.5rem;
+    padding-inline: 1.5rem;
+    background: rgba(15, 23, 42, 0.95);
+    clip-path: none;
+    overflow: visible;
+  }
+}
+@media print {
+  .portfolio-identity[data-sticky],
+  .portfolio-shell-home .section-heading {
+    position: static;
+    min-height: 0;
+    padding: 0;
+    margin-inline: 0;
+    background: none;
+  }
+  .portfolio-shell *,
+  .portfolio-shell *::before {
+    transition: none !important;
+  }
+}
+
 @page {
   size: A4;
   margin: 16mm;

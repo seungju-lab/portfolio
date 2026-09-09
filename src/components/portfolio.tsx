@@ -1,3 +1,4 @@
+import { SectionNavigation } from "@/components/section-navigation";
 import { CursorGlow } from "@/components/cursor-glow";
 import { PointerInteractions } from "@/components/pointer-interactions";
 import type { ReactNode } from "react";
@@ -53,6 +54,7 @@ export function PortfolioShell({
     <div className={`portfolio-shell portfolio-shell-${variant}`}>
       <PointerInteractions />
       <CursorGlow />
+      <SectionNavigation />
       <header className="portfolio-identity">{identity}</header>
       <main className="portfolio-main" id="main-content">
         {children}
