@@ -57,7 +57,8 @@ export function PrintToolbar() {
     };
     const mediaChange = () => {
       if (media.matches) before();
-      else finish();
+      // Chromium leaves print media after generating the preview, before the
+      // dialog closes. Only afterprint may restore the reading position.
     };
     const leave = () => {
       present = false;

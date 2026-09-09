@@ -748,6 +748,9 @@ svg {
 .print-repository-address {
   display: none;
 }
+.print-project-summary {
+  display: none;
+}
 @media (hover: hover) and (pointer: fine) {
   .print-shell .text-link:hover {
     color: var(--color-accent);
@@ -803,5 +806,164 @@ svg {
   .section-navigation,
   .profile-links {
     display: none;
+  }
+}
+
+@page portfolio {
+  size: A4;
+  margin: 16mm;
+  @bottom-center {
+    content: "이승주 · " counter(page);
+    font-family: var(--font-noto-sans), sans-serif;
+    font-size: 10px;
+    color: #333;
+  }
+}
+@media print {
+  .print-shell {
+    page: portfolio;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .print-shell *,
+  .print-shell *::before,
+  .print-shell *::after {
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    position: static;
+  }
+  .print-toolbar,
+  .print-repositories .text-link {
+    display: none;
+  }
+  .print-document {
+    gap: 0;
+  }
+  .print-introduction {
+    order: 0;
+  }
+  .print-introduction .profile-name {
+    font-size: 32px;
+  }
+  .print-introduction .profile-role {
+    font-size: 17px;
+  }
+  .print-introduction > * + * {
+    margin-top: 12px;
+  }
+  .print-project-summary {
+    display: block;
+    order: 1;
+    margin-top: 24px;
+  }
+  .print-project-summary ul {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+  }
+  .print-project-summary li + li {
+    margin-top: 14px;
+  }
+  .print-project-summary p + p {
+    margin-top: 4px;
+  }
+  .print-project-summary h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .print-project-summary li,
+  .print-education li {
+    break-inside: avoid;
+  }
+  .print-education {
+    order: 2;
+    margin-top: 24px;
+  }
+  .print-education .section-heading {
+    margin-bottom: 12px;
+    letter-spacing: 0;
+  }
+  .print-education .entry-list > li + li {
+    margin-top: 12px;
+  }
+  .print-education .education-entry {
+    gap: 4px;
+  }
+  .print-education .entry-date {
+    font-size: 12px;
+  }
+  .print-education .entry-title {
+    font-size: 15px;
+  }
+  .print-education .entry-description {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+  .print-education .working-note {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .print-education .working-note p {
+    margin-top: 8px;
+  }
+  .print-project {
+    order: 3;
+    display: block;
+    break-before: page;
+  }
+  .print-project-heading h2 {
+    font-size: 28px;
+  }
+  .print-project-heading > * + * {
+    margin-top: 10px;
+  }
+  .print-project-heading .project-period {
+    font-size: 12px;
+  }
+  .print-project-heading .project-contribution {
+    font-size: 14px;
+  }
+  .print-project-summary h2,
+  .print-education h2,
+  .print-education .working-note h3,
+  .print-article-section h3 {
+    font-size: 17px;
+  }
+  .print-article-section {
+    margin-top: 24px;
+  }
+  .print-article-section h3 {
+    margin-bottom: 10px;
+  }
+  .print-shell h1,
+  .print-shell h2,
+  .print-shell h3,
+  .print-project-heading {
+    break-after: avoid;
+  }
+  .print-shell p {
+    orphans: 3;
+    widows: 3;
+  }
+  .print-repositories {
+    margin-top: 24px;
+    break-inside: avoid;
+  }
+  .print-repositories > li + li {
+    margin-top: 6px;
+  }
+  .print-repository-address {
+    display: block;
+    font-family: var(--font-inter), var(--font-noto-sans), sans-serif;
+    font-size: 12px;
+    overflow-wrap: anywhere;
   }
 }

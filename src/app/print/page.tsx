@@ -30,6 +30,23 @@ export default function PrintPage() {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </header>
+        <section
+          className="print-project-summary"
+          aria-labelledby="summary-heading"
+        >
+          <h2 id="summary-heading">프로젝트</h2>
+          <ul>
+            {projects.map((project) => (
+              <li key={project.slug}>
+                <h3 lang="en">{project.title}</h3>
+                <p>
+                  {project.period} · {project.role}
+                </p>
+                <p>{project.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
         {projects.map((project: Project) => (
           <article
             className="print-project"
