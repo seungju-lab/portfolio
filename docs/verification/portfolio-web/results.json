@@ -1,0 +1,892 @@
+{
+  "date": "2026-09-09",
+  "baseCommit": "951403351420b2e1dba78dd4c5b5763ab08092ad",
+  "sourceSha256": {
+    "src/app/globals.css": "5a905c5bd31b3934034084c2b320e1e6079915615423df6da252fb7893d2c2d5",
+    "src/app/layout.tsx": "817ed1abe0c92844f1b5f787e3d559ce4e2f628a47a8e0a405647fee8b6c9fd3",
+    "src/app/page.tsx": "cd2032488a384aa4f921def1fa5f0c761dd7c2df0b2cb5325a67828914744ffc",
+    "src/app/print/page.tsx": "0b0c2ca4920f251883d496aef3f0c5935429f851ed098f5dca3ac048b94e4184",
+    "src/app/projects/[slug]/page.tsx": "67f7e8341efb36f224f0b49ac2184ec7ea0576ce88e82190176873c47e71f97c",
+    "src/components/cursor-glow.tsx": "70dfa16025cf99642335c75b32c8188a91986f7ffae365141895853a19374f68",
+    "src/components/pointer-interactions.tsx": "a52e7fbcb7b75e40efab170c0f31fd6509cd232e4dd84149d8515c26f576ca63",
+    "src/components/portfolio.tsx": "9502d6bbd6461d604c4c6262d067105d7d30fdc6f0eab088166cdfdea9a14edb",
+    "src/components/print-toolbar.tsx": "48e2c5accaa56efae1435aa6ccafb780e7c6cebabdc142c77acc4882bf0a5f66",
+    "src/components/project-arrival-focus.tsx": "03e1054a92fa7885935b0283f0e0f446213677c356fb1c11fa164ea0b656f1cb",
+    "src/components/project-detail.tsx": "548ed5decae9fa866909a524bc7b375a9f7bcd792a42b915621fe5307b80ea87",
+    "src/components/section-navigation.tsx": "e5741a8e260eb2e43d0ebb5734e1f43b1c631ce184943cc6d6a38fbc3c904671",
+    "src/content/portfolio.ts": "d907339de699676c6f0181f76a225a2f72f19b11a347497359f1dc283d08be43"
+  },
+  "results": {
+    "matrix": {
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/140.0.7339.16",
+        "revision": "@b50d93d6db089ce82ddf985f059aa524051fcb2a",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/140.0.0.0 Safari/537.36",
+        "jsVersion": "14.0.365.1"
+      },
+      "results": [
+        {
+          "path": "/",
+          "width": 1440,
+          "height": 1000,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "이승주",
+          "main": {
+            "x": 704,
+            "y": 96,
+            "width": 593,
+            "height": 1701.796875
+          },
+          "identity": {
+            "x": 128,
+            "y": 96,
+            "width": 448,
+            "height": 720
+          },
+          "sticky": true,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/",
+          "width": 390,
+          "height": 1000,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "h1": "이승주",
+          "main": {
+            "x": 24,
+            "y": 424.984375,
+            "width": 342,
+            "height": 2125.78125
+          },
+          "identity": {
+            "x": 24,
+            "y": 48,
+            "width": 342,
+            "height": 312.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/",
+          "width": 320,
+          "height": 1000,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "h1": "이승주",
+          "main": {
+            "x": 24,
+            "y": 424.984375,
+            "width": 272,
+            "height": 2293.171875
+          },
+          "identity": {
+            "x": 24,
+            "y": 48,
+            "width": 272,
+            "height": 312.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/",
+          "width": 1440,
+          "height": 440,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "이승주",
+          "main": {
+            "x": 704,
+            "y": 96,
+            "width": 593,
+            "height": 1701.796875
+          },
+          "identity": {
+            "x": 128,
+            "y": 96,
+            "width": 448,
+            "height": 720
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/ilog/",
+          "width": 1440,
+          "height": 1000,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "ILOG",
+          "main": {
+            "x": 704,
+            "y": 80,
+            "width": 593,
+            "height": 1104.34375
+          },
+          "identity": {
+            "x": 128,
+            "y": 96,
+            "width": 448,
+            "height": 526.390625
+          },
+          "sticky": true,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/ilog/",
+          "width": 390,
+          "height": 1000,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "h1": "ILOG",
+          "main": {
+            "x": 24,
+            "y": 447.984375,
+            "width": 342,
+            "height": 1490.296875
+          },
+          "identity": {
+            "x": 24,
+            "y": 40,
+            "width": 342,
+            "height": 343.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/ilog/",
+          "width": 320,
+          "height": 1000,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "h1": "ILOG",
+          "main": {
+            "x": 24,
+            "y": 447.984375,
+            "width": 272,
+            "height": 1746.671875
+          },
+          "identity": {
+            "x": 24,
+            "y": 40,
+            "width": 272,
+            "height": 343.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/ilog/",
+          "width": 1440,
+          "height": 440,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "ILOG",
+          "main": {
+            "x": 704,
+            "y": 80,
+            "width": 593,
+            "height": 1104.34375
+          },
+          "identity": {
+            "x": 128,
+            "y": 80,
+            "width": 448,
+            "height": 526.390625
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/lorekeeper/",
+          "width": 1440,
+          "height": 1000,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "Lorekeeper",
+          "main": {
+            "x": 704,
+            "y": 80,
+            "width": 593,
+            "height": 909.5625
+          },
+          "identity": {
+            "x": 128,
+            "y": 96,
+            "width": 448,
+            "height": 613.390625
+          },
+          "sticky": true,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/lorekeeper/",
+          "width": 390,
+          "height": 1000,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "h1": "Lorekeeper",
+          "main": {
+            "x": 24,
+            "y": 534.984375,
+            "width": 342,
+            "height": 1010.34375
+          },
+          "identity": {
+            "x": 24,
+            "y": 40,
+            "width": 342,
+            "height": 430.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/lorekeeper/",
+          "width": 320,
+          "height": 1000,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "h1": "Lorekeeper",
+          "main": {
+            "x": 24,
+            "y": 534.984375,
+            "width": 272,
+            "height": 1266.71875
+          },
+          "identity": {
+            "x": 24,
+            "y": 40,
+            "width": 272,
+            "height": 430.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/lorekeeper/",
+          "width": 1440,
+          "height": 440,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "Lorekeeper",
+          "main": {
+            "x": 704,
+            "y": 80,
+            "width": 593,
+            "height": 909.5625
+          },
+          "identity": {
+            "x": 128,
+            "y": 80,
+            "width": 448,
+            "height": 613.390625
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/matching-ssafy/",
+          "width": 1440,
+          "height": 1000,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "h1": "Matching SSAFY",
+          "main": {
+            "x": 704,
+            "y": 80,
+            "width": 608,
+            "height": 824
+          },
+          "identity": {
+            "x": 128,
+            "y": 96,
+            "width": 448,
+            "height": 526.390625
+          },
+          "sticky": true,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/matching-ssafy/",
+          "width": 390,
+          "height": 1000,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "h1": "Matching SSAFY",
+          "main": {
+            "x": 24,
+            "y": 447.984375,
+            "width": 342,
+            "height": 724.359375
+          },
+          "identity": {
+            "x": 24,
+            "y": 40,
+            "width": 342,
+            "height": 343.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/matching-ssafy/",
+          "width": 320,
+          "height": 1000,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "h1": "Matching SSAFY",
+          "main": {
+            "x": 24,
+            "y": 447.984375,
+            "width": 272,
+            "height": 839.546875
+          },
+          "identity": {
+            "x": 24,
+            "y": 40,
+            "width": 272,
+            "height": 343.984375
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/projects/matching-ssafy/",
+          "width": 1440,
+          "height": 440,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "Matching SSAFY",
+          "main": {
+            "x": 704,
+            "y": 80,
+            "width": 593,
+            "height": 681.171875
+          },
+          "identity": {
+            "x": 128,
+            "y": 80,
+            "width": 448,
+            "height": 526.390625
+          },
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/print/",
+          "width": 1440,
+          "height": 1000,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "이승주",
+          "main": {
+            "x": 332.5,
+            "y": 209.59375,
+            "width": 760,
+            "height": 3705
+          },
+          "identity": null,
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/print/",
+          "width": 390,
+          "height": 1000,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "h1": "이승주",
+          "main": {
+            "x": 24,
+            "y": 229.59375,
+            "width": 342,
+            "height": 4665.671875
+          },
+          "identity": null,
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/print/",
+          "width": 320,
+          "height": 1000,
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "h1": "이승주",
+          "main": {
+            "x": 24,
+            "y": 229.59375,
+            "width": 272,
+            "height": 5407
+          },
+          "identity": null,
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        },
+        {
+          "path": "/print/",
+          "width": 1440,
+          "height": 440,
+          "scrollWidth": 1425,
+          "clientWidth": 1425,
+          "h1": "이승주",
+          "main": {
+            "x": 332.5,
+            "y": 209.59375,
+            "width": 760,
+            "height": 3705
+          },
+          "identity": null,
+          "sticky": false,
+          "overflow": [],
+          "independentScroll": false
+        }
+      ]
+    },
+    "home": {
+      "results": [
+        {
+          "width": 1440,
+          "overflow": 0,
+          "firstProject": {
+            "x": 704,
+            "y": 395.578125,
+            "width": 593,
+            "height": 233.890625
+          },
+          "linkCount": 9
+        },
+        {
+          "width": 1024,
+          "overflow": 0,
+          "firstProject": {
+            "x": 550,
+            "y": 481.96875,
+            "width": 367.984375,
+            "height": 325.890625
+          },
+          "linkCount": 9
+        },
+        {
+          "width": 768,
+          "overflow": 0,
+          "firstProject": {
+            "x": 24,
+            "y": 804.171875,
+            "width": 720,
+            "height": 240.484375
+          },
+          "linkCount": 9
+        },
+        {
+          "width": 390,
+          "overflow": 0,
+          "firstProject": {
+            "x": 24,
+            "y": 919.359375,
+            "width": 342,
+            "height": 294.484375
+          },
+          "linkCount": 9
+        },
+        {
+          "width": 320,
+          "overflow": 0,
+          "firstProject": {
+            "x": 24,
+            "y": 1005.75,
+            "width": 272,
+            "height": 294.484375
+          },
+          "linkCount": 9
+        }
+      ],
+      "rowNames": [
+        "ILOG 상세 읽기",
+        "Lorekeeper 상세 읽기",
+        "Matching SSAFY 상세 읽기"
+      ],
+      "keyboard": "one stop per project",
+      "withoutJavaScript": "three native anchors and touch tap passed"
+    },
+    "details": [
+      {
+        "slug": "ilog",
+        "width": 1440,
+        "paragraphs": 5,
+        "overflow": 0,
+        "mobileNavigationHidden": false
+      },
+      {
+        "slug": "ilog",
+        "width": 1024,
+        "paragraphs": 5,
+        "overflow": 0,
+        "mobileNavigationHidden": false
+      },
+      {
+        "slug": "ilog",
+        "width": 390,
+        "paragraphs": 5,
+        "overflow": 0,
+        "mobileNavigationHidden": true
+      },
+      {
+        "slug": "ilog",
+        "width": 320,
+        "paragraphs": 5,
+        "overflow": 0,
+        "mobileNavigationHidden": true
+      },
+      {
+        "slug": "lorekeeper",
+        "width": 1440,
+        "paragraphs": 4,
+        "overflow": 0,
+        "mobileNavigationHidden": false
+      },
+      {
+        "slug": "lorekeeper",
+        "width": 1024,
+        "paragraphs": 4,
+        "overflow": 0,
+        "mobileNavigationHidden": false
+      },
+      {
+        "slug": "lorekeeper",
+        "width": 390,
+        "paragraphs": 4,
+        "overflow": 0,
+        "mobileNavigationHidden": true
+      },
+      {
+        "slug": "lorekeeper",
+        "width": 320,
+        "paragraphs": 4,
+        "overflow": 0,
+        "mobileNavigationHidden": true
+      },
+      {
+        "slug": "matching-ssafy",
+        "width": 1440,
+        "paragraphs": 3,
+        "overflow": 0,
+        "mobileNavigationHidden": false
+      },
+      {
+        "slug": "matching-ssafy",
+        "width": 1024,
+        "paragraphs": 3,
+        "overflow": 0,
+        "mobileNavigationHidden": false
+      },
+      {
+        "slug": "matching-ssafy",
+        "width": 390,
+        "paragraphs": 3,
+        "overflow": 0,
+        "mobileNavigationHidden": true
+      },
+      {
+        "slug": "matching-ssafy",
+        "width": 320,
+        "paragraphs": 3,
+        "overflow": 0,
+        "mobileNavigationHidden": true
+      }
+    ],
+    "states": {
+      "hover": "passed",
+      "rapidChange": "passed",
+      "layoutStable": true,
+      "keyboardPriority": true,
+      "touch": [390, 320],
+      "reducedMotion": "live toggle passed"
+    },
+    "glow": {
+      "position": "viewport, latest per frame",
+      "inputCleanup": "passed",
+      "selectionAndLinks": "passed",
+      "reducedPrintMobile": "hidden",
+      "contrast": 4.66296078321987
+    },
+    "scroll": {
+      "records": [
+        {
+          "desktop": "sticky, cancellation, latest target, native history, manual hash/focus, keyboard and reduced motion passed",
+          "interrupted": {
+            "url": "/#education",
+            "y": 368,
+            "active": "",
+            "current": "#projects",
+            "height": 1000,
+            "max": 894,
+            "sticky": true
+          }
+        }
+      ],
+      "directAnchors": 12,
+      "missingHashes": 4,
+      "mobile": [390, 320],
+      "pageExit": "passed",
+      "print": "passed"
+    },
+    "navigation": {
+      "records": [
+        {
+          "width": 1440,
+          "homeY": 113,
+          "ilogY": 480,
+          "loreY": 286,
+          "matchingY": 57,
+          "reloadY": 300,
+          "reloadedY": 300,
+          "nativeHistory": "passed",
+          "arrivalFocus": "passed",
+          "hashEntry": "preserved"
+        },
+        {
+          "width": 390,
+          "homeY": 667,
+          "ilogY": 1186,
+          "loreY": 793,
+          "matchingY": 420,
+          "reloadY": 300,
+          "reloadedY": 300,
+          "nativeHistory": "passed",
+          "arrivalFocus": "passed",
+          "hashEntry": "preserved"
+        }
+      ],
+      "externalLinks": "all four repositories verified in both locations",
+      "withoutJavaScript": "home → three projects → home passed",
+      "rapidNavigation": "passed"
+    },
+    "web": {
+      "paragraphs": 12,
+      "content": "exact",
+      "desktopWidth": 760,
+      "mobile": [390, 320],
+      "keyboardTouch": "passed",
+      "duplicateFailureRetry": "passed",
+      "focusHistoryExit": "passed",
+      "withoutJS": "passed"
+    },
+    "native-preview": [
+      {
+        "mode": "button",
+        "events": ["before", "after"],
+        "y": 600,
+        "button": true,
+        "link": false,
+        "busy": null,
+        "pages": 4
+      },
+      {
+        "mode": "space",
+        "events": ["before", "after"],
+        "y": 600,
+        "button": true,
+        "link": false,
+        "busy": null,
+        "pages": 4
+      },
+      {
+        "mode": "shortcut",
+        "events": ["before", "after"],
+        "y": 600,
+        "button": false,
+        "link": true,
+        "busy": null,
+        "pages": 4
+      }
+    ],
+    "save": {
+      "files": [
+        "전체 열람 · PDF _ 이승주 (1).pdf",
+        "전체 열람 · PDF _ 이승주.pdf"
+      ],
+      "events": ["before", "after"],
+      "y": 850,
+      "button": true,
+      "busy": null,
+      "theme": "rgb(15, 23, 42)"
+    },
+    "pdf": [
+      {
+        "file": "desktop.pdf",
+        "pages": 4,
+        "content": "all shared paragraphs exact",
+        "fonts": "embedded",
+        "links": "verified",
+        "bounds": "inside A4"
+      },
+      {
+        "file": "mobile.pdf",
+        "pages": 4,
+        "content": "all shared paragraphs exact",
+        "fonts": "embedded",
+        "links": "verified",
+        "bounds": "inside A4"
+      },
+      {
+        "file": "without-js.pdf",
+        "pages": 4,
+        "content": "all shared paragraphs exact",
+        "fonts": "embedded",
+        "links": "verified",
+        "bounds": "inside A4"
+      },
+      {
+        "file": "saved/전체 열람 · PDF _ 이승주 (1).pdf",
+        "pages": 4,
+        "content": "all shared paragraphs exact",
+        "fonts": "embedded",
+        "links": "verified",
+        "bounds": "inside A4"
+      }
+    ],
+    "workers": [
+      {
+        "path": "/",
+        "status": 200,
+        "cache": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/projects/ilog/",
+        "status": 200,
+        "cache": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/projects/lorekeeper/",
+        "status": 200,
+        "cache": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/projects/matching-ssafy/",
+        "status": 200,
+        "cache": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/print/",
+        "status": 200,
+        "cache": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/missing-check/",
+        "status": 404,
+        "cache": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/projects/not-a-project/",
+        "status": 404,
+        "cache": "public, max-age=0, must-revalidate"
+      },
+      {
+        "path": "/index.html",
+        "status": 307,
+        "location": "/"
+      },
+      {
+        "path": "/print",
+        "status": 307,
+        "location": "/print/"
+      },
+      {
+        "path": "/print/index.html",
+        "status": 307,
+        "location": "/print/"
+      },
+      {
+        "path": "/projects/ilog/index.html",
+        "status": 307,
+        "location": "/projects/ilog/"
+      },
+      {
+        "path": "/_next/static/media/inter_variable-s.p.1yh3a3784c-t_.woff2",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/media/noto_sans_kr_variable-s.p.3-j6tly410ks-.woff2",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/1-5nr9db52vwd.css",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/3tqpwk6ox3csa.js",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/2mryqr-pp3uqt.js",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/18w91zf62gamc.js",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/turbopack-42zrere36bswl.js",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/1zs8uft0v_zyp.js",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/2i9vatxrhbc0v.js",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      },
+      {
+        "path": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+        "status": 200,
+        "cache": "public, max-age=31536000, immutable"
+      }
+    ]
+  },
+  "rendersSha256": {
+    "home-1440.png": "29aca49e627b50bcca384e9c0bb3a804102d02f22cbced6d580049de6467d943",
+    "home-390.png": "ab52d907acd982be0ed4f48e33793939bef33a515b358c475a5721045a729173",
+    "home-320.png": "8dcd6bef3dc636f045b86745657267fa833bded895ce42c73c9cbfc7c0cdf741",
+    "ilog-390.png": "f3afd5091babdc0c238de7978125b1c13a7c6acbf272886aa88c8b6d0417175e",
+    "print-web-1440.png": "2d99e168269008bb4339bbc1891673485268f38632187733706a9a1e92bed692",
+    "pdf-page-1.png": "4da21cefa4307f1a78c11dcf18ef4b9596a9b279e67c9b5970d85ca60a1162a2",
+    "pdf-page-2.png": "d8412f37ba458666db9c92f3925f30b174083a7aa84ba48c5e51de45629d0a81"
+  },
+  "pdfSha256": "2ea3e6334c58da120d971e649247258508e0bd864ab620531d8b27f6f713ca98"
+}

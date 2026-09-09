@@ -16,12 +16,21 @@ export const metadata: Metadata = {
     "이승주의 소개와 세 프로젝트의 담당 범위·구현 과정·검증 기록을 한 문서로 읽습니다.",
 };
 
+function PrintIdentity() {
+  return (
+    <p className="print-only print-eyebrow">
+      {profile.name} / <span lang="en">{profile.role.toUpperCase()}</span>
+    </p>
+  );
+}
+
 export default function PrintPage() {
   return (
     <div className="print-shell">
       <PrintToolbar />
       <main id="main-content" className="print-document">
         <header className="print-introduction">
+          <PrintIdentity />
           <h1 className="profile-name">{profile.name}</h1>
           <p className="profile-role" lang="en">
             {profile.role}
@@ -55,10 +64,14 @@ export default function PrintPage() {
             aria-labelledby={`${project.slug}-heading`}
           >
             <header className="print-project-heading">
+              <PrintIdentity />
               <h2 id={`${project.slug}-heading`} lang="en">
                 {project.title}
               </h2>
-              <p className="project-period">{project.detail.period}</p>
+              <p className="project-period">
+                {project.detail.period}
+                <span className="print-only"> · {project.role}</span>
+              </p>
               <p className="project-contribution">
                 {project.detail.contribution}
               </p>
@@ -110,6 +123,11 @@ export default function PrintPage() {
             <h3>{workingPractice.title}</h3>
             <p>{workingPractice.description}</p>
           </div>
+          <p className="print-only print-profile-address">
+            <a href={profile.github}>
+              {profile.github.replace("https://", "")}
+            </a>
+          </p>
         </section>
       </main>
     </div>
