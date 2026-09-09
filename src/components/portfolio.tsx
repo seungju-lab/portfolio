@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { ProjectSummary } from "@/content/portfolio";
 
 type IconName = "arrow" | "external" | "back" | "github" | "print";
 
@@ -124,15 +125,7 @@ export function SkillTag({ children }: { children: ReactNode }) {
     </span>
   );
 }
-export type ProjectEntryContent = {
-  slug: string;
-  title: string;
-  period: string;
-  role: string;
-  summary: string;
-  technologies: readonly string[];
-};
-export function ProjectEntry({ project }: { project: ProjectEntryContent }) {
+export function ProjectEntry({ project }: { project: ProjectSummary }) {
   return (
     <a
       className="project-entry"
