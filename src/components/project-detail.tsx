@@ -1,3 +1,4 @@
+import { ProjectArrivalFocus } from "@/components/project-arrival-focus";
 import type { Project } from "@/content/portfolio";
 import {
   ArticleSection,
@@ -6,12 +7,19 @@ import {
   TextLink,
 } from "@/components/portfolio";
 
-export function ProjectDetail({ project }: { project: Project }) {
+export function ProjectDetail({
+  project,
+  nextProject,
+}: {
+  project: Project;
+  nextProject?: Pick<Project, "slug" | "title">;
+}) {
   return (
     <PortfolioShell
       variant="project"
       identity={
         <>
+          <ProjectArrivalFocus />
           <TextLink href="/#projects" icon="back">
             포트폴리오로
           </TextLink>
@@ -73,6 +81,24 @@ export function ProjectDetail({ project }: { project: Project }) {
           </div>
         ))}
       </article>
+      <nav className="case-navigation" aria-label="프로젝트 관련 링크">
+        {project.detail.repositories.map((repository) => (
+          <TextLink key={repository.href} href={repository.href} external>
+            {project.detail.repositories.length === 1
+              ? "코드에서 확인하기"
+              : `${repository.label}에서 코드 확인하기`}
+          </TextLink>
+        ))}
+        {nextProject ? (
+          <TextLink href={`/projects/${nextProject.slug}/`}>
+            다음 프로젝트 · {nextProject.title}
+          </TextLink>
+        ) : (
+          <TextLink href="/#projects" icon="back">
+            프로젝트 목록으로
+          </TextLink>
+        )}
+      </nav>
     </PortfolioShell>
   );
 }
