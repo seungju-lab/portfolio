@@ -41,12 +41,14 @@ export function Icon({ name }: { name: IconName }) {
 export function PortfolioShell({
   identity,
   children,
+  variant = "home",
 }: {
   identity: ReactNode;
   children: ReactNode;
+  variant?: "home" | "project";
 }) {
   return (
-    <div className="portfolio-shell">
+    <div className={`portfolio-shell portfolio-shell-${variant}`}>
       <header className="portfolio-identity">{identity}</header>
       <main className="portfolio-main" id="main-content">
         {children}
@@ -111,9 +113,13 @@ export function TextLink({
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
     >
-      {(icon === "github" || icon === "print") && <Icon name={icon} />}
+      {(icon === "github" || icon === "print" || icon === "back") && (
+        <Icon name={icon} />
+      )}
       <span>{children}</span>
-      {icon !== "github" && icon !== "print" && <Icon name={icon} />}
+      {icon !== "github" && icon !== "print" && icon !== "back" && (
+        <Icon name={icon} />
+      )}
       {external && <span className="visually-hidden"> (새 탭)</span>}
     </a>
   );
@@ -180,16 +186,20 @@ export function EducationEntry({
 }
 export function ArticleSection({
   id,
+  headingId,
   title,
   children,
 }: {
   id?: string;
+  headingId?: string;
   title: string;
   children: ReactNode;
 }) {
   return (
     <section className="article-section" id={id}>
-      <h2>{title}</h2>
+      <h2 id={headingId} tabIndex={headingId ? -1 : undefined}>
+        {title}
+      </h2>
       {children}
     </section>
   );

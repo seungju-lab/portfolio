@@ -373,6 +373,85 @@ svg {
   }
 }
 
+/* Project details share the home columns and reading tokens. */
+.portfolio-shell-project {
+  padding-top: 5rem;
+}
+.portfolio-shell-project .portfolio-identity {
+  min-height: 0;
+  gap: 2.5rem;
+}
+.portfolio-shell-project .portfolio-identity > .text-link {
+  align-self: flex-start;
+}
+.project-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.project-overview p {
+  margin: 0;
+}
+.project-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.project-period {
+  color: var(--color-meta);
+  font-family: var(--font-inter), var(--font-noto-sans), sans-serif;
+  font-size: var(--text-meta);
+}
+.project-role {
+  color: var(--color-heading);
+  font-size: var(--text-role);
+  font-weight: 500;
+}
+.project-contribution {
+  font-size: var(--text-description);
+  white-space: pre-line;
+}
+.project-navigation {
+  margin-top: 0;
+}
+.repository-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.repository-links > li + li {
+  margin-top: 1rem;
+}
+.project-article {
+  padding-top: 4.5rem;
+}
+.article-group + .article-group {
+  margin-top: 2.5rem;
+}
+.project-article .article-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.article-group {
+  scroll-margin-top: 6rem;
+}
+@media (width < 64rem) {
+  .portfolio-shell-project {
+    padding-top: 2.5rem;
+  }
+  .project-name {
+    font-size: 2rem;
+  }
+  .project-navigation {
+    display: none;
+  }
+  .project-article {
+    padding-top: 0;
+  }
+  .article-group {
+    scroll-margin-top: 5rem;
+  }
+}
+
 @page {
   size: A4;
   margin: 16mm;

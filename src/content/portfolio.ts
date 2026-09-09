@@ -14,6 +14,7 @@ export type Project = ProjectSummary & {
     period: string;
     role: string;
     team?: string;
+    contribution: string;
     repositories: readonly { label: string; href: string }[];
     groups: readonly {
       id: "scope" | "implementation" | "verification";
@@ -66,6 +67,7 @@ export const projects = [
     detail: {
       period: "2025.10 — 2025.11",
       role: "인증·사용자·그룹·API Gateway",
+      contribution: "6인 팀 · 네 서비스 단독 설계·구현",
       team: "6인 팀",
       repositories: [
         {
@@ -136,6 +138,7 @@ export const projects = [
     detail: {
       period: "2026.05 — 진행 중",
       role: "로그인 프론트엔드·백엔드, Work·Episode 백엔드 개발",
+      contribution: "로그인 프론트엔드·백엔드\nWork·Episode 백엔드 개발",
       repositories: [
         {
           label: "Backend GitHub",
@@ -203,6 +206,7 @@ export const projects = [
     detail: {
       period: "2025.07 — 2025.08",
       role: "백엔드 팀·채팅 도메인",
+      contribution: "6인 팀 · 백엔드 팀·채팅 도메인",
       team: "6인 팀",
       repositories: [
         {
