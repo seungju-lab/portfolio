@@ -200,6 +200,9 @@ svg {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+.about-section .section-heading {
+  margin-bottom: 1.25rem;
+}
 .entry-list > li + li {
   margin-top: var(--space-project);
 }
@@ -276,9 +279,20 @@ svg {
   grid-template-columns: minmax(0, 1fr);
   row-gap: 0.5rem;
 }
+.education-entry .entry-description {
+  white-space: pre-line;
+}
 .working-note {
   margin-top: 2.5rem;
   font-size: var(--text-description);
+}
+.working-note h3 {
+  font-size: var(--text-project-title);
+  font-weight: 600;
+  line-height: 1.8;
+}
+.working-note p {
+  margin-top: 1rem;
 }
 .article-section + .article-section {
   margin-top: 2.5rem;
@@ -297,6 +311,10 @@ svg {
   align-items: center;
   min-height: 2.75rem;
   color: var(--color-heading);
+}
+
+.portfolio-footer p + p {
+  margin-top: 0.5rem;
 }
 
 @media (width < 64rem) {

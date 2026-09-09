@@ -1,5 +1,14 @@
-import { profile, introduction, projects } from "@/content/portfolio";
 import {
+  colophon,
+  education,
+  homeNavigation,
+  introduction,
+  profile,
+  projects,
+  workingPractice,
+} from "@/content/portfolio";
+import {
+  EducationEntry,
   PortfolioShell,
   Profile,
   ProjectEntry,
@@ -19,14 +28,13 @@ export default function Home() {
           </Profile>
           <nav className="section-navigation" aria-label="본문 목차">
             <ul>
-              <li>
-                <SectionLink href="#about" current>
-                  소개
-                </SectionLink>
-              </li>
-              <li>
-                <SectionLink href="#projects">프로젝트</SectionLink>
-              </li>
+              {homeNavigation.map(({ id, label }) => (
+                <li key={id}>
+                  <SectionLink href={`#${id}`} current={id === "about"}>
+                    {label}
+                  </SectionLink>
+                </li>
+              ))}
             </ul>
           </nav>
           <ul className="profile-links">
@@ -44,20 +52,72 @@ export default function Home() {
         </>
       }
     >
-      <section className="content-section" id="about">
-        <h2 className="section-heading section-heading-desktop-hidden">소개</h2>
+      <section
+        className="content-section about-section"
+        id="about"
+        aria-labelledby="about-heading"
+      >
+        <h2
+          id="about-heading"
+          className="section-heading section-heading-desktop-hidden"
+          tabIndex={-1}
+        >
+          소개
+        </h2>
         {introduction.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
       </section>
-      <section className="content-section" id="projects">
-        <h2 className="section-heading">프로젝트</h2>
+      <section
+        className="content-section"
+        id="projects"
+        aria-labelledby="projects-heading"
+      >
+        <h2 id="projects-heading" className="section-heading" tabIndex={-1}>
+          프로젝트
+        </h2>
         <ul className="entry-list">
-          <li>
-            <ProjectEntry project={projects[0]} />
-          </li>
+          {projects.map((project) => (
+            <li key={project.slug}>
+              <ProjectEntry project={project} />
+            </li>
+          ))}
         </ul>
       </section>
+      <section
+        className="content-section"
+        id="education"
+        aria-labelledby="education-heading"
+      >
+        <h2 id="education-heading" className="section-heading" tabIndex={-1}>
+          교육·활동
+        </h2>
+        <ul className="entry-list">
+          {education.map((entry) => (
+            <li key={entry.title}>
+              <EducationEntry period={entry.period} title={entry.title}>
+                {entry.description.join("\n")}
+              </EducationEntry>
+            </li>
+          ))}
+        </ul>
+        <div className="working-note">
+          <h3>{workingPractice.title}</h3>
+          <p>{workingPractice.description}</p>
+        </div>
+      </section>
+      <footer className="portfolio-footer">
+        <p lang="en">
+          <a href={colophon.href} target="_blank" rel="noreferrer">
+            {colophon.credit}
+            <span className="visually-hidden" lang="ko">
+              {" "}
+              (새 탭)
+            </span>
+          </a>
+        </p>
+        <p>{colophon.updated}</p>
+      </footer>
     </PortfolioShell>
   );
 }
