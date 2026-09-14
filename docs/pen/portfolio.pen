@@ -46,11 +46,35 @@
               "gap": "$u:space.xl",
               "children": [
                 {
-                  "id": "e9j3Nt",
-                  "type": "ref",
-                  "ref": "u:w2UW1",
-                  "name": "이승주 · Backend Developer",
-                  "width": "fill_container"
+                  "type": "frame",
+                  "id": "v55vX",
+                  "name": "Profile with portrait",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$u:space.lg",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": "$u:radius.hover",
+                      "id": "Jt8Nt",
+                      "name": "사선 프로필 사진 · 160 × 200",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "backup-assets/profile_side_view.jpg",
+                        "mode": "fill"
+                      },
+                      "width": 160,
+                      "height": 200
+                    },
+                    {
+                      "id": "e9j3Nt",
+                      "type": "ref",
+                      "ref": "u:w2UW1",
+                      "name": "이승주 · Backend Developer",
+                      "width": "fill_container"
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
@@ -511,11 +535,51 @@
               "gap": "$u:space.xl",
               "children": [
                 {
-                  "id": "QcDSc",
-                  "type": "ref",
-                  "ref": "u:w2UW1",
-                  "name": "이승주 · Backend Developer",
-                  "width": "fill_container"
+                  "type": "frame",
+                  "id": "l6AoC",
+                  "name": "Profile with compact portrait",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "QcDSc",
+                      "type": "ref",
+                      "ref": "u:w2UW1",
+                      "name": "이승주 · Backend Developer",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:OsyCr": {
+                          "width": 230
+                        },
+                        "u:PM0Qf": {
+                          "width": 230,
+                          "padding": [
+                            "$u:space.sm",
+                            0,
+                            48,
+                            0
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": "$u:radius.hover",
+                      "id": "fvfhM",
+                      "layoutPosition": "absolute",
+                      "x": 246,
+                      "y": 0,
+                      "name": "사선 프로필 사진 · 96 × 120",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "backup-assets/profile_side_view.jpg",
+                        "mode": "fill"
+                      },
+                      "width": 96,
+                      "height": 120
+                    }
+                  ]
                 },
                 {
                   "type": "frame",
@@ -1005,11 +1069,45 @@
               "gap": "$u:space.xl",
               "children": [
                 {
-                  "id": "i9RFNR",
-                  "type": "ref",
-                  "ref": "u:w2UW1",
-                  "name": "이승주 · Backend Developer",
-                  "width": "fill_container"
+                  "type": "frame",
+                  "id": "o976B",
+                  "name": "Profile with compact portrait",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "id": "i9RFNR",
+                      "type": "ref",
+                      "ref": "u:w2UW1",
+                      "name": "이승주 · Backend Developer",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:OsyCr": {
+                          "width": 176
+                        },
+                        "u:PM0Qf": {
+                          "width": 176
+                        }
+                      }
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": "$u:radius.hover",
+                      "id": "UU2wc",
+                      "layoutPosition": "absolute",
+                      "x": 192,
+                      "y": 0,
+                      "name": "사선 프로필 사진 · 80 × 100",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "backup-assets/profile_side_view.jpg",
+                        "mode": "fill"
+                      },
+                      "width": 80,
+                      "height": 100
+                    }
+                  ]
                 },
                 {
                   "type": "frame",

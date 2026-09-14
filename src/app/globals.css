@@ -128,6 +128,17 @@ svg {
   margin-top: 1rem;
   text-wrap: pretty;
 }
+.profile-portrait {
+  display: block;
+  width: 10rem;
+  height: 12.5rem;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+.profile-heading {
+  min-width: 0;
+}
 .section-navigation {
   margin-top: 2.5rem;
 }
@@ -331,6 +342,27 @@ svg {
   .profile-intro {
     max-width: 26rem;
   }
+  .profile-with-portrait {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 6rem;
+    gap: 1rem;
+    align-items: start;
+  }
+  .profile-portrait {
+    grid-column: 2;
+    grid-row: 1;
+    width: 6rem;
+    height: 7.5rem;
+    margin: 0;
+  }
+  .profile-heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .profile-with-portrait .profile-intro {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
   .portfolio-identity {
     min-height: 0;
   }
@@ -370,6 +402,16 @@ svg {
   }
   .entry-date {
     padding-top: 0;
+  }
+}
+
+@media (width < 360px) {
+  .profile-with-portrait {
+    grid-template-columns: minmax(0, 1fr) 5rem;
+  }
+  .profile-portrait {
+    width: 5rem;
+    height: 6.25rem;
   }
 }
 

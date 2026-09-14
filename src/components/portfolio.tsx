@@ -3,6 +3,8 @@ import { CursorGlow } from "@/components/cursor-glow";
 import { PointerInteractions } from "@/components/pointer-interactions";
 import type { ReactNode } from "react";
 import type { ProjectSummary } from "@/content/portfolio";
+import Image from "next/image";
+import profilePortrait from "@/assets/profile-portrait.webp";
 
 type IconName = "arrow" | "external" | "back" | "github" | "print";
 
@@ -72,11 +74,21 @@ export function Profile({
   children: ReactNode;
 }) {
   return (
-    <div className="profile">
-      <h1 className="profile-name">{name}</h1>
-      <p className="profile-role" lang="en">
-        {role}
-      </p>
+    <div className="profile profile-with-portrait">
+      <Image
+        className="profile-portrait"
+        src={profilePortrait}
+        alt={`${name} 프로필 사진`}
+        width={160}
+        height={200}
+        preload
+      />
+      <div className="profile-heading">
+        <h1 className="profile-name">{name}</h1>
+        <p className="profile-role" lang="en">
+          {role}
+        </p>
+      </div>
       <p className="profile-intro">{children}</p>
     </div>
   );
