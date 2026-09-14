@@ -13,6 +13,7 @@ export const detailNavigation: readonly {
 ];
 export type DetailText = { title: string; text: string };
 export type ProjectDetailContent = {
+  repositories: readonly { label: string; href: string }[];
   period: string;
   role: string;
   contribution: string;
@@ -32,6 +33,9 @@ export type ProjectDetailContent = {
 };
 export const projectDetails: Record<string, ProjectDetailContent> = {
   ilog: {
+    repositories: [
+      { label: "GitHub 저장소", href: "https://github.com/ju1115/ilog" },
+    ],
     period: "2025.10 — 2025.11",
     role: "인증·사용자·그룹·API Gateway",
     contribution: "6인 팀 · 네 서비스 단독 설계·구현",
@@ -127,6 +131,16 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     },
   },
   lorekeeper: {
+    repositories: [
+      {
+        label: "백엔드 저장소",
+        href: "https://github.com/soma-lorekeeper/lorekeeper-backend",
+      },
+      {
+        label: "프론트엔드 저장소",
+        href: "https://github.com/soma-lorekeeper/lorekeeper-frontend",
+      },
+    ],
     period: "2026.05 — 진행 중",
     role: "로그인·작품·회차",
     contribution: "로그인 프론트엔드·백엔드 / Work·Episode 백엔드 개발",
@@ -197,6 +211,12 @@ export const projectDetails: Record<string, ProjectDetailContent> = {
     },
   },
   "matching-ssafy": {
+    repositories: [
+      {
+        label: "GitHub 저장소",
+        href: "https://github.com/ju1115/Matching_SSAFY",
+      },
+    ],
     period: "2025.07 — 2025.08",
     role: "팀·실시간 채팅",
     contribution: "6인 팀 · 백엔드 팀·채팅 도메인",

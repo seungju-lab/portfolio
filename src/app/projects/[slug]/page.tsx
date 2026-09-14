@@ -27,6 +27,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
   const project = projects.find((entry) => entry.slug === slug);
   if (!project) notFound();
-  const nextProject = projects[projects.indexOf(project) + 1];
-  return <ProjectDetail project={project} nextProject={nextProject} />;
+  const index = projects.indexOf(project);
+  return (
+    <ProjectDetail
+      project={project}
+      previousProject={projects[index - 1]}
+      nextProject={projects[index + 1]}
+    />
+  );
 }

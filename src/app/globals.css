@@ -419,7 +419,10 @@ svg {
   list-style: none;
 }
 .repository-links > li + li {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+}
+.portfolio-shell-project .repository-links {
+  margin-top: -0.5rem;
 }
 .project-article {
   padding-top: 0;
@@ -602,8 +605,17 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
-  margin-top: 2.5rem;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-rule);
+}
+.case-navigation .text-link {
+  max-width: 100%;
+}
+.case-navigation .text-link > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 @media (width < 64rem) {
   .portfolio-shell-project {
@@ -614,6 +626,12 @@ svg {
   }
   .project-navigation {
     display: none;
+  }
+  .portfolio-shell-project .repository-links {
+    margin-top: -1rem;
+  }
+  .case-navigation {
+    margin-top: 2.5rem;
   }
   .project-article {
     padding-top: 0;

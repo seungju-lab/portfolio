@@ -56,9 +56,11 @@ function DetailList({
 
 export function ProjectDetail({
   project,
+  previousProject,
   nextProject,
 }: {
   project: Project;
+  previousProject?: Pick<Project, "slug" | "title">;
   nextProject?: Pick<Project, "slug" | "title">;
 }) {
   const detail = projectDetails[project.slug];
@@ -99,10 +101,10 @@ export function ProjectDetail({
             </ul>
           </nav>
           <ul className="repository-links">
-            {project.print.repositories.map((repository) => (
+            {detail.repositories.map((repository) => (
               <li key={repository.href}>
                 <TextLink href={repository.href} external icon="github">
-                  {repository.label} 저장소
+                  {repository.label}
                 </TextLink>
               </li>
             ))}
@@ -170,21 +172,15 @@ export function ProjectDetail({
           )}
         </DetailSection>
       </article>
-      <nav className="case-navigation" aria-label="프로젝트 관련 링크">
-        {project.print.repositories.map((repository) => (
-          <TextLink key={repository.href} href={repository.href} external>
-            {project.print.repositories.length === 1
-              ? "코드에서 확인하기"
-              : `${repository.label}에서 코드 확인하기`}
+      <nav className="case-navigation" aria-label="프로젝트 사이 이동">
+        {previousProject && (
+          <TextLink href={`/projects/${previousProject.slug}/`} icon="back">
+            이전 프로젝트 · {previousProject.title}
           </TextLink>
-        ))}
-        {nextProject ? (
+        )}
+        {nextProject && (
           <TextLink href={`/projects/${nextProject.slug}/`}>
             다음 프로젝트 · {nextProject.title}
-          </TextLink>
-        ) : (
-          <TextLink href="/#projects" icon="back">
-            프로젝트 목록으로
           </TextLink>
         )}
       </nav>
