@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "ilog",
+    "width": 1440,
+    "links": 1,
+    "external": 1
+  },
+  {
+    "slug": "lorekeeper",
+    "width": 1440,
+    "links": 2,
+    "external": 2
+  },
+  {
+    "slug": "matching-ssafy",
+    "width": 1440,
+    "links": 1,
+    "external": 1
+  },
+  {
+    "slug": "ilog",
+    "width": 390,
+    "links": 1,
+    "external": 1
+  },
+  {
+    "slug": "lorekeeper",
+    "width": 390,
+    "links": 2,
+    "external": 2
+  },
+  {
+    "slug": "matching-ssafy",
+    "width": 390,
+    "links": 1,
+    "external": 1
+  },
+  {
+    "slug": "ilog",
+    "width": 320,
+    "links": 1,
+    "external": 1
+  },
+  {
+    "slug": "lorekeeper",
+    "width": 320,
+    "links": 2,
+    "external": 2
+  },
+  {
+    "slug": "matching-ssafy",
+    "width": 320,
+    "links": 1,
+    "external": 1
+  },
+  {
+    "input": "mouse",
+    "arrivalFocus": true,
+    "nextTab": true,
+    "historyRestoration": true,
+    "previous": true
+  },
+  {
+    "input": "keyboard",
+    "arrivalFocus": true,
+    "nextTab": true,
+    "historyRestoration": true,
+    "previous": true
+  },
+  {
+    "input": "touch",
+    "arrivalFocus": true,
+    "nextTab": true,
+    "historyRestoration": true,
+    "previous": true
+  }
+]

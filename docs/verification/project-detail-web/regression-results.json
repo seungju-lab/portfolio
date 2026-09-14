@@ -1,0 +1,155 @@
+{
+  "browser": "153.0.8010.12",
+  "results": [
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "ilog",
+      "width": 1024,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1024,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1024,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "ilog",
+      "width": 1023,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1023,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1023,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "ilog",
+      "width": 320,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 320,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 320,
+      "textScale": 2,
+      "diagramFont": 28,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "homeCopy": true,
+      "homeDetailReturn": true,
+      "printParagraphs": 12
+    },
+    {
+      "width": 390,
+      "homeCopy": true,
+      "homeDetailReturn": true,
+      "printParagraphs": 12
+    },
+    {
+      "width": 320,
+      "homeCopy": true,
+      "homeDetailReturn": true,
+      "printParagraphs": 12
+    },
+    {
+      "homeNavigationHistory": true
+    },
+    {
+      "pdfPages": 4,
+      "paper": "A4",
+      "printEvents": ["beforeprint", "afterprint"],
+      "restoredScrollY": 850,
+      "restoredFocus": "print-button"
+    }
+  ],
+  "assetAndPageErrors": [],
+  "printExceptionRetry": true
+}

@@ -1,0 +1,8 @@
+- figure "로그인·작품·회차의 구성":
+    - heading "로그인·작품·회차의 구성" [level=3]
+    - paragraph: 담당 · 청록색 테두리와 역할 레이블
+    - list:
+        - listitem: Next.js 프론트엔드와 Spring Boot 백엔드는 로그인·작품·회차 API로 연결됩니다.
+        - listitem: Spring Boot 백엔드와 PostgreSQL은 사용자·작품·회차 데이터를 주고받습니다.
+        - listitem: Spring Boot 백엔드와 Redis는 OAuth 요청·토큰 데이터를 주고받습니다.
+        - listitem: 프론트엔드는 로그인, 백엔드는 로그인·Work·Episode를 담당했습니다. 백엔드는 현재 계층형 MVP이며 도메인이 독립 서비스인 것은 아닙니다.

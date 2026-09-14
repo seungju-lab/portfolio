@@ -1,0 +1,358 @@
+{
+  "results": [
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "hash": "overview",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "hash": "architecture",
+      "target": "architecture",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "hash": "challenges",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "hash": "results",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "hash": "scope",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "hash": "implementation",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 1440,
+      "hash": "verification",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "hash": "overview",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "hash": "architecture",
+      "target": "architecture",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "hash": "challenges",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "hash": "results",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "hash": "scope",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "hash": "implementation",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 1440,
+      "hash": "verification",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "hash": "overview",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "hash": "architecture",
+      "target": "architecture",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "hash": "challenges",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "hash": "results",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "hash": "scope",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "hash": "implementation",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 1440,
+      "hash": "verification",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "hash": "overview",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "hash": "architecture",
+      "target": "architecture",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "hash": "challenges",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "hash": "results",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "hash": "scope",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "hash": "implementation",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "ilog",
+      "width": 390,
+      "hash": "verification",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "hash": "overview",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "hash": "architecture",
+      "target": "architecture",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "hash": "challenges",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "hash": "results",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "hash": "scope",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "hash": "implementation",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "lorekeeper",
+      "width": 390,
+      "hash": "verification",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "hash": "overview",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "hash": "architecture",
+      "target": "architecture",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "hash": "challenges",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "hash": "results",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "hash": "scope",
+      "target": "overview",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "hash": "implementation",
+      "target": "challenges",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "slug": "matching-ssafy",
+      "width": 390,
+      "hash": "verification",
+      "target": "results",
+      "direct": true,
+      "reload": true
+    },
+    {
+      "desktop": true,
+      "click": true,
+      "keyboard": true,
+      "backForward": true,
+      "rapidNavigation": true,
+      "wheelInterruption": true,
+      "reducedMotion": true,
+      "legacySameDocument": true,
+      "pageExitAndHome": true
+    },
+    {
+      "mobile": true,
+      "directAnchor": true,
+      "hiddenNavExcludedFromTab": true,
+      "touchPageExit": true
+    }
+  ],
+  "assetAndPageErrors": []
+}

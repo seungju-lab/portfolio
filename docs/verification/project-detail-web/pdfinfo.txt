@@ -1,0 +1,19 @@
+Title:           전체 열람 · PDF | 이승주
+Creator:         Chromium
+Producer:        Skia/PDF m153
+CreationDate:    Mon Sep 14 14:16:12 2026 UTC
+ModDate:         Mon Sep 14 14:16:12 2026 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           4
+Encrypted:       no
+Page size:       594.96 x 841.92 pts (A4)
+Page rot:        0
+File size:       639360 bytes
+Optimized:       no
+PDF version:     1.4

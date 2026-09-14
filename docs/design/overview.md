@@ -24,7 +24,7 @@ Java 백엔드 개발자를 검토하는 채용 담당자와 기술 면접관이
 
 ## 기준 자료
 
-- Git 프로젝트의 [README](../../README.md)와 [초기 홈](../../src/app/page.tsx): 웹·PDF 목적, 이름, 직무. 초기 코드에는 상세 프로젝트 콘텐츠가 없다.
+- Git 프로젝트의 [README](../../README.md)와 [초기 홈](../../src/app/page.tsx): 웹·PDF 목적, 이름, 직무. 최초 설계 당시의 입력이다. 현재 코드는 상세 프로젝트 화면까지 포함한다.
 - [지원자 정보](../../../../knowledge-wiki/docs/자소서/지원자-정보.md), [ILOG](../../../../knowledge-wiki/docs/자소서/ilog.md), [Lorekeeper](../../../../knowledge-wiki/docs/자소서/lorekeeper.md), [Matching SSAFY](../../../../knowledge-wiki/docs/자소서/matching-ssafy.md).
 - [문제 해결 자소서](../../../../knowledge-wiki/docs/자소서/넥슨컴퍼니/프로젝트와-문제-해결.md), [협업 회고](../../../../knowledge-wiki/docs/자소서/넥슨컴퍼니/협업과-피드백.md), [Agent Hub](../../../../knowledge-wiki/docs/자소서/agent-hub.md).
 
@@ -58,4 +58,4 @@ Java 백엔드 개발자를 검토하는 채용 담당자와 기술 면접관이
 
 ## 반응 명세 검토 이력
 
-조명, 행 강조, 링크·목차, 스크롤 탐색, 상세 이동, 인쇄에 대해 시작·해제·반복·입력 대안과 수용 기준을 문서에 반영했다. 레퍼런스 브라우저 조사와 문서 간 상태 전이 검토를 완료했다. 위 반응 조사 당시의 문서 검토 기록이다. 이후 웹·PDF 구현 검증은 [2026-09-09 보고서](../verification/portfolio-web.md)에 기록되어 있다. 새 상세의 정적 렌더 검증은 [2026-09-14 보고서](../verification/project-detail-pencil.md)에 기록했으며, 새 상세의 웹 동작 구현·검증은 별도 작업이다.
+조명, 행 강조, 링크·목차, 스크롤 탐색, 상세 이동, 인쇄에 대해 시작·해제·반복·입력 대안과 수용 기준을 문서에 반영했다. 레퍼런스 브라우저 조사와 문서 간 상태 전이 검토를 완료했다. 위 반응 조사 당시의 문서 검토 기록이다. 이후 웹·PDF 구현 검증은 [2026-09-09 보고서](../verification/portfolio-web.md)에 기록되어 있다. 새 상세의 정적 렌더 검증은 [2026-09-14 보고서](../verification/project-detail-pencil.md)에 기록했으며, 새 상세의 웹 동작 구현·검증은 후속 Deliverable #34의 [웹 구현 기록](../verification/project-detail-web.md)에 있다.

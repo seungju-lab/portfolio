@@ -19,27 +19,49 @@ const browser = await chromium.launch();
 const failures = [],
   results = [];
 async function landing(page, id) {
-  await page.waitForFunction(
-    (id) => {
-      const heading = document.getElementById(id + "-heading");
-      if (!heading) return false;
-      const offset = innerWidth >= 1024 ? 96 : 80;
-      const expected = Math.min(
-        document.documentElement.scrollHeight - innerHeight,
-        Math.max(0, heading.getBoundingClientRect().top + scrollY - offset),
+  await page
+    .waitForFunction(
+      (id) => {
+        const heading = document.getElementById(id + "-heading");
+        if (!heading) return false;
+        const offset = innerWidth >= 1024 ? 96 : 80;
+        const expected = Math.min(
+          document.documentElement.scrollHeight - innerHeight,
+          Math.max(0, heading.getBoundingClientRect().top + scrollY - offset),
+        );
+        return (
+          document.activeElement === heading &&
+          Math.abs(scrollY - expected) < 2 &&
+          document
+            .querySelector('.project-navigation [aria-current="location"]')
+            ?.getAttribute("href") ===
+            "#" + id
+        );
+      },
+      id,
+      { timeout: 8000 },
+    )
+    .catch(async (error) => {
+      console.error(
+        "Anchor landing failed",
+        page.url(),
+        await page.evaluate(
+          (id) => ({
+            focus: document.activeElement?.id,
+            y: scrollY,
+            headingTop: document
+              .getElementById(id + "-heading")
+              ?.getBoundingClientRect().top,
+            current: document
+              .querySelector(".project-navigation [aria-current]")
+              ?.getAttribute("href"),
+            height: document.documentElement.scrollHeight,
+          }),
+          id,
+        ),
       );
-      return (
-        document.activeElement === heading &&
-        Math.abs(scrollY - expected) < 2 &&
-        document
-          .querySelector('.project-navigation [aria-current="location"]')
-          ?.getAttribute("href") ===
-          "#" + id
-      );
-    },
-    id,
-    { timeout: 8000 },
-  );
+      throw error;
+    });
   assert.equal(new URL(page.url()).hash, "#" + id);
   assert.equal(
     await page
@@ -49,7 +71,7 @@ async function landing(page, id) {
   );
 }
 try {
-  const page = await browser.newPage();
+  let page = await browser.newPage();
   page.on("pageerror", (e) => failures.push(e.message));
   page.on("response", (r) => {
     if (
@@ -83,6 +105,11 @@ try {
       console.log(`Direct/reload anchors passed: ${slug} ${width}px`);
     }
   }
+  // Use a fresh history for interactions: Chromium caps a document's history
+  // list at 50 entries after the direct/reload matrix above.
+  await page.close();
+  page = await browser.newPage();
+  page.on("pageerror", (e) => failures.push(e.message));
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(base + "/projects/ilog/", { waitUntil: "networkidle" });
   const nav = (id) => page.locator(`.project-navigation a[href="#${id}"]`);

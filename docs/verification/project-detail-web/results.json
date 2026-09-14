@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-14",
+  "codeBaseCommit": "d01ef10ad65f7c28ad3c230b1cc23b44bd21c303",
+  "completionIssue": "https://github.com/seungju-lab/portfolio/issues/42",
+  "sourceSHA256": {
+    "src/content/portfolio.ts": "a6da134234f0ed81baf7545147b0f38c1d66e32433dc7cd5bca317c9129e0a02",
+    "src/content/project-details.ts": "57caffb3c68a81066e264a48064ce9b9722d02ab20c4315e1717a03b75207245",
+    "src/components/project-detail.tsx": "2ab43f9ac10d29cffd9774d95eb8a4f5d18ea1cae7abe6bae273846907f9ba39",
+    "src/components/system-diagram.tsx": "090433933fa4ee2b59f2fbe1cc743a07ae036191ce1288395d48a8fd3087f530",
+    "src/components/section-navigation.tsx": "79786dad8b61c7c74176f4481985c7186933f505506ea987b8f68dbf6b12b102",
+    "src/components/project-arrival-focus.tsx": "03e1054a92fa7885935b0283f0e0f446213677c356fb1c11fa164ea0b656f1cb",
+    "src/app/globals.css": "e32e78a98bd68b6611ea154c02aeceffa2105ea4e34276f744c6e40b7f4c24d1",
+    "src/app/print/page.tsx": "53f78c82b5981cf5a6f125133d86ca7bdff8cf85cb403f88a7482f09d97f6144",
+    "src/components/print-toolbar.tsx": "48e2c5accaa56efae1435aa6ccafb780e7c6cebabdc142c77acc4882bf0a5f66",
+    "scripts/check-project-detail-layout.mjs": "38f1f10d77d1f3fbbf46e49c865f71448e7dd8670868780e94faaea2ee5b14a7",
+    "scripts/check-project-links.mjs": "1ff3ba4c2cd583a37932a020028656462617cf0a4ba629658cc77430ced3516a",
+    "scripts/check-project-anchors.mjs": "7ebc021ea86ca59b0fefc3bc4f709ef95f725994c594c7118e33102640ede220",
+    "scripts/check-project-regression.mjs": "438510d55f6fa879cd20515dad531724c62bad49a923a63855660f3c734966a3"
+  },
+  "pdfSHA256": "0cea8e66411187d0e58dd72d1b2126d5f7d62718be21be7072465de8350f826d",
+  "environment": {
+    "node": "24.18.1",
+    "pnpm": "11.18.0",
+    "chromium": "153.0.8010.12",
+    "server": "Python HTTP, production out/, container loopback:3002"
+  },
+  "preservation": {
+    "homePrintDataDeepComparison": true,
+    "approvedDetailCopyComparison": true,
+    "baselineCommit": "82feaad5c86743e211f198e00a94941fa09859df"
+  },
+  "evidence": [
+    "layout-results.json",
+    "links-results.json",
+    "anchors-results.json",
+    "regression-results.json",
+    "pdf-bounds.json"
+  ],
+  "deploymentVerified": false
+}

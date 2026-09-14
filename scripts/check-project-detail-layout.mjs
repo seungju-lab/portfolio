@@ -5,11 +5,20 @@ import fs from "node:fs";
 import assert from "node:assert/strict";
 const dir = process.env.EVIDENCE_DIR ?? "/tmp/portfolio-detail-layout";
 fs.mkdirSync(dir, { recursive: true });
-const baseURL = process.env.BASE_URL ?? "http://127.0.0.1:3001";
+const baseURL = process.env.BASE_URL ?? "http://localhost:3001";
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
+page.on("response", (response) => {
+  if (
+    response.status() >= 400 &&
+    ["document", "script", "stylesheet", "font"].includes(
+      response.request().resourceType(),
+    )
+  )
+    errors.push(`${response.status()} ${response.url()}`);
+});
 const results = [];
 for (const width of [1440, 1024, 1023, 390, 320]) {
   await page.setViewportSize({ width, height: 1000 });

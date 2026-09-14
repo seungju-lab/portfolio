@@ -326,22 +326,32 @@ export function SectionNavigation() {
     update();
     const navigation = performance.getEntriesByType("navigation")[0] as
       PerformanceNavigationTiming | undefined;
-    void document.fonts.ready.then(() => {
-      if (
-        disposed ||
-        !available ||
-        interacted ||
-        (navigation?.type !== "navigate" &&
-          !(isProject && navigation?.type === "reload"))
-      )
-        return;
-      const section = hashSection();
-      if (section) {
-        normalizeHash(section);
-        window.scrollTo({ top: destination(section), behavior: "instant" });
-        if (isProject) section.heading.focus({ preventScroll: true });
-      }
-      schedule();
+    // Initial fragment navigation can reset focus after hydration. Wait for
+    // document loading and native fragment handling before focusing the title.
+    const loaded =
+      document.readyState === "complete"
+        ? Promise.resolve()
+        : new Promise<void>((resolve) =>
+            window.addEventListener("load", () => resolve(), { once: true }),
+          );
+    void Promise.all([document.fonts.ready, loaded]).then(() => {
+      requestAnimationFrame(() => {
+        if (
+          disposed ||
+          !available ||
+          interacted ||
+          (navigation?.type !== "navigate" &&
+            !(isProject && navigation?.type === "reload"))
+        )
+          return;
+        const section = hashSection();
+        if (section) {
+          normalizeHash(section);
+          window.scrollTo({ top: destination(section), behavior: "instant" });
+          if (isProject) section.heading.focus({ preventScroll: true });
+        }
+        schedule();
+      });
     });
     return () => {
       disposed = true;

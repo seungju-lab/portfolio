@@ -64,3 +64,5 @@ PLAYWRIGHT_MODULE=/tmp/portfolio-browser/node_modules/playwright/index.mjs \
 전체 시나리오는 Work #38 범위다. 이 캡처에는 기존 하단 링크가 남아 있다.
 PDF 네 장의 실제 출력·읽기 상태 복원, 200% 확대, 전체 탐색 회귀와 구현 상태 문서 갱신은
 Work #41에서 최종 확인한다. 이 기록은 배포 또는 딜리버러블 전체 완료의 근거가 아니다.
+
+Work #38·#41의 후속 결과는 [최종 웹 검증 기록](project-detail-web.md)에 있다. 위 캡처와 결과는 Work #35 시점의 근거로 유지한다.
