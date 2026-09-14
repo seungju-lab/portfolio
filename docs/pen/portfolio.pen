@@ -1458,7 +1458,7 @@
       "type": "frame",
       "id": "DYzMp",
       "x": 0,
-      "y": 9583,
+      "y": 2600,
       "name": "ILOG · 1440",
       "context": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: ilog/1440",
       "theme": {
@@ -3088,8 +3088,8 @@
     {
       "type": "frame",
       "id": "G6zZve",
-      "x": 0,
-      "y": 13481,
+      "x": 1600,
+      "y": 2600,
       "name": "ILOG · 390",
       "context": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: ilog/390",
       "theme": {
@@ -4646,7 +4646,7 @@
       "type": "frame",
       "id": "xfTNq",
       "x": 0,
-      "y": 18635,
+      "y": 7754,
       "name": "Lorekeeper · 1440",
       "context": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: lorekeeper/1440",
       "theme": {
@@ -5989,9 +5989,9 @@
       "type": "frame",
       "id": "w71qL",
       "x": 1600,
-      "y": 5400,
+      "y": 7754,
       "name": "Lorekeeper · 390",
-      "context": "Current design source: ../design/pages/project-detail.md; SHA256: 45c64498604098e1cd6bbc9c015a20db52299b0cc3972d3f593a2817789de0ad; viewKey: lorekeeper/390. This context records the current source revision; metadata.sourceRevision records the creation revision.",
+      "context": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: lorekeeper/390",
       "theme": {
         "u:presentation": "mobile"
       },
@@ -6002,55 +6002,54 @@
         "viewKey": "lorekeeper/390",
         "reference": "https://brittanychiang.com/"
       },
-      "clip": true,
       "width": 390,
       "fill": "$u:color.canvas",
       "layout": "vertical",
-      "gap": "$u:space.section",
+      "gap": 64,
       "padding": [
-        40,
-        24,
         48,
         24
       ],
       "children": [
         {
           "type": "frame",
-          "id": "q2kHl",
+          "id": "rODoZ",
           "name": "Project identity",
           "width": "fill_container",
-          "fill": "$u:color.canvas",
           "layout": "vertical",
-          "gap": "$u:space.xl",
+          "gap": "$u:space.lg",
           "children": [
             {
-              "id": "pBMQd",
+              "id": "vvYSx",
               "type": "ref",
               "ref": "u:sHYjZ",
               "name": "포트폴리오로",
+              "width": "fill_container",
               "height": 44,
+              "context": "Link target: /#projects; same tab; minimum target height 44px",
               "descendants": {
                 "u:ain5n": {
                   "icon": "arrow-left"
                 },
                 "u:A8C0m": {
-                  "content": "포트폴리오로"
+                  "content": "포트폴리오로",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container"
                 }
               }
             },
             {
               "type": "frame",
-              "id": "PT5QO",
-              "name": "Project overview",
+              "id": "T427X",
+              "name": "Project introduction",
               "width": "fill_container",
-              "fill": "$u:color.canvas",
               "layout": "vertical",
               "gap": "$u:space.md",
               "children": [
                 {
                   "type": "text",
-                  "id": "d9VEhe",
-                  "name": "Project name",
+                  "id": "kI3Gk",
+                  "name": "Project title",
                   "fill": "$u:color.text",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
@@ -6062,38 +6061,38 @@
                 },
                 {
                   "type": "text",
-                  "id": "rEFpb",
+                  "id": "x59qS",
                   "name": "Period",
                   "fill": "$u:color.muted",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
                   "content": "2026.05 — 진행 중",
                   "lineHeight": "$u:line.body",
-                  "fontFamily": "$u:font.latin",
+                  "fontFamily": "$u:font.family",
                   "fontSize": "$u:type.meta",
                   "fontWeight": "$u:weight.body"
                 },
                 {
                   "type": "text",
-                  "id": "w3zVVI",
+                  "id": "lbPCH",
                   "name": "Role",
                   "fill": "$u:color.text",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
                   "content": "로그인·작품·회차",
-                  "lineHeight": "$u:line.body",
+                  "lineHeight": "$u:line.heading",
                   "fontFamily": "$u:font.family",
                   "fontSize": "$u:type.role",
                   "fontWeight": "$u:weight.medium"
                 },
                 {
                   "type": "text",
-                  "id": "nneIm",
-                  "name": "Team and contribution",
+                  "id": "W4Ag3",
+                  "name": "Contribution summary",
                   "fill": "$u:color.body",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
-                  "content": "로그인 프론트엔드·백엔드\nWork·Episode 백엔드 개발",
+                  "content": "로그인 프론트엔드·백엔드 /\nWork·Episode 백엔드 개발",
                   "lineHeight": "$u:line.body",
                   "fontFamily": "$u:font.family",
                   "fontSize": "$u:type.summary",
@@ -6102,143 +6101,1162 @@
               ]
             },
             {
-              "id": "lhneW",
-              "type": "ref",
-              "ref": "u:sHYjZ",
-              "name": "GitHub 저장소",
-              "height": 44,
-              "descendants": {
-                "u:ain5n": {
-                  "icon": "github"
+              "type": "frame",
+              "id": "UdZPK",
+              "name": "External links",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": "$u:space.sm",
+              "children": [
+                {
+                  "id": "A81XvT",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "백엔드 저장소",
+                  "width": "fill_container",
+                  "height": 44,
+                  "context": "Link target: https://github.com/soma-lorekeeper/lorekeeper-backend; new tab; accessible name includes 새 탭; minimum target height 44px",
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "github"
+                    },
+                    "u:A8C0m": {
+                      "content": "백엔드 저장소",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container"
+                    }
+                  }
                 },
-                "u:A8C0m": {
-                  "content": "GitHub 저장소"
+                {
+                  "id": "oTb78",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "프론트엔드 저장소",
+                  "width": "fill_container",
+                  "height": 44,
+                  "context": "Link target: https://github.com/soma-lorekeeper/lorekeeper-frontend; new tab; accessible name includes 새 탭; minimum target height 44px",
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "github"
+                    },
+                    "u:A8C0m": {
+                      "content": "프론트엔드 저장소",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container"
+                    }
+                  }
                 }
-              }
+              ]
             }
           ]
         },
         {
           "type": "frame",
-          "id": "ZI0dq",
+          "id": "I8fLC",
           "name": "Case study",
           "width": "fill_container",
-          "fill": "$u:color.canvas",
           "layout": "vertical",
-          "gap": "$u:space.xl",
+          "gap": "$u:space.section",
           "children": [
             {
-              "id": "ngppN",
+              "id": "PgvCV",
               "type": "ref",
-              "ref": "u:h0MPp8",
-              "name": "서비스와 담당 범위",
+              "ref": "u:A3IEM7",
+              "name": "프로젝트 개요",
               "width": "fill_container",
+              "context": "Section anchor: #overview",
               "descendants": {
-                "u:uXXMm": {
-                  "content": "서비스와 담당 범위"
+                "u:dBPnC": {
+                  "enabled": false
                 },
-                "u:h4R2zW": {
-                  "content": "장편 창작자가 작품별 회차와 세계관을 관리하고 설정 오류 탐지 결과를 확인하는 서비스입니다. 저는 로그인 프론트엔드·백엔드와 작품·회차 API를 개발하고 있습니다. AI 설정 오류 탐지 엔진은 제 담당 범위에 포함하지 않습니다."
+                "u:sWjlr": {
+                  "content": "프로젝트 개요"
+                },
+                "u:RA8nk": {
+                  "type": "frame",
+                  "id": "Z6CHVy",
+                  "name": "Section content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$u:space.lg",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CowRS",
+                      "name": "Introduction",
+                      "fill": "$u:color.body",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "장편 창작자가 작품별 회차와 세계관을 관리하고 설정 오류 탐지 결과를 확인하는 서비스입니다. 로그인 프론트엔드·백엔드와 작품·회차 API를 개발하고 있습니다. AI 설정 오류 탐지 엔진은 제 담당 범위에 포함하지 않습니다.",
+                      "lineHeight": "$u:line.body",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.body",
+                      "fontWeight": "$u:weight.body"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Y4QdU1",
+                      "name": "주요 기능",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$u:space.md",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GJrVG",
+                          "name": "Group heading",
+                          "fill": "$u:color.text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "주요 기능",
+                          "lineHeight": "$u:line.heading",
+                          "fontFamily": "$u:font.family",
+                          "fontSize": "$u:type.item",
+                          "fontWeight": "$u:weight.label"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "mU1if",
+                          "name": "List",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.sm",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "MLnTi",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "XlzxW",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "jnYJp",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "작품과 회차 원고 관리",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "LzGiW",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "SVXHG",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "zLHRL",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "세계관과 설정 오류 탐지 결과 확인",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "x1cyy",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "B8zvY",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "A5iii1",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Google 로그인",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PpsH3",
+                      "name": "담당 범위",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$u:space.md",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WzAAA",
+                          "name": "Group heading",
+                          "fill": "$u:color.text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "담당 범위",
+                          "lineHeight": "$u:line.heading",
+                          "fontFamily": "$u:font.family",
+                          "fontSize": "$u:type.item",
+                          "fontWeight": "$u:weight.label"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "a0UvL",
+                          "name": "List",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.sm",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "sFqoc",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "aL7Bm",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "hk7mR",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "로그인 화면과 반환 처리, 보호된 화면 접근 제어",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lbcAY",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "t0axU2",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "YpDlr",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "토큰 발급·재발급, 쿠키 인증과 CSRF 처리",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "DvX4h",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "zxWsb",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "JdIoI",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "작품 생성·조회·제목 수정과 사용자별 접근 처리",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Y56Gdh",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "r5tfz",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "h7ddb6",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "회차 상태·원고 관리,\n다운로드와 여러 회차 업로드",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HD5jM",
+                      "name": "Technologies",
+                      "width": "fill_container",
+                      "gap": "$u:space.sm",
+                      "children": [
+                        {
+                          "id": "hPPPL",
+                          "type": "ref",
+                          "ref": "u:XkAXW",
+                          "name": "Spring Boot",
+                          "descendants": {
+                            "u:E2lqSi": {
+                              "content": "Spring Boot"
+                            }
+                          }
+                        },
+                        {
+                          "id": "XOBzl",
+                          "type": "ref",
+                          "ref": "u:XkAXW",
+                          "name": "OAuth2",
+                          "descendants": {
+                            "u:E2lqSi": {
+                              "content": "OAuth2"
+                            }
+                          }
+                        },
+                        {
+                          "id": "C6XNZR",
+                          "type": "ref",
+                          "ref": "u:XkAXW",
+                          "name": "JPA",
+                          "descendants": {
+                            "u:E2lqSi": {
+                              "content": "JPA"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             },
             {
-              "id": "vum3U",
+              "id": "z4GRCr",
               "type": "ref",
-              "ref": "u:h0MPp8",
-              "name": "브라우저와 서버의 로그인 상태 연결",
+              "ref": "u:A3IEM7",
+              "name": "아키텍처",
               "width": "fill_container",
+              "context": "Section anchor: #architecture",
               "descendants": {
-                "u:uXXMm": {
-                  "content": "브라우저와 서버의 로그인 상태 연결"
+                "u:dBPnC": {
+                  "enabled": true
                 },
-                "u:h4R2zW": {
-                  "content": "Google OAuth 로그인 화면과 반환 처리, 보호된 화면 접근 제어를 구현했습니다. 서버에서는 JWT 발급·재발급, Redis 기반 OAuth 요청과 리프레시 토큰 관리, 쿠키 인증과 CSRF 처리를 맡았습니다. 로그아웃 이후 브라우저 상태와 현재 사용자 정보도 함께 동기화했습니다."
+                "u:sWjlr": {
+                  "content": "아키텍처"
+                },
+                "u:RA8nk": {
+                  "type": "frame",
+                  "id": "IscDg",
+                  "name": "Section content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$u:space.lg",
+                  "children": [
+                    {
+                      "id": "le5pd",
+                      "type": "ref",
+                      "ref": "u:ypTAB",
+                      "name": "System diagram",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:BQ7Vc": {
+                          "content": "로그인·작품·회차의 구성"
+                        },
+                        "u:cvuFL": {
+                          "type": "frame",
+                          "id": "QphxU",
+                          "name": "Architecture flow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.md",
+                          "children": [
+                            {
+                              "id": "V4UrSw",
+                              "type": "ref",
+                              "ref": "u:mejVU",
+                              "name": "Next.js 프론트엔드",
+                              "width": "fill_container",
+                              "stroke": "$u:color.accent",
+                              "descendants": {
+                                "u:yhHYC": {
+                                  "content": "Next.js 프론트엔드"
+                                },
+                                "u:fQ45e": {
+                                  "content": "로그인 담당",
+                                  "enabled": true,
+                                  "fill": "$u:color.accent"
+                                }
+                              }
+                            },
+                            {
+                              "type": "frame",
+                              "id": "uNwNd",
+                              "name": "로그인·작품·회차 API",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "AVTeF",
+                                  "name": "Connection label",
+                                  "fill": "$u:color.muted",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "로그인·작품·회차 API",
+                                  "lineHeight": "$u:line.meta",
+                                  "textAlign": "center",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.body"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "k6nE8",
+                                  "name": "Bidirectional connection",
+                                  "width": 16,
+                                  "height": 24,
+                                  "icon": "arrow-down-up",
+                                  "library": "lucide",
+                                  "fill": "$u:color.rule"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "sa7hI",
+                              "type": "ref",
+                              "ref": "u:mejVU",
+                              "name": "Spring Boot 백엔드",
+                              "width": "fill_container",
+                              "stroke": "$u:color.accent",
+                              "descendants": {
+                                "u:yhHYC": {
+                                  "content": "Spring Boot 백엔드"
+                                },
+                                "u:fQ45e": {
+                                  "content": "로그인·Work·Episode 담당",
+                                  "enabled": true,
+                                  "fill": "$u:color.accent"
+                                }
+                              }
+                            },
+                            {
+                              "type": "frame",
+                              "id": "LAXkk",
+                              "name": "Storage connections",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.md",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "pI50e",
+                                  "name": "PostgreSQL connection",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": "$u:space.md",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "syuwW",
+                                      "name": "Backend ↔ PostgreSQL\n사용자·작품·회차 데이터",
+                                      "width": "fill_container",
+                                      "layout": "vertical",
+                                      "gap": "$u:space.sm",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "fspQw",
+                                          "name": "Connection label",
+                                          "fill": "$u:color.muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": "fill_container",
+                                          "content": "Backend ↔ PostgreSQL\n사용자·작품·회차 데이터",
+                                          "lineHeight": "$u:line.meta",
+                                          "textAlign": "center",
+                                          "fontFamily": "$u:font.family",
+                                          "fontSize": "$u:type.meta",
+                                          "fontWeight": "$u:weight.body"
+                                        },
+                                        {
+                                          "type": "icon",
+                                          "id": "k0a3wK",
+                                          "name": "Bidirectional connection",
+                                          "width": 16,
+                                          "height": 24,
+                                          "icon": "arrow-down-up",
+                                          "library": "lucide",
+                                          "fill": "$u:color.rule"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "jXw6K",
+                                      "type": "ref",
+                                      "ref": "u:mejVU",
+                                      "name": "PostgreSQL",
+                                      "width": "fill_container",
+                                      "stroke": "$u:color.rule",
+                                      "descendants": {
+                                        "u:yhHYC": {
+                                          "content": "PostgreSQL"
+                                        },
+                                        "u:fQ45e": {
+                                          "content": "",
+                                          "enabled": false,
+                                          "fill": "$u:color.muted"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "DM6Z6",
+                                  "name": "Redis connection",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": "$u:space.md",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "I1OUKn",
+                                      "name": "Backend ↔ Redis\nOAuth 요청·토큰 데이터",
+                                      "width": "fill_container",
+                                      "layout": "vertical",
+                                      "gap": "$u:space.sm",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "rXmP5",
+                                          "name": "Connection label",
+                                          "fill": "$u:color.muted",
+                                          "textGrowth": "fixed-width",
+                                          "width": "fill_container",
+                                          "content": "Backend ↔ Redis\nOAuth 요청·토큰 데이터",
+                                          "lineHeight": "$u:line.meta",
+                                          "textAlign": "center",
+                                          "fontFamily": "$u:font.family",
+                                          "fontSize": "$u:type.meta",
+                                          "fontWeight": "$u:weight.body"
+                                        },
+                                        {
+                                          "type": "icon",
+                                          "id": "jOzrQ",
+                                          "name": "Bidirectional connection",
+                                          "width": 16,
+                                          "height": 24,
+                                          "icon": "arrow-down-up",
+                                          "library": "lucide",
+                                          "fill": "$u:color.rule"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "qAnGp",
+                                      "type": "ref",
+                                      "ref": "u:mejVU",
+                                      "name": "Redis",
+                                      "width": "fill_container",
+                                      "stroke": "$u:color.rule",
+                                      "descendants": {
+                                        "u:yhHYC": {
+                                          "content": "Redis"
+                                        },
+                                        "u:fQ45e": {
+                                          "content": "",
+                                          "enabled": false,
+                                          "fill": "$u:color.muted"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "nTNPD",
+                      "name": "Architecture explanation",
+                      "fill": "$u:color.body",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Next.js 프론트엔드와 Spring Boot API 서버를 연결합니다. PostgreSQL은 사용자·작품·회차 데이터를 저장하고, Redis는 OAuth 요청과 인증 토큰 데이터를 관리합니다.",
+                      "lineHeight": "$u:line.body",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.body",
+                      "fontWeight": "$u:weight.body"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IZDFg",
+                      "name": "Architecture explanation",
+                      "fill": "$u:color.body",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "현재 계층형 구조로 MVP를 먼저 구현하고 있습니다. 서비스 분리는 이후 계획이며, 지금 여러 도메인을 독립 서비스로 분리한 상태는 아닙니다.",
+                      "lineHeight": "$u:line.body",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.body",
+                      "fontWeight": "$u:weight.body"
+                    }
+                  ]
                 }
               }
             },
             {
-              "id": "T7fq8",
+              "id": "xVMWK",
               "type": "ref",
-              "ref": "u:h0MPp8",
-              "name": "작품과 회차를 다루는 API",
+              "ref": "u:A3IEM7",
+              "name": "문제 해결",
               "width": "fill_container",
+              "context": "Section anchor: #challenges",
               "descendants": {
-                "u:uXXMm": {
-                  "content": "작품과 회차를 다루는 API"
+                "u:dBPnC": {
+                  "enabled": true
                 },
-                "u:h4R2zW": {
-                  "content": "Work에서는 작품 생성·조회·제목 수정과 사용자별 접근 처리를 구현했습니다. Episode에서는 회차 상태, 원고 수정·조회, UTF-8 다운로드와 여러 회차 업로드의 입력 검증·일괄 처리를 구현했습니다."
-                }
-              }
-            },
-            {
-              "id": "TizOj",
-              "type": "ref",
-              "ref": "u:h0MPp8",
-              "name": "진행 상황과 테스트",
-              "width": "fill_container",
-              "descendants": {
-                "u:uXXMm": {
-                  "content": "진행 상황과 테스트"
+                "u:sWjlr": {
+                  "content": "문제 해결"
                 },
-                "u:h4R2zW": {
-                  "content": "현재 개발을 진행하고 있으며, Work·Episode 도메인 테스트를 작성했습니다. 작품 접근과 회차 처리 규칙을 API 구현과 함께 다루고 있습니다."
+                "u:RA8nk": {
+                  "type": "frame",
+                  "id": "ujiiC",
+                  "name": "Section content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$u:space.case",
+                  "children": [
+                    {
+                      "id": "p0OZPb",
+                      "type": "ref",
+                      "ref": "u:xIrsq",
+                      "name": "브라우저와 서버의 로그인 상태 맞추기",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:jZZKJ": {
+                          "content": "브라우저와 서버의 로그인 상태 맞추기"
+                        },
+                        "u:IUxwP": {
+                          "type": "frame",
+                          "id": "cjlfH",
+                          "name": "Case explanation",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.lg",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "zdBIn",
+                              "name": "구현 과제",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "qNwXu",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "구현 과제",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "UDYBj",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "로그인 반환 처리부터 보호된 화면 접근과 로그아웃까지, 브라우저 상태와 서버의 인증 처리를 함께 연결해야 했습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "CeRXH",
+                              "name": "구현",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "P0Uj0",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "구현",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "lTzt0",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "프론트엔드에서는 Google OAuth 로그인 화면과 반환 처리, 보호된 화면 접근 제어를 구현했습니다. 서버에서는 JWT 발급·재발급, Redis 기반 OAuth 요청과 리프레시 토큰 관리, 쿠키 인증과 CSRF 처리를 맡았습니다. 로그아웃 이후 브라우저 상태와 현재 사용자 정보도 함께 동기화했습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "K8rYhd",
+                      "name": "Case divider",
+                      "fill": "$u:color.rule",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "id": "NplOO",
+                      "type": "ref",
+                      "ref": "u:xIrsq",
+                      "name": "작품 접근과 여러 회차 원고 처리",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:jZZKJ": {
+                          "content": "작품 접근과 여러 회차 원고 처리"
+                        },
+                        "u:IUxwP": {
+                          "type": "frame",
+                          "id": "dKHGj",
+                          "name": "Case explanation",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.lg",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "TR41o",
+                              "name": "구현 과제",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "vnAql",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "구현 과제",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "srC3l",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "작품별 접근을 처리하고, 여러 회차의 원고 입력을 검증해 일괄 처리하는 기능이 필요했습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "iuhEV",
+                              "name": "구현",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "cnAvH",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "구현",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "D8rGXj",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Work에서 작품 생성·조회·제목 수정과 사용자별 접근 처리를 구현했습니다. Episode에서는 회차 상태, 원고 수정·조회, UTF-8 다운로드와 여러 회차 업로드의 입력 검증·일괄 처리를 구현했습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             },
             {
               "type": "frame",
-              "id": "p6PaE",
-              "name": "Case navigation",
+              "id": "cwbMV",
+              "name": "Results and navigation",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": "$u:space.md",
+              "gap": 40,
               "children": [
                 {
-                  "id": "Jx7N4",
+                  "id": "Fc5LF",
                   "type": "ref",
-                  "ref": "u:sHYjZ",
-                  "name": "코드에서 확인하기",
-                  "height": 44,
+                  "ref": "u:A3IEM7",
+                  "name": "결과",
+                  "width": "fill_container",
+                  "context": "Section anchor: #results",
                   "descendants": {
-                    "u:ain5n": {
-                      "icon": "arrow-up-right"
+                    "u:dBPnC": {
+                      "enabled": true
                     },
-                    "u:A8C0m": {
-                      "content": "코드에서 확인하기"
+                    "u:sWjlr": {
+                      "content": "결과"
+                    },
+                    "u:RA8nk": {
+                      "type": "frame",
+                      "id": "wCbek",
+                      "name": "Section content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$u:space.lg",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "sAoPL",
+                          "name": "Outcomes",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.md",
+                          "children": [
+                            {
+                              "id": "dMPZw",
+                              "type": "ref",
+                              "ref": "u:f9UTO",
+                              "name": "로그인 흐름 구현",
+                              "width": "fill_container",
+                              "descendants": {
+                                "u:aG7nT": {
+                                  "content": "로그인 흐름 구현"
+                                },
+                                "u:l4Ao9z": {
+                                  "content": "로그인 프론트엔드·백엔드와 로그아웃 이후의 인증 상태 동기화를 구현했습니다."
+                                }
+                              }
+                            },
+                            {
+                              "id": "d1GqZY",
+                              "type": "ref",
+                              "ref": "u:f9UTO",
+                              "name": "작품·회차 API와 테스트 작성",
+                              "width": "fill_container",
+                              "descendants": {
+                                "u:aG7nT": {
+                                  "content": "작품·회차 API와 테스트 작성"
+                                },
+                                "u:l4Ao9z": {
+                                  "content": "Work·Episode API와 도메인 테스트를 작성했습니다. 프로젝트는 현재 개발 중입니다."
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bohJx",
+                          "name": "검증 범위",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "E9W3W",
+                              "name": "Label",
+                              "fill": "$u:color.text",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "검증 범위",
+                              "lineHeight": "$u:line.body",
+                              "fontFamily": "$u:font.family",
+                              "fontSize": "$u:type.meta",
+                              "fontWeight": "$u:weight.label"
+                            },
+                            {
+                              "type": "text",
+                              "id": "x8DquE",
+                              "name": "Body",
+                              "fill": "$u:color.body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "여기에는 구현과 테스트 작성까지 확인된 범위를 기록했습니다. 현재 전체 테스트 통과나 운영 성과를 의미하지 않습니다.",
+                              "lineHeight": "$u:line.body",
+                              "fontFamily": "$u:font.family",
+                              "fontSize": "$u:type.body",
+                              "fontWeight": "$u:weight.body"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KpjVM",
+                          "name": "회고 — MVP 구현을 먼저 진행",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LRdHU",
+                              "name": "Label",
+                              "fill": "$u:color.text",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "회고 — MVP 구현을 먼저 진행",
+                              "lineHeight": "$u:line.body",
+                              "fontFamily": "$u:font.family",
+                              "fontSize": "$u:type.meta",
+                              "fontWeight": "$u:weight.label"
+                            },
+                            {
+                              "type": "text",
+                              "id": "A4takE",
+                              "name": "Body",
+                              "fill": "$u:color.body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "ILOG에서 서비스 규모에 맞는 기술 선택의 중요성을 배운 뒤, Lorekeeper에서는 계층형 MVP를 먼저 구현하고 이후 서비스를 분리하는 순서로 바꿨습니다. 서비스 분리는 향후 계획입니다.",
+                              "lineHeight": "$u:line.body",
+                              "fontFamily": "$u:font.family",
+                              "fontSize": "$u:type.body",
+                              "fontWeight": "$u:weight.body"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   }
                 },
                 {
-                  "id": "Y5lZB",
-                  "type": "ref",
-                  "ref": "u:sHYjZ",
-                  "name": "프론트엔드 저장소",
-                  "height": 44,
-                  "descendants": {
-                    "u:ain5n": {
-                      "icon": "arrow-up-right"
+                  "type": "frame",
+                  "id": "Phk8N",
+                  "name": "Project navigation",
+                  "context": "Top margin: desktop 48px, mobile 40px after the results. Internal navigation follows the project order.",
+                  "width": "fill_container",
+                  "stroke": "$u:color.rule",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": "$u:space.sm",
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "fyjQ6",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "이전 프로젝트 · ILOG",
+                      "width": "fill_container",
+                      "height": 44,
+                      "context": "Link target: /projects/ilog/; same tab; minimum target height 44px",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "arrow-left"
+                        },
+                        "u:A8C0m": {
+                          "content": "이전 프로젝트 · ILOG",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container"
+                        }
+                      }
                     },
-                    "u:A8C0m": {
-                      "content": "프론트엔드 저장소"
+                    {
+                      "id": "jGGYw",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "다음 프로젝트 · Matching SSAFY",
+                      "width": "fill_container",
+                      "height": 44,
+                      "context": "Link target: /projects/matching-ssafy/; same tab; minimum target height 44px",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "arrow-right"
+                        },
+                        "u:A8C0m": {
+                          "content": "다음 프로젝트 · Matching SSAFY",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container"
+                        }
+                      }
                     }
-                  }
-                },
-                {
-                  "id": "mvRNh",
-                  "type": "ref",
-                  "ref": "u:sHYjZ",
-                  "name": "다음 프로젝트 · Matching SSAFY",
-                  "height": 44,
-                  "descendants": {
-                    "u:ain5n": {
-                      "icon": "arrow-right"
-                    },
-                    "u:A8C0m": {
-                      "content": "다음 프로젝트 · Matching SSAFY"
-                    }
-                  }
+                  ]
                 }
               ]
             }
@@ -6250,7 +7268,7 @@
       "type": "frame",
       "id": "toznr",
       "x": 0,
-      "y": 21911,
+      "y": 11961,
       "name": "Matching SSAFY · 1440",
       "context": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: matching-ssafy/1440",
       "theme": {
@@ -7521,9 +8539,9 @@
       "type": "frame",
       "id": "tUysq",
       "x": 1600,
-      "y": 8200,
+      "y": 11961,
       "name": "Matching SSAFY · 390",
-      "context": "Current design source: ../design/pages/project-detail.md; SHA256: 45c64498604098e1cd6bbc9c015a20db52299b0cc3972d3f593a2817789de0ad; viewKey: matching-ssafy/390. This context records the current source revision; metadata.sourceRevision records the creation revision.",
+      "context": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: matching-ssafy/390",
       "theme": {
         "u:presentation": "mobile"
       },
@@ -7534,55 +8552,54 @@
         "viewKey": "matching-ssafy/390",
         "reference": "https://brittanychiang.com/"
       },
-      "clip": true,
       "width": 390,
       "fill": "$u:color.canvas",
       "layout": "vertical",
-      "gap": "$u:space.section",
+      "gap": 64,
       "padding": [
-        40,
-        24,
         48,
         24
       ],
       "children": [
         {
           "type": "frame",
-          "id": "RAqJf",
+          "id": "CL9W5",
           "name": "Project identity",
           "width": "fill_container",
-          "fill": "$u:color.canvas",
           "layout": "vertical",
-          "gap": "$u:space.xl",
+          "gap": "$u:space.lg",
           "children": [
             {
-              "id": "iRRY6",
+              "id": "VZ9G6",
               "type": "ref",
               "ref": "u:sHYjZ",
               "name": "포트폴리오로",
+              "width": "fill_container",
               "height": 44,
+              "context": "Link target: /#projects; same tab; minimum target height 44px",
               "descendants": {
                 "u:ain5n": {
                   "icon": "arrow-left"
                 },
                 "u:A8C0m": {
-                  "content": "포트폴리오로"
+                  "content": "포트폴리오로",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container"
                 }
               }
             },
             {
               "type": "frame",
-              "id": "G2Tw9A",
-              "name": "Project overview",
+              "id": "Z8aR1p",
+              "name": "Project introduction",
               "width": "fill_container",
-              "fill": "$u:color.canvas",
               "layout": "vertical",
               "gap": "$u:space.md",
               "children": [
                 {
                   "type": "text",
-                  "id": "QuxDH",
-                  "name": "Project name",
+                  "id": "jDXkp",
+                  "name": "Project title",
                   "fill": "$u:color.text",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
@@ -7594,34 +8611,34 @@
                 },
                 {
                   "type": "text",
-                  "id": "nterf",
+                  "id": "T4KHOf",
                   "name": "Period",
                   "fill": "$u:color.muted",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
                   "content": "2025.07 — 2025.08",
                   "lineHeight": "$u:line.body",
-                  "fontFamily": "$u:font.latin",
+                  "fontFamily": "$u:font.family",
                   "fontSize": "$u:type.meta",
                   "fontWeight": "$u:weight.body"
                 },
                 {
                   "type": "text",
-                  "id": "gygbv",
+                  "id": "EYR01",
                   "name": "Role",
                   "fill": "$u:color.text",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
                   "content": "팀·실시간 채팅",
-                  "lineHeight": "$u:line.body",
+                  "lineHeight": "$u:line.heading",
                   "fontFamily": "$u:font.family",
                   "fontSize": "$u:type.role",
                   "fontWeight": "$u:weight.medium"
                 },
                 {
                   "type": "text",
-                  "id": "JzZOm",
-                  "name": "Team and contribution",
+                  "id": "H1Jb1a",
+                  "name": "Contribution summary",
                   "fill": "$u:color.body",
                   "textGrowth": "fixed-width",
                   "width": "fill_container",
@@ -7634,113 +8651,1069 @@
               ]
             },
             {
-              "id": "WVhKK",
-              "type": "ref",
-              "ref": "u:sHYjZ",
-              "name": "GitHub 저장소",
-              "height": 44,
-              "descendants": {
-                "u:ain5n": {
-                  "icon": "github"
-                },
-                "u:A8C0m": {
-                  "content": "GitHub 저장소"
+              "type": "frame",
+              "id": "WfvZ4",
+              "name": "External links",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": "$u:space.sm",
+              "children": [
+                {
+                  "id": "OUB7W",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "GitHub 저장소",
+                  "width": "fill_container",
+                  "height": 44,
+                  "context": "Link target: https://github.com/ju1115/Matching_SSAFY; new tab; accessible name includes 새 탭; minimum target height 44px",
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "github"
+                    },
+                    "u:A8C0m": {
+                      "content": "GitHub 저장소",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container"
+                    }
+                  }
                 }
-              }
+              ]
             }
           ]
         },
         {
           "type": "frame",
-          "id": "drs2e",
+          "id": "psKeh",
           "name": "Case study",
           "width": "fill_container",
-          "fill": "$u:color.canvas",
           "layout": "vertical",
-          "gap": "$u:space.xl",
+          "gap": "$u:space.section",
           "children": [
             {
-              "id": "mdCsR",
+              "id": "kleov",
               "type": "ref",
-              "ref": "u:h0MPp8",
-              "name": "서비스와 담당 범위",
+              "ref": "u:A3IEM7",
+              "name": "프로젝트 개요",
               "width": "fill_container",
+              "context": "Section anchor: #overview",
               "descendants": {
-                "u:uXXMm": {
-                  "content": "서비스와 담당 범위"
+                "u:dBPnC": {
+                  "enabled": false
                 },
-                "u:h4R2zW": {
-                  "content": "SSAFY 교육생의 프로젝트 팀 구성을 지원하는 서비스입니다. 저는 팀 생성·조회·수정·삭제, 초대·참여 요청·거절·탈퇴와 팀 상태 잠금 기능을 개발했습니다. 팀 채팅과 1:1 채팅도 담당했습니다."
+                "u:sWjlr": {
+                  "content": "프로젝트 개요"
+                },
+                "u:RA8nk": {
+                  "type": "frame",
+                  "id": "h4xtp",
+                  "name": "Section content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$u:space.lg",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hlcf1",
+                      "name": "Introduction",
+                      "fill": "$u:color.body",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SSAFY 교육생의 프로젝트 팀 구성을 지원하는 서비스입니다. 팀 생성·조회·수정·삭제와 초대·참여 요청·거절·탈퇴, 팀 상태 잠금 기능을 개발했습니다. 팀 채팅과 1:1 채팅도 담당했습니다.",
+                      "lineHeight": "$u:line.body",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.body",
+                      "fontWeight": "$u:weight.body"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "J7VAw",
+                      "name": "주요 기능",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$u:space.md",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rqnvb",
+                          "name": "Group heading",
+                          "fill": "$u:color.text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "주요 기능",
+                          "lineHeight": "$u:line.heading",
+                          "fontFamily": "$u:font.family",
+                          "fontSize": "$u:type.item",
+                          "fontWeight": "$u:weight.label"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "oYdTO",
+                          "name": "List",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.sm",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "XgWxR",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "XbSrC",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "gsNU5",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "팀 탐색과 팀원 초대·참여 요청",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "glJ0Y",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Klnkj",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "qV2WK",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "팀 구성 상태 관리",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "T8odkL",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "gLR5N",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "bvsEH",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "팀 채팅과 1:1 채팅",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "fSjQw",
+                      "name": "담당 범위",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$u:space.md",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nCybK",
+                          "name": "Group heading",
+                          "fill": "$u:color.text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "담당 범위",
+                          "lineHeight": "$u:line.heading",
+                          "fontFamily": "$u:font.family",
+                          "fontSize": "$u:type.item",
+                          "fontWeight": "$u:weight.label"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Usraa",
+                          "name": "List",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.sm",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "RMK6T",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "u6VGf",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "sUrtW",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "팀 관리와 초대·참여·거절·탈퇴 처리",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "VqCgt",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "f5vtS",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "v7AtRQ",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "팀 상태 잠금",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "mM9RT",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "fpCVf",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "q88Yo",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "실시간 메시지 송수신과 채팅방·기록 조회 API",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "v3ziBD",
+                              "name": "List item",
+                              "width": "fill_container",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "IxHwI",
+                                  "name": "Bullet",
+                                  "fill": "$u:color.accent",
+                                  "textGrowth": "fixed-width",
+                                  "width": 8,
+                                  "content": "·",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "uOSZm",
+                                  "name": "Item",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "프론트엔드 채팅 연동과 팀·채팅 테스트 작성",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U3t9Q6",
+                      "name": "Technologies",
+                      "width": "fill_container",
+                      "gap": "$u:space.sm",
+                      "children": [
+                        {
+                          "id": "uWoEp",
+                          "type": "ref",
+                          "ref": "u:XkAXW",
+                          "name": "Spring Boot",
+                          "descendants": {
+                            "u:E2lqSi": {
+                              "content": "Spring Boot"
+                            }
+                          }
+                        },
+                        {
+                          "id": "k3vDMV",
+                          "type": "ref",
+                          "ref": "u:XkAXW",
+                          "name": "WebSocket",
+                          "descendants": {
+                            "u:E2lqSi": {
+                              "content": "WebSocket"
+                            }
+                          }
+                        },
+                        {
+                          "id": "pRM76",
+                          "type": "ref",
+                          "ref": "u:XkAXW",
+                          "name": "STOMP",
+                          "descendants": {
+                            "u:E2lqSi": {
+                              "content": "STOMP"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               }
             },
             {
-              "id": "KCx2P",
+              "id": "rHskK",
               "type": "ref",
-              "ref": "u:h0MPp8",
-              "name": "실시간 메시지와 기록 조회",
+              "ref": "u:A3IEM7",
+              "name": "아키텍처",
               "width": "fill_container",
+              "context": "Section anchor: #architecture",
               "descendants": {
-                "u:uXXMm": {
-                  "content": "실시간 메시지와 기록 조회"
+                "u:dBPnC": {
+                  "enabled": true
                 },
-                "u:h4R2zW": {
-                  "content": "WebSocket과 STOMP로 팀·1:1 채팅 메시지를 송수신하고, 채팅방 생성과 메시지 기록 조회 API를 구현했습니다. 프론트엔드의 WebSocket 연결과 채팅 화면을 연동하며 연결·CORS 설정 오류, 1:1 채팅 상태 처리를 수정했습니다."
+                "u:sWjlr": {
+                  "content": "아키텍처"
+                },
+                "u:RA8nk": {
+                  "type": "frame",
+                  "id": "I87nY",
+                  "name": "Section content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$u:space.lg",
+                  "children": [
+                    {
+                      "id": "NC2Tj",
+                      "type": "ref",
+                      "ref": "u:ypTAB",
+                      "name": "System diagram",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:BQ7Vc": {
+                          "content": "팀·채팅 API와 실시간 메시지"
+                        },
+                        "u:cvuFL": {
+                          "type": "frame",
+                          "id": "UILHn",
+                          "name": "Architecture flow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.md",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "YGLt2",
+                              "name": "API 조회",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.md",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "dL35N",
+                                  "name": "Route heading",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "API 조회",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.diagram",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "id": "WB7rf",
+                                  "type": "ref",
+                                  "ref": "u:mejVU",
+                                  "name": "React 화면",
+                                  "width": "fill_container",
+                                  "stroke": "$u:color.accent",
+                                  "descendants": {
+                                    "u:yhHYC": {
+                                      "content": "React 화면"
+                                    },
+                                    "u:fQ45e": {
+                                      "content": "채팅 연동 담당",
+                                      "enabled": true,
+                                      "fill": "$u:color.accent"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "jAP5J",
+                                  "name": "팀·채팅방·기록 조회 API",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": "$u:space.sm",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "USqdA",
+                                      "name": "Connection label",
+                                      "fill": "$u:color.muted",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "팀·채팅방·기록 조회 API",
+                                      "lineHeight": "$u:line.meta",
+                                      "textAlign": "center",
+                                      "fontFamily": "$u:font.family",
+                                      "fontSize": "$u:type.meta",
+                                      "fontWeight": "$u:weight.body"
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "IL1Mi",
+                                      "name": "Bidirectional connection",
+                                      "width": 16,
+                                      "height": 24,
+                                      "icon": "arrow-down-up",
+                                      "library": "lucide",
+                                      "fill": "$u:color.rule"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "E6o6P",
+                                  "type": "ref",
+                                  "ref": "u:mejVU",
+                                  "name": "Spring Boot 백엔드",
+                                  "width": "fill_container",
+                                  "stroke": "$u:color.accent",
+                                  "descendants": {
+                                    "u:yhHYC": {
+                                      "content": "Spring Boot 백엔드"
+                                    },
+                                    "u:fQ45e": {
+                                      "content": "팀·채팅 담당",
+                                      "enabled": true,
+                                      "fill": "$u:color.accent"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "V2kCMA",
+                              "name": "실시간 메시지",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.md",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "mmZQe",
+                                  "name": "Route heading",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "실시간 메시지",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.diagram",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "id": "ZIQeu",
+                                  "type": "ref",
+                                  "ref": "u:mejVU",
+                                  "name": "React 화면",
+                                  "width": "fill_container",
+                                  "stroke": "$u:color.accent",
+                                  "descendants": {
+                                    "u:yhHYC": {
+                                      "content": "React 화면"
+                                    },
+                                    "u:fQ45e": {
+                                      "content": "채팅 연동 담당",
+                                      "enabled": true,
+                                      "fill": "$u:color.accent"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "QLstV",
+                                  "name": "WebSocket · STOMP 메시지",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": "$u:space.sm",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "D7WUyb",
+                                      "name": "Connection label",
+                                      "fill": "$u:color.muted",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "WebSocket · STOMP 메시지",
+                                      "lineHeight": "$u:line.meta",
+                                      "textAlign": "center",
+                                      "fontFamily": "$u:font.family",
+                                      "fontSize": "$u:type.meta",
+                                      "fontWeight": "$u:weight.body"
+                                    },
+                                    {
+                                      "type": "icon",
+                                      "id": "Gfx7w",
+                                      "name": "Bidirectional connection",
+                                      "width": 16,
+                                      "height": 24,
+                                      "icon": "arrow-down-up",
+                                      "library": "lucide",
+                                      "fill": "$u:color.rule"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "EeEu0",
+                                  "type": "ref",
+                                  "ref": "u:mejVU",
+                                  "name": "Spring Boot 백엔드",
+                                  "width": "fill_container",
+                                  "stroke": "$u:color.accent",
+                                  "descendants": {
+                                    "u:yhHYC": {
+                                      "content": "Spring Boot 백엔드"
+                                    },
+                                    "u:fQ45e": {
+                                      "content": "팀·채팅 담당",
+                                      "enabled": true,
+                                      "fill": "$u:color.accent"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "jmAyX",
+                      "name": "Architecture explanation",
+                      "fill": "$u:color.body",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "React 화면과 Spring Boot 백엔드를 연결했습니다. 팀 관리와 채팅방·메시지 기록 조회는 API로 제공하고, 실시간 메시지는 WebSocket과 STOMP로 송수신합니다.",
+                      "lineHeight": "$u:line.body",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.body",
+                      "fontWeight": "$u:weight.body"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SSGw9",
+                      "name": "Architecture explanation",
+                      "fill": "$u:color.body",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "저는 백엔드의 팀·채팅 도메인과 프론트엔드 채팅 연동을 담당했습니다. 아래 도식은 API 조회와 실시간 메시지 전달이라는 두 흐름을 구분합니다.",
+                      "lineHeight": "$u:line.body",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.body",
+                      "fontWeight": "$u:weight.body"
+                    }
+                  ]
                 }
               }
             },
             {
-              "id": "ndEoA",
+              "id": "mDNuL",
               "type": "ref",
-              "ref": "u:h0MPp8",
-              "name": "테스트와 검증 범위",
+              "ref": "u:A3IEM7",
+              "name": "문제 해결",
               "width": "fill_container",
+              "context": "Section anchor: #challenges",
               "descendants": {
-                "u:uXXMm": {
-                  "content": "테스트와 검증 범위"
+                "u:dBPnC": {
+                  "enabled": true
                 },
-                "u:h4R2zW": {
-                  "content": "팀 서비스·컨트롤러와 채팅방·메시지·멤버 서비스의 단위 테스트 및 통합 테스트를 작성했습니다. 프론트엔드 연동 과정에서는 WebSocket 연결과 1:1 채팅 상태 처리를 수정했습니다."
+                "u:sWjlr": {
+                  "content": "문제 해결"
+                },
+                "u:RA8nk": {
+                  "type": "frame",
+                  "id": "s73jV",
+                  "name": "Section content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": "$u:space.case",
+                  "children": [
+                    {
+                      "id": "K9WcH",
+                      "type": "ref",
+                      "ref": "u:xIrsq",
+                      "name": "팀 구성 단계의 여러 동작 처리",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:jZZKJ": {
+                          "content": "팀 구성 단계의 여러 동작 처리"
+                        },
+                        "u:IUxwP": {
+                          "type": "frame",
+                          "id": "FlLDh",
+                          "name": "Case explanation",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.lg",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "ujBsU",
+                              "name": "구현 과제",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "AMsVQ",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "구현 과제",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "OuZvV",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "팀 생성 이후에도 초대·참여 요청·거절·탈퇴와 팀 상태 잠금 등 팀 구성 과정의 여러 동작을 처리해야 했습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xlnlv",
+                              "name": "구현",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "WV5F3",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "구현",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "Gs3OV",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "팀 관리 API와 초대·참여·거절·탈퇴 처리를 구현했습니다. 팀장이 팀에서 나갈 때의 팀 처리 로직도 수정했습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "GGPdp",
+                      "name": "Case divider",
+                      "fill": "$u:color.rule",
+                      "width": "fill_container",
+                      "height": 1
+                    },
+                    {
+                      "id": "G8Zpjp",
+                      "type": "ref",
+                      "ref": "u:xIrsq",
+                      "name": "채팅 연결과 1:1 채팅 상태 연동",
+                      "width": "fill_container",
+                      "descendants": {
+                        "u:jZZKJ": {
+                          "content": "채팅 연결과 1:1 채팅 상태 연동"
+                        },
+                        "u:IUxwP": {
+                          "type": "frame",
+                          "id": "oKZPg",
+                          "name": "Case explanation",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.lg",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "or0Cw",
+                              "name": "문제",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "n4epjr",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "문제",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "iqANA",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "프론트엔드 채팅 화면을 연결하는 과정에서 WebSocket 연결·CORS 설정 오류와 1:1 채팅 상태 처리 문제가 있었습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "YwwVV",
+                              "name": "해결",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": "$u:space.sm",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "BoO0q",
+                                  "name": "Label",
+                                  "fill": "$u:color.text",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "해결",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.meta",
+                                  "fontWeight": "$u:weight.label"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "qubAN",
+                                  "name": "Body",
+                                  "fill": "$u:color.body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "WebSocket 연결과 CORS 설정을 수정하고 1:1 채팅 상태 처리를 프론트엔드와 맞췄습니다. 팀·1:1 메시지 송수신과 채팅방 생성·메시지 기록 조회 API를 연동했습니다.",
+                                  "lineHeight": "$u:line.body",
+                                  "fontFamily": "$u:font.family",
+                                  "fontSize": "$u:type.body",
+                                  "fontWeight": "$u:weight.body"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             },
             {
               "type": "frame",
-              "id": "orrIB",
-              "name": "Case navigation",
+              "id": "rNKvk",
+              "name": "Results and navigation",
               "width": "fill_container",
               "layout": "vertical",
-              "gap": "$u:space.md",
+              "gap": 40,
               "children": [
                 {
-                  "id": "TaHyR",
+                  "id": "lev9M",
                   "type": "ref",
-                  "ref": "u:sHYjZ",
-                  "name": "코드에서 확인하기",
-                  "height": 44,
+                  "ref": "u:A3IEM7",
+                  "name": "결과",
+                  "width": "fill_container",
+                  "context": "Section anchor: #results",
                   "descendants": {
-                    "u:ain5n": {
-                      "icon": "arrow-up-right"
+                    "u:dBPnC": {
+                      "enabled": true
                     },
-                    "u:A8C0m": {
-                      "content": "코드에서 확인하기"
+                    "u:sWjlr": {
+                      "content": "결과"
+                    },
+                    "u:RA8nk": {
+                      "type": "frame",
+                      "id": "X9re5",
+                      "name": "Section content",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$u:space.lg",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "S6WdVD",
+                          "name": "Outcomes",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.md",
+                          "children": [
+                            {
+                              "id": "S2n2E",
+                              "type": "ref",
+                              "ref": "u:f9UTO",
+                              "name": "팀·채팅 기능 구현과 연동",
+                              "width": "fill_container",
+                              "descendants": {
+                                "u:aG7nT": {
+                                  "content": "팀·채팅 기능 구현과 연동"
+                                },
+                                "u:l4Ao9z": {
+                                  "content": "팀 관리 API, 팀·1:1 실시간 채팅과 채팅방·메시지 기록 조회를 구현했습니다. 프론트엔드 연동 과정에서 연결과 채팅 상태 처리를 수정했습니다."
+                                }
+                              }
+                            },
+                            {
+                              "id": "Y6DVo",
+                              "type": "ref",
+                              "ref": "u:f9UTO",
+                              "name": "단위·통합 테스트 작성",
+                              "width": "fill_container",
+                              "descendants": {
+                                "u:aG7nT": {
+                                  "content": "단위·통합 테스트 작성"
+                                },
+                                "u:l4Ao9z": {
+                                  "content": "팀 서비스·컨트롤러와 채팅방·메시지·멤버 서비스의 단위 테스트 및 통합 테스트를 작성했습니다."
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bPD1M",
+                          "name": "검증 범위",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$u:space.sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QWUeY",
+                              "name": "Label",
+                              "fill": "$u:color.text",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "검증 범위",
+                              "lineHeight": "$u:line.body",
+                              "fontFamily": "$u:font.family",
+                              "fontSize": "$u:type.meta",
+                              "fontWeight": "$u:weight.label"
+                            },
+                            {
+                              "type": "text",
+                              "id": "zNeCB",
+                              "name": "Body",
+                              "fill": "$u:color.body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "이번 기록은 구현·연동 수정과 테스트 작성 범위입니다. 현재 전체 테스트 통과나 동시 접속 성능을 측정한 결과는 포함하지 않습니다.",
+                              "lineHeight": "$u:line.body",
+                              "fontFamily": "$u:font.family",
+                              "fontSize": "$u:type.body",
+                              "fontWeight": "$u:weight.body"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   }
                 },
                 {
-                  "id": "c1IPv",
-                  "type": "ref",
-                  "ref": "u:sHYjZ",
-                  "name": "다음 프로젝트 · ILOG",
-                  "height": 44,
-                  "descendants": {
-                    "u:ain5n": {
-                      "icon": "arrow-right"
-                    },
-                    "u:A8C0m": {
-                      "content": "다음 프로젝트 · ILOG"
+                  "type": "frame",
+                  "id": "oXiK3",
+                  "name": "Project navigation",
+                  "context": "Top margin: desktop 48px, mobile 40px after the results. Internal navigation follows the project order.",
+                  "width": "fill_container",
+                  "stroke": "$u:color.rule",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": "$u:space.sm",
+                  "padding": [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "UahmN",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "이전 프로젝트 · Lorekeeper",
+                      "width": "fill_container",
+                      "height": 44,
+                      "context": "Link target: /projects/lorekeeper/; same tab; minimum target height 44px",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "arrow-left"
+                        },
+                        "u:A8C0m": {
+                          "content": "이전 프로젝트 · Lorekeeper",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container"
+                        }
+                      }
                     }
-                  }
+                  ]
                 }
               ]
             }
