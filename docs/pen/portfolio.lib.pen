@@ -823,7 +823,7 @@
           }
         },
         {
-          "value": "#FFFFFF",
+          "value": "#0F172A",
           "theme": {
             "presentation": "print"
           }
@@ -846,7 +846,7 @@
           }
         },
         {
-          "value": "#111111",
+          "value": "#E2E8F0",
           "theme": {
             "presentation": "print"
           }
@@ -869,7 +869,7 @@
           }
         },
         {
-          "value": "#242424",
+          "value": "#94A3B8",
           "theme": {
             "presentation": "print"
           }
@@ -892,7 +892,7 @@
           }
         },
         {
-          "value": "#444444",
+          "value": "#8897AF",
           "theme": {
             "presentation": "print"
           }
@@ -915,7 +915,7 @@
           }
         },
         {
-          "value": "#111111",
+          "value": "#5EEAD4",
           "theme": {
             "presentation": "print"
           }
@@ -938,7 +938,7 @@
           }
         },
         {
-          "value": "#F1F3F5",
+          "value": "#163337",
           "theme": {
             "presentation": "print"
           }
@@ -1025,11 +1025,49 @@
     },
     "type.role": {
       "type": "number",
-      "value": 20
+      "value": [
+        {
+          "value": 20,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 20,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 18,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
     },
     "type.item": {
       "type": "number",
-      "value": 18
+      "value": [
+        {
+          "value": 18,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 18,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 16,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
     },
     "type.section": {
       "type": "number",
@@ -1124,7 +1162,7 @@
           }
         },
         {
-          "value": 1.6,
+          "value": 1.7,
           "theme": {
             "presentation": "print"
           }
@@ -1149,7 +1187,26 @@
     },
     "space.md": {
       "type": "number",
-      "value": 16
+      "value": [
+        {
+          "value": 16,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 16,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 12,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
     },
     "space.paragraph": {
       "type": "number",
@@ -1157,11 +1214,49 @@
     },
     "space.lg": {
       "type": "number",
-      "value": 24
+      "value": [
+        {
+          "value": 24,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 24,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 16,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
     },
     "space.xl": {
       "type": "number",
-      "value": 40
+      "value": [
+        {
+          "value": 40,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 40,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 24,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
     },
     "space.section": {
       "type": "number",
@@ -1220,6 +1315,12 @@
           "theme": {
             "presentation": "mobile"
           }
+        },
+        {
+          "value": 21,
+          "theme": {
+            "presentation": "print"
+          }
         }
       ]
     },
@@ -1229,7 +1330,26 @@
     },
     "space.case": {
       "type": "number",
-      "value": 32
+      "value": [
+        {
+          "value": 32,
+          "theme": {
+            "presentation": "desktop"
+          }
+        },
+        {
+          "value": 32,
+          "theme": {
+            "presentation": "mobile"
+          }
+        },
+        {
+          "value": 24,
+          "theme": {
+            "presentation": "print"
+          }
+        }
+      ]
     },
     "space.detail-top": {
       "type": "number",
