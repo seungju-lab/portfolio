@@ -170,7 +170,14 @@ function MatchingDiagram() {
   );
 }
 
-export function SystemDiagram({ slug }: { slug: string }) {
+export function SystemDiagram({
+  slug,
+  headingLevel = 3,
+}: {
+  slug: string;
+  headingLevel?: 3 | 4;
+}) {
+  const Heading = headingLevel === 3 ? "h3" : "h4";
   const diagram = diagrams[slug];
   if (!diagram) return null;
   return (
@@ -178,7 +185,9 @@ export function SystemDiagram({ slug }: { slug: string }) {
       className="system-diagram"
       aria-labelledby={`${slug}-diagram-title`}
     >
-      <h3 id={`${slug}-diagram-title`}>{diagram.title}</h3>
+      <Heading className="detail-subheading" id={`${slug}-diagram-title`}>
+        {diagram.title}
+      </Heading>
       <p className="diagram-legend">담당 · 청록색 테두리와 역할 레이블</p>
       <div className="diagram-visual" aria-hidden="true">
         {slug === "ilog" ? (

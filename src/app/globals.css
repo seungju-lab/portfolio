@@ -54,7 +54,8 @@ p {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--color-heading);
   line-height: 1.3;
   word-break: keep-all;
@@ -297,7 +298,8 @@ svg {
   margin-top: 2.5rem;
   font-size: var(--text-description);
 }
-.working-note h3 {
+.working-note h3,
+h4 {
   font-size: var(--text-project-title);
   font-weight: 600;
   line-height: 1.8;
@@ -481,12 +483,12 @@ svg {
   padding-top: 1.5rem;
   scroll-margin-top: calc(6rem - 1.5rem - 1px);
 }
-.detail-section > h2 {
+.detail-section > .detail-heading {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
-.detail-section h3 {
+.detail-section .detail-subheading {
   font-size: var(--text-project-title);
   font-weight: 600;
 }
@@ -688,7 +690,7 @@ svg {
   .detail-section + .detail-section {
     scroll-margin-top: calc(5rem - 1.5rem - 1px);
   }
-  .detail-section > h2 {
+  .detail-section > .detail-heading {
     font-size: 1.375rem;
   }
   .detail-results {
@@ -1251,5 +1253,95 @@ svg {
     margin-top: 24px;
     font-family: var(--font-inter), var(--font-noto-sans), sans-serif;
     font-size: 13px;
+  }
+}
+
+/* The full document shares project content and styling with detail pages. */
+@media screen {
+  .print-shell {
+    padding-top: 5rem;
+  }
+  .print-project {
+    display: block;
+    border-top: 1px solid var(--color-rule);
+    padding-top: 2rem;
+    scroll-margin-top: 3rem;
+  }
+  .print-project-body {
+    margin-top: 2rem;
+  }
+  .print-project-heading > h2 {
+    margin: 0;
+  }
+  .print-education > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .print-contact {
+    margin-top: 2rem;
+  }
+  .print-contents h2 {
+    font-size: 1.5rem;
+  }
+  .print-contents ol {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+  }
+  .print-contents li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .print-contents li + li {
+    margin-top: 1.5rem;
+  }
+  .print-contents a {
+    color: var(--color-accent);
+    font-size: 1.125rem;
+  }
+  .print-contents p {
+    margin-top: 0.5rem;
+    font-size: var(--text-meta);
+  }
+}
+.print-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.print-profile > div {
+  min-width: 0;
+}
+.print-profile .profile-role {
+  margin-top: 0.5rem;
+}
+.print-portrait {
+  flex: none;
+  width: 6rem;
+  height: 7.5rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.print-shell .text-link {
+  max-width: 100%;
+}
+.print-shell .text-link > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+@media screen and (width < 48rem) {
+  .print-shell {
+    padding-top: 3rem;
+  }
+  .print-contents h2,
+  .print-education > h2 {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (width < 22.5rem) {
+  .print-portrait {
+    width: 5rem;
+    height: 6.25rem;
   }
 }
