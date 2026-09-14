@@ -30,6 +30,9 @@ Linux 호스트에서 nvm을 사용한다면 `nvm install && nvm use`로 Node를
 `pnpm check`는 도구 버전 확인, 포맷 검사, lint, 타입 검사, 정적 빌드와 산출물
 검증을 순서대로 실행한다. Node·pnpm이 지정한 버전과 다르거나 어느 단계든 실패하면
 명령이 실패 코드로 종료된다. `pnpm build`에도 산출물 검증이 포함된다.
+`pnpm typecheck`는 먼저 `next typegen`으로 Next.js 타입 파일을 생성한 뒤
+`tsc --noEmit`을 실행한다. 처음 받은 저장소에서도 정적 이미지 타입을 인식하도록
+생성 순서를 보장하며, 생성된 `next-env.d.ts`와 `.next/`는 커밋하지 않는다.
 
 산출물 검증은 홈·세 프로젝트 상세·전체 열람의 HTML과 `404.html`, 원본과 같은
 `_headers`를 확인한다. 각 HTML의 JS·CSS·폰트와 CSS가 참조하는 정적 자산도

@@ -6,7 +6,7 @@
     "dev": "next dev --port 3001",
     "build": "next build && pnpm check:export",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check:toolchain": "node scripts/check-toolchain.mjs",
