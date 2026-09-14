@@ -14124,7 +14124,7 @@
                   "content": "SW마에스트로 17기"
                 },
                 "u:iJBrv": {
-                  "content": "연수생 · 참여 중. Lorekeeper 개발."
+                  "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발"
                 }
               }
             },
@@ -14142,9 +14142,22 @@
                   "content": "삼성 청년 SW·AI 아카데미 13기"
                 },
                 "u:iJBrv": {
-                  "content": "Java 백엔드 개발과 팀 프로젝트."
+                  "content": "Java 백엔드 개발과 팀 프로젝트"
                 }
               }
+            },
+            {
+              "type": "text",
+              "id": "k4PM42",
+              "name": "개발 환경과 작업 방식",
+              "fill": "$u:color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "개발 환경과 작업 방식",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.item",
+              "fontWeight": "$u:weight.heading"
             },
             {
               "type": "text",
@@ -18458,7 +18471,7 @@
                   "content": "SW마에스트로 17기"
                 },
                 "u:iJBrv": {
-                  "content": "연수생 · 참여 중. Lorekeeper 개발."
+                  "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발"
                 }
               }
             },
@@ -18476,9 +18489,22 @@
                   "content": "삼성 청년 SW·AI 아카데미 13기"
                 },
                 "u:iJBrv": {
-                  "content": "Java 백엔드 개발과 팀 프로젝트."
+                  "content": "Java 백엔드 개발과 팀 프로젝트"
                 }
               }
+            },
+            {
+              "type": "text",
+              "id": "b83q1Q",
+              "name": "개발 환경과 작업 방식",
+              "fill": "$u:color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "개발 환경과 작업 방식",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.item",
+              "fontWeight": "$u:weight.heading"
             },
             {
               "type": "text",
@@ -18550,19 +18576,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "Hin16",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / ILOG · 개요",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "type": "frame",
               "id": "M2QXJe",
@@ -19094,7 +19107,7 @@
               "id": "m8dgc",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "02 / 11",
+              "content": "02 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -19445,7 +19458,7 @@
               "id": "H1b91D",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "01 / 11",
+              "content": "01 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -19488,19 +19501,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "m2FGh",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / ILOG · 아키텍처",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "id": "ktWWF",
               "type": "ref",
@@ -19931,7 +19931,7 @@
               "id": "e87xH",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "03 / 11",
+              "content": "03 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -19974,19 +19974,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "G2SbO",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / ILOG · 문제 해결",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "id": "a7ns1w",
               "type": "ref",
@@ -20298,7 +20285,7 @@
               "id": "WS2ec",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "04 / 11",
+              "content": "04 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -20627,19 +20614,6 @@
           "gap": "$u:space.lg",
           "children": [
             {
-              "type": "text",
-              "id": "ogOtc",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / ILOG · 문제 해결과 결과",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
-            {
               "id": "DwILh",
               "type": "ref",
               "ref": "u:xIrsq",
@@ -20934,7 +20908,7 @@
               "id": "ZWZS1",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "05 / 11",
+              "content": "05 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -20970,19 +20944,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "oL6JH",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / Lorekeeper · 개요",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "type": "frame",
               "id": "aDzCN",
@@ -21533,7 +21494,7 @@
               "id": "bJFuo",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "06 / 11",
+              "content": "06 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -21569,19 +21530,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "ZLfK5",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / Lorekeeper · 아키텍처와 로그인",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "id": "xNu8x",
               "type": "ref",
@@ -22016,7 +21964,7 @@
               "id": "kUrKk",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "07 / 11",
+              "content": "07 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -22052,19 +22000,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "y4gSCI",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / Lorekeeper · 작품·회차와 결과",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "id": "HiqpQ",
               "type": "ref",
@@ -22334,7 +22269,7 @@
               "id": "MBsAA",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "08 / 11",
+              "content": "08 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -22370,19 +22305,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "vsHbO",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / Matching SSAFY · 개요",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "type": "frame",
               "id": "OYoyN",
@@ -22914,7 +22836,7 @@
               "id": "BBEtg",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "09 / 11",
+              "content": "09 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -22950,19 +22872,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "LDvwf",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / Matching SSAFY · 아키텍처와 팀",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "id": "GadQ4",
               "type": "ref",
@@ -23391,7 +23300,7 @@
               "id": "c0usD",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "10 / 11",
+              "content": "10 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",
@@ -23406,7 +23315,7 @@
       "id": "PIiGg",
       "x": 15994,
       "y": 0,
-      "name": "A4 · 11 Matching SSAFY · 결과와 교육·활동",
+      "name": "A4 · 11 Matching SSAFY · 사례와 결과",
       "context": "Deliverable #43; ../design/pages/print.md; viewKey: paper/11",
       "theme": {
         "u:presentation": "print"
@@ -23427,19 +23336,6 @@
           "layout": "vertical",
           "gap": "$u:space.lg",
           "children": [
-            {
-              "type": "text",
-              "id": "wvKKa",
-              "name": "페이지 식별",
-              "fill": "$u:color.muted",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "이승주 / Matching SSAFY · 결과와 교육·활동",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "normal"
-            },
             {
               "id": "JMwQi",
               "type": "ref",
@@ -23647,7 +23543,68 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nvyMH",
+          "name": "Page footer",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "wMMtZ",
+              "name": "이름",
+              "fill": "$u:color.muted",
+              "content": "이승주 · 포트폴리오",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.tag",
+              "fontWeight": "normal"
             },
+            {
+              "type": "text",
+              "id": "aMYoC",
+              "name": "페이지 번호",
+              "fill": "$u:color.muted",
+              "content": "11 / 12",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.tag",
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "P9Wvk",
+      "x": 16948,
+      "y": 0,
+      "name": "A4 · 12 교육·활동과 연락",
+      "context": "Deliverable #43; ../design/pages/print.md; viewKey: paper/12",
+      "theme": {
+        "u:presentation": "print"
+      },
+      "clip": true,
+      "width": 794,
+      "height": 1123,
+      "fill": "$u:color.canvas",
+      "layout": "vertical",
+      "padding": 60,
+      "justifyContent": "space_between",
+      "children": [
+        {
+          "type": "frame",
+          "id": "NV3jT",
+          "name": "인쇄 본문",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$u:space.lg",
+          "children": [
             {
               "type": "frame",
               "id": "xVPbH",
@@ -23683,7 +23640,7 @@
                       "content": "SW마에스트로 17기"
                     },
                     "u:iJBrv": {
-                      "content": "연수생 · 참여 중. Lorekeeper 개발."
+                      "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발"
                     }
                   }
                 },
@@ -23701,9 +23658,22 @@
                       "content": "삼성 청년 SW·AI 아카데미 13기"
                     },
                     "u:iJBrv": {
-                      "content": "Java 백엔드 개발과 팀 프로젝트."
+                      "content": "Java 백엔드 개발과 팀 프로젝트"
                     }
                   }
+                },
+                {
+                  "type": "text",
+                  "id": "rFomt",
+                  "name": "개발 환경과 작업 방식",
+                  "fill": "$u:color.text",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "개발 환경과 작업 방식",
+                  "lineHeight": "$u:line.meta",
+                  "fontFamily": "$u:font.family",
+                  "fontSize": "$u:type.item",
+                  "fontWeight": "$u:weight.heading"
                 },
                 {
                   "type": "text",
@@ -23744,14 +23714,14 @@
         },
         {
           "type": "frame",
-          "id": "nvyMH",
+          "id": "XyIUl",
           "name": "Page footer",
           "width": "fill_container",
           "justifyContent": "space_between",
           "children": [
             {
               "type": "text",
-              "id": "wMMtZ",
+              "id": "fMe9z",
               "name": "이름",
               "fill": "$u:color.muted",
               "content": "이승주 · 포트폴리오",
@@ -23762,10 +23732,10 @@
             },
             {
               "type": "text",
-              "id": "aMYoC",
+              "id": "w294g",
               "name": "페이지 번호",
               "fill": "$u:color.muted",
-              "content": "11 / 11",
+              "content": "12 / 12",
               "lineHeight": "$u:line.meta",
               "fontFamily": "$u:font.family",
               "fontSize": "$u:type.tag",

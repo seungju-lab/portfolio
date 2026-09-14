@@ -1047,7 +1047,7 @@ h4 {
   }
 }
 @media print {
-  :root {
+  :root:not(:has(.print-shell)) {
     color-scheme: light;
     --color-canvas: #fff;
     --color-heading: #000;
@@ -1070,240 +1070,53 @@ h4 {
   }
 }
 
-@page portfolio {
-  size: A4;
-  margin: 16mm;
-  @bottom-left {
-    content: "이승주 · 포트폴리오";
-    font-family: var(--font-noto-sans), sans-serif;
-    font-size: 12px;
-    color: #444;
-  }
-  @bottom-right {
-    content: counter(page, decimal-leading-zero) " / "
-      counter(pages, decimal-leading-zero);
-    font-family: var(--font-noto-sans), sans-serif;
-    font-size: 12px;
-    color: #444;
-  }
+/* The full document shares project content and styling with detail pages. */
+.print-shell {
+  padding-top: 5rem;
 }
-@media print {
-  .print-shell {
-    page: portfolio;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .print-shell *,
-  .print-shell *::before,
-  .print-shell *::after {
-    opacity: 1 !important;
-    transition: none !important;
-    animation: none !important;
-    transform: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    position: static;
-  }
-  .print-toolbar,
-  .print-repositories .text-link {
-    display: none;
-  }
-  .print-document {
-    gap: 0;
-  }
-  .print-introduction {
-    order: 0;
-  }
-  .print-introduction .profile-name {
-    font-size: 28px;
-    margin-top: 16px;
-  }
-  .print-introduction .profile-role {
-    display: none;
-  }
-  .print-introduction > * + * {
-    margin-top: 24px;
-  }
-  .print-project-summary {
-    display: block;
-    order: 1;
-    margin-top: 24px;
-  }
-  .print-project-summary ul {
-    list-style: none;
-    margin: 12px 0 0;
-    padding: 0;
-  }
-  .print-project-summary li + li {
-    margin-top: 14px;
-  }
-  .print-project-summary p + p {
-    margin-top: 4px;
-  }
-  .print-project-summary h3 {
-    font-size: 15px;
-    margin-bottom: 4px;
-  }
-  .print-project-summary li,
-  .print-education li {
-    break-inside: avoid;
-  }
-  .print-education {
-    order: 2;
-    margin-top: 24px;
-  }
-  .print-education .section-heading {
-    margin-bottom: 12px;
-    letter-spacing: 0;
-  }
-  .print-education .entry-list > li + li {
-    margin-top: 12px;
-  }
-  .print-education .education-entry {
-    gap: 4px;
-  }
-  .print-education .entry-date {
-    font-size: 12px;
-  }
-  .print-education .entry-title {
-    font-size: 15px;
-  }
-  .print-education .entry-description {
-    margin-top: 4px;
-    font-size: 14px;
-  }
-  .print-education .working-note {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-  .print-education .working-note p {
-    margin-top: 8px;
-  }
-  .print-project {
-    order: 3;
-    display: block;
-    break-before: page;
-  }
-  .print-project-heading h2 {
-    font-size: 28px;
-  }
-  .print-project-heading > * + * {
-    margin-top: 10px;
-  }
-  .print-project-heading .project-period {
-    font-size: 13px;
-  }
-  .print-project-heading .project-contribution {
-    font-size: 14px;
-  }
-  .print-project-summary h2,
-  .print-education h2,
-  .print-education .working-note h3,
-  .print-article-section h3 {
-    font-size: 17px;
-  }
-  .print-article-section {
-    margin-top: 24px;
-  }
-  .print-article-section h3 {
-    margin-bottom: 10px;
-  }
-  .print-shell h1,
-  .print-shell h2,
-  .print-shell h3,
-  .print-project-heading {
-    break-after: avoid;
-  }
-  .print-shell p {
-    orphans: 3;
-    widows: 3;
-  }
-  .print-repositories {
-    margin-top: 24px;
-    break-inside: avoid;
-  }
-  .print-repositories > li + li {
-    margin-top: 6px;
-  }
-  .print-repository-address {
-    display: block;
-    font-family: var(--font-inter), var(--font-noto-sans), sans-serif;
-    font-size: 13px;
-    overflow-wrap: anywhere;
-  }
-  .print-only {
-    display: inline;
-  }
-  .print-eyebrow {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.5;
-    letter-spacing: 1.4px;
-  }
-  .print-project-heading h2 {
-    margin-top: 16px;
-  }
-  .print-profile-address {
-    display: block;
-    margin-top: 24px;
-    font-family: var(--font-inter), var(--font-noto-sans), sans-serif;
-    font-size: 13px;
-  }
+.print-project {
+  display: block;
+  border-top: 1px solid var(--color-rule);
+  padding-top: 2rem;
+  scroll-margin-top: 3rem;
+}
+.print-project-body {
+  margin-top: 2rem;
+}
+.print-project-heading > h2 {
+  margin: 0;
+}
+.print-education > h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.print-contact {
+  margin-top: 2rem;
+}
+.print-contents h2 {
+  font-size: 1.5rem;
+}
+.print-contents ol {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+.print-contents li {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-rule);
+}
+.print-contents li + li {
+  margin-top: 1.5rem;
+}
+.print-contents a {
+  color: var(--color-accent);
+  font-size: 1.125rem;
+}
+.print-contents p {
+  margin-top: 0.5rem;
+  font-size: var(--text-meta);
 }
 
-/* The full document shares project content and styling with detail pages. */
-@media screen {
-  .print-shell {
-    padding-top: 5rem;
-  }
-  .print-project {
-    display: block;
-    border-top: 1px solid var(--color-rule);
-    padding-top: 2rem;
-    scroll-margin-top: 3rem;
-  }
-  .print-project-body {
-    margin-top: 2rem;
-  }
-  .print-project-heading > h2 {
-    margin: 0;
-  }
-  .print-education > h2 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  .print-contact {
-    margin-top: 2rem;
-  }
-  .print-contents h2 {
-    font-size: 1.5rem;
-  }
-  .print-contents ol {
-    list-style: none;
-    padding: 0;
-    margin: 1.5rem 0 0;
-  }
-  .print-contents li {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--color-rule);
-  }
-  .print-contents li + li {
-    margin-top: 1.5rem;
-  }
-  .print-contents a {
-    color: var(--color-accent);
-    font-size: 1.125rem;
-  }
-  .print-contents p {
-    margin-top: 0.5rem;
-    font-size: var(--text-meta);
-  }
-}
 .print-profile {
   display: flex;
   align-items: center;
@@ -1343,5 +1156,233 @@ h4 {
   .print-portrait {
     width: 5rem;
     height: 6.25rem;
+  }
+}
+
+@page portfolio {
+  size: A4;
+  margin: 16mm;
+  background: #0f172a;
+  @bottom-left {
+    content: "이승주 · 포트폴리오";
+    font-family: var(--font-noto-sans), sans-serif;
+    font-size: 12px;
+    color: #8897af;
+  }
+  @bottom-right {
+    content: counter(page, decimal-leading-zero) " / "
+      counter(pages, decimal-leading-zero);
+    font-family: var(--font-noto-sans), sans-serif;
+    font-size: 12px;
+    color: #8897af;
+  }
+}
+@media print {
+  .print-shell {
+    page: portfolio;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    --text-description: 14px;
+    --text-meta: 12px;
+    --text-project-title: 16px;
+    --space-paragraph: 16px;
+    --space-section: 32px;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .print-shell *,
+  .print-shell *::before,
+  .print-shell *::after {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .print-toolbar {
+    display: none;
+  }
+  .print-document {
+    display: block;
+  }
+  .print-profile .profile-name,
+  .print-project-heading h2 {
+    font-size: 28px;
+  }
+  .print-profile .profile-role,
+  .print-project-heading .project-role {
+    font-size: 18px;
+  }
+  .print-introduction > * + * {
+    margin-top: 16px;
+  }
+  .print-contents {
+    margin-top: 32px;
+  }
+  .print-contents ol {
+    margin-top: 16px;
+  }
+  .print-contents li {
+    break-inside: avoid;
+  }
+  .print-contents li + li {
+    margin-top: 16px;
+  }
+  .print-contents a {
+    font-size: 16px;
+  }
+  .print-contents h2,
+  .print-education > h2,
+  .print-shell .detail-heading {
+    font-size: 21px;
+  }
+  .print-shell .text-link {
+    min-height: 0;
+    height: auto;
+    padding-block: 4px;
+  }
+  .print-shell a[href^="https:"] {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .print-shell a[href^="https:"]::after {
+    content: attr(href);
+    flex-basis: 100%;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--color-meta);
+    overflow-wrap: anywhere;
+  }
+  .print-project {
+    break-before: page;
+    border: 0;
+    padding: 0;
+  }
+  .print-project-heading > * + * {
+    margin-top: 12px;
+  }
+  .print-project-body {
+    margin-top: 24px;
+  }
+  .print-repositories > li + li {
+    margin-top: 8px;
+  }
+  .print-shell .detail-heading {
+    margin-bottom: 16px;
+  }
+  .print-shell .detail-section + .detail-section {
+    padding-top: 16px;
+  }
+  .print-shell .detail-subheading {
+    font-size: 16px;
+  }
+  .print-shell .detail-list,
+  .print-shell .detail-skills,
+  .print-shell .detail-result-note {
+    margin-top: 16px;
+  }
+  .print-shell .detail-list ul {
+    margin-top: 12px;
+  }
+  .print-shell .detail-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .print-shell .result-item {
+    padding: 12px;
+  }
+  .print-shell .result-item p,
+  .print-shell .detail-result-note p {
+    margin-top: 12px;
+  }
+  .print-shell .challenge-block + .challenge-block {
+    margin-top: 24px;
+    padding-top: 16px;
+  }
+  .print-shell .challenge-block dl > div + div {
+    margin-top: 16px;
+  }
+  .print-shell .system-diagram {
+    container-type: normal;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .print-shell .diagram-legend {
+    margin-top: 12px;
+  }
+  .print-shell .diagram-visual {
+    margin-top: 16px;
+  }
+  .print-shell .diagram-connection {
+    padding-block: 12px;
+  }
+  .print-shell .diagram-branches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .print-shell .diagram-branches-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .print-shell .diagram-message-flow {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: 16px;
+  }
+  .print-shell .diagram-mobile-origin,
+  .print-shell .diagram-arrow-vertical {
+    display: none;
+  }
+  .print-shell .diagram-arrow-horizontal {
+    display: block;
+  }
+  .print-education {
+    margin-top: 32px;
+    break-inside: avoid;
+  }
+  .print-education > h2 {
+    margin-bottom: 16px;
+  }
+  .print-education .entry-list > li + li {
+    margin-top: 16px;
+  }
+  .print-education .education-entry {
+    gap: 8px;
+  }
+  .print-education .entry-title {
+    font-size: 16px;
+  }
+  .print-education .entry-description {
+    font-size: 14px;
+  }
+  .print-education .working-note {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  .print-contact {
+    margin-top: 16px;
+  }
+  .print-shell :is(h1, h2, h3, h4),
+  .print-project-heading {
+    break-after: avoid;
+  }
+  .print-shell
+    :is(
+      .system-diagram,
+      .challenge-block,
+      .detail-results,
+      .detail-result-note,
+      .detail-list,
+      .repository-links
+    ) {
+    break-inside: avoid;
+  }
+  .print-shell .challenge-block:last-child,
+  .print-shell .detail-section:has(+ .detail-section[id$="results"]) {
+    break-after: avoid;
+  }
+  .print-shell p {
+    orphans: 3;
+    widows: 3;
   }
 }

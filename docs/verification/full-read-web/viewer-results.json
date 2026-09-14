@@ -1,0 +1,99 @@
+{
+  "pdfjsVersion": "6.3.289",
+  "pages": 12,
+  "navigation": [
+    {
+      "dest": "ilog",
+      "page": 2
+    },
+    {
+      "dest": "lorekeeper",
+      "page": 6
+    },
+    {
+      "dest": "matching-ssafy",
+      "page": 9
+    }
+  ],
+  "externalClicks": [
+    {
+      "href": "https://portfolio.seungju.dev/projects/ilog/",
+      "resolved": "https://portfolio.seungju.dev/projects/ilog/"
+    },
+    {
+      "href": "https://github.com/ju1115/ilog",
+      "resolved": "https://github.com/seungju-lab/ilog"
+    },
+    {
+      "href": "https://github.com/ju1115",
+      "resolved": "https://github.com/ju1115"
+    }
+  ],
+  "search": [
+    {
+      "page": 5,
+      "count": 1
+    }
+  ],
+  "textSelection": true,
+  "pageBackgrounds": [
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255]
+  ],
+  "annotations": [
+    {
+      "id": "73R",
+      "dest": "ilog"
+    },
+    {
+      "id": "74R",
+      "dest": "lorekeeper"
+    },
+    {
+      "id": "75R",
+      "dest": "matching-ssafy"
+    },
+    {
+      "id": "126R",
+      "url": "https://github.com/ju1115/ilog"
+    },
+    {
+      "id": "127R",
+      "url": "https://portfolio.seungju.dev/projects/ilog/"
+    },
+    {
+      "id": "204R",
+      "url": "https://github.com/soma-lorekeeper/lorekeeper-backend"
+    },
+    {
+      "id": "205R",
+      "url": "https://github.com/soma-lorekeeper/lorekeeper-frontend"
+    },
+    {
+      "id": "206R",
+      "url": "https://portfolio.seungju.dev/projects/lorekeeper/"
+    },
+    {
+      "id": "229R",
+      "url": "https://github.com/ju1115/Matching_SSAFY"
+    },
+    {
+      "id": "230R",
+      "url": "https://portfolio.seungju.dev/projects/matching-ssafy/"
+    },
+    {
+      "id": "255R",
+      "url": "https://github.com/ju1115"
+    }
+  ]
+}

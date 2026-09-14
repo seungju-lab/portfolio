@@ -3,6 +3,8 @@ import fs from "node:fs";
 import { execFileSync } from "node:child_process";
 import { projects, introduction, education } from "../src/content/portfolio.ts";
 
+import { projectDetails } from "../src/content/project-details.ts";
+
 const { chromium } = await import(
   process.env.PLAYWRIGHT_MODULE ?? "playwright"
 );
@@ -123,13 +125,22 @@ try {
     await page.waitForURL("**/print/", { waitUntil: "networkidle" });
     await checkBounds();
     const paragraphs = await page
-      .locator(".print-article-section p")
+      .locator(
+        ".print-project-body p:not(.diagram-legend):not(.diagram-route-title)",
+      )
       .allTextContents();
     assert.deepEqual(
       paragraphs,
-      projects.flatMap((p) =>
-        p.print.groups.flatMap((g) => g.sections.flatMap((s) => s.paragraphs)),
-      ),
+      projects.flatMap((project) => {
+        const detail = projectDetails[project.slug];
+        return [
+          detail.overview.introduction,
+          ...detail.architecture.paragraphs,
+          ...detail.results.map((result) => result.text),
+          detail.limitations,
+          ...(detail.reflection ? [detail.reflection.text] : []),
+        ];
+      }),
     );
     assert.equal(await page.locator(".print-button").isEnabled(), true);
     results.push({
@@ -180,34 +191,46 @@ try {
   const events = await page.evaluate(() => window.printEvents);
   assert.deepEqual(events, ["beforeprint", "afterprint"]);
   const info = execFileSync("pdfinfo", [pdf], { encoding: "utf8" });
-  assert.match(info, /Pages:\s+4\b/);
+  const pageCount = Number(info.match(/Pages:\s+(\d+)/)?.[1]);
+  assert(pageCount >= 4);
   const size = info.match(/Page size:\s+([\d.]+) x ([\d.]+) pts \(A4\)/);
   assert(size, "PDF must identify A4 paper");
   assert(Math.abs(Number(size[1]) - 595.28) < 1);
   assert(Math.abs(Number(size[2]) - 841.89) < 1);
-  const pdfText = execFileSync("pdftotext", ["-layout", pdf, "-"], {
+  const pdfText = execFileSync("pdftotext", ["-raw", pdf, "-"], {
     encoding: "utf8",
   });
   const pages = pdfText.split("\f").filter((p) => p.trim());
-  assert.equal(pages.length, 4);
-  for (let i = 0; i < projects.length; i++) {
-    const project = projects[i];
-    const text = normalize(pages[i + 1]);
-    for (const expected of project.print.groups.flatMap((g) =>
-      g.sections.flatMap((s) => s.paragraphs),
-    ))
+  assert.equal(pages.length, pageCount);
+  const combined = normalize(
+    pages.map((p) => p.replace(/^.*이승주 · 포트폴리오.*$/gm, "")).join(""),
+  );
+  const strings = (value) =>
+    typeof value === "string"
+      ? [value]
+      : Object.values(value ?? {}).flatMap(strings);
+  for (const project of projects) {
+    const detail = projectDetails[project.slug];
+    for (const expected of strings([
+      detail.overview,
+      detail.architecture,
+      detail.challenges,
+      detail.results,
+      detail.limitations,
+      detail.reflection,
+    ]))
       assert(
-        text.includes(normalize(expected)),
-        `${project.slug}: missing PDF text`,
+        combined.includes(normalize(expected)),
+        `${project.slug}: missing PDF text: ${expected}`,
       );
-    for (const repository of project.print.repositories)
-      assert(text.includes(normalize(repository.href)));
+    for (const repository of detail.repositories)
+      assert(combined.includes(normalize(repository.href)));
   }
   fs.writeFileSync(`${out}/pdfinfo.txt`, info);
   fs.writeFileSync(`${out}/pdf-text.txt`, pdfText);
   await page.screenshot({ path: `${out}/print-web-1440.png`, fullPage: true });
   results.push({
-    pdfPages: 4,
+    pdfPages: pageCount,
     paper: "A4",
     printEvents: events,
     restoredScrollY: await page.evaluate(() => scrollY),
@@ -249,7 +272,7 @@ try {
     ),
   );
   console.log(
-    "Passed: 15 text-200% views; home/print copy and navigation; A4 four-page PDF, print events, reading restoration and error retry.",
+    "Passed: 15 text-200% views; home/print copy and navigation; styled A4 PDF, print events, reading restoration and error retry.",
   );
 } finally {
   await browser.close();

@@ -1,5 +1,4 @@
-// Approved web detail copy: docs/design/pages/project-detail.md.
-// The original print copy remains in portfolio.ts and changes independently.
+// Shared detail, full-read and PDF copy: docs/design/pages/project-detail.md.
 export type DetailSectionId =
   "overview" | "architecture" | "challenges" | "results";
 export const detailNavigation: readonly {

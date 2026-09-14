@@ -122,7 +122,11 @@ export function PrintToolbar() {
           <Icon name="print" />
           <span>PDF로 저장</span>
         </button>
-        <p id="print-help">브라우저 인쇄에서 PDF로 저장할 수 있습니다.</p>
+        <p id="print-help">
+          브라우저 인쇄에서 PDF로 저장할 수 있습니다.
+          <br />
+          남색 배경이 보이지 않으면 배경 그래픽을 켜 주세요.
+        </p>
         <p className="print-error" role="alert">
           {error &&
             "인쇄 창을 열지 못했습니다. 브라우저 메뉴의 인쇄 기능을 이용해 주세요."}
