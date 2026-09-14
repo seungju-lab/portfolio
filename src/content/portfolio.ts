@@ -1,5 +1,5 @@
-// Public copy approved in docs/design/pages/{home,project-detail,print}.md.
-// Detail and print views must render these same paragraph arrays.
+// Home and print copy approved in docs/design/pages/{home,print}.md.
+// Web detail copy lives in project-details.ts; preserve this print edition.
 export type ProjectSummary = {
   slug: string;
   title: string;
@@ -10,7 +10,7 @@ export type ProjectSummary = {
 };
 
 export type Project = ProjectSummary & {
-  detail: {
+  print: {
     period: string;
     role: string;
     team?: string;
@@ -64,7 +64,7 @@ export const projects = [
     summary:
       "일기와 감정 분석 서비스에서 네 서비스를 단독 설계·구현했습니다. 로그인 후 사용자 조회가 다시 로그인으로 돌아가던 문제를 인증 경계를 정리해 해결했습니다.",
     technologies: ["Java", "Spring Security", "Gateway"],
-    detail: {
+    print: {
       period: "2025.10 — 2025.11",
       role: "인증·사용자·그룹·API Gateway",
       contribution: "6인 팀 · 네 서비스 단독 설계·구현",
@@ -135,7 +135,7 @@ export const projects = [
     summary:
       "장편 창작자를 위한 작품 관리 서비스를 개발하고 있습니다. 로그인 프론트엔드·백엔드와 작품·회차 API, 원고 업로드 검증을 맡았습니다.",
     technologies: ["Spring Boot", "OAuth2", "JPA"],
-    detail: {
+    print: {
       period: "2026.05 — 진행 중",
       role: "로그인 프론트엔드·백엔드, Work·Episode 백엔드 개발",
       contribution: "로그인 프론트엔드·백엔드\nWork·Episode 백엔드 개발",
@@ -203,7 +203,7 @@ export const projects = [
     summary:
       "교육생의 프로젝트 팀 구성을 돕는 서비스입니다. 팀 초대·참여 API와 WebSocket·STOMP 채팅을 구현하고 프론트엔드 연동을 담당했습니다.",
     technologies: ["Spring Boot", "WebSocket", "STOMP"],
-    detail: {
+    print: {
       period: "2025.07 — 2025.08",
       role: "백엔드 팀·채팅 도메인",
       contribution: "6인 팀 · 백엔드 팀·채팅 도메인",

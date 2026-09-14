@@ -69,14 +69,14 @@ export default function PrintPage() {
                 {project.title}
               </h2>
               <p className="project-period">
-                {project.detail.period}
+                {project.print.period}
                 <span className="print-only"> · {project.role}</span>
               </p>
               <p className="project-contribution">
-                {project.detail.contribution}
+                {project.print.contribution}
               </p>
             </header>
-            {project.detail.groups
+            {project.print.groups
               .flatMap((group) => group.sections)
               .map((section) => (
                 <section className="print-article-section" key={section.title}>
@@ -87,7 +87,7 @@ export default function PrintPage() {
                 </section>
               ))}
             <ul className="repository-links print-repositories">
-              {project.detail.repositories.map((repository) => (
+              {project.print.repositories.map((repository) => (
                 <li key={repository.href}>
                   <TextLink href={repository.href} external icon="github">
                     {repository.label} 저장소
