@@ -31,6 +31,22 @@ export function SectionNavigation() {
       if (element && heading) sections.push({ element, heading, link });
     }
     if (!sections.length) return;
+    const isProject = shell.classList.contains("portfolio-shell-project");
+    const legacyAnchors: Record<string, string> = isProject
+      ? {
+          "#scope": "#overview",
+          "#implementation": "#challenges",
+          "#verification": "#results",
+        }
+      : {};
+    const hashSection = () => {
+      const hash = legacyAnchors[location.hash] ?? location.hash;
+      return sections.find((section) => section.link.hash === hash);
+    };
+    const normalizeHash = (section: Section) => {
+      if (legacyAnchors[location.hash])
+        history.replaceState(history.state, "", section.link.hash);
+    };
     const desktop = matchMedia("(min-width: 1024px)");
     const reduced = matchMedia("(prefers-reduced-motion: reduce)");
     const printing = matchMedia("print");
@@ -39,6 +55,16 @@ export function SectionNavigation() {
     let available = true;
     let disposed = false;
     let interacted = false;
+    let restoreFrame = 0;
+    let restoring = false;
+    let entry = isProject
+      ? (history.state?.portfolioEntry ?? crypto.randomUUID())
+      : "";
+    const positions = new Map<string, { x: number; y: number }>();
+    if (isProject) {
+      history.replaceState({ ...history.state, portfolioEntry: entry }, "");
+      positions.set(entry, { x: scrollX, y: scrollY });
+    }
     const maxScroll = () =>
       Math.max(0, document.documentElement.scrollHeight - innerHeight);
     const destination = (section: Section) =>
@@ -46,7 +72,10 @@ export function SectionNavigation() {
         maxScroll(),
         Math.max(
           0,
-          section.element.getBoundingClientRect().top +
+          (isProject
+            ? section.heading
+            : section.element
+          ).getBoundingClientRect().top +
             scrollY -
             (desktop.matches ? 96 : 80),
         ),
@@ -82,6 +111,9 @@ export function SectionNavigation() {
       setCurrent(current);
     };
     const cancel = (stopScroll = true) => {
+      cancelAnimationFrame(restoreFrame);
+      restoreFrame = 0;
+      restoring = false;
       const moving = pending;
       pending = null;
       if (moving && stopScroll)
@@ -121,6 +153,11 @@ export function SectionNavigation() {
     const schedule = () => {
       if (!frame && available) frame = requestAnimationFrame(tick);
     };
+    const scroll = () => {
+      if (isProject && available && !restoring)
+        positions.set(entry, { x: scrollX, y: scrollY });
+      schedule();
+    };
     const click = (event: MouseEvent) => {
       if (
         event.defaultPrevented ||
@@ -138,9 +175,21 @@ export function SectionNavigation() {
       event.preventDefault();
       interacted = true;
       cancel();
-      if (location.hash !== section.link.hash)
-        history.pushState(history.state, "", section.link.hash);
       const target = destination(section);
+      if (location.hash !== section.link.hash) {
+        if (isProject) {
+          positions.set(entry, { x: scrollX, y: scrollY });
+          entry = crypto.randomUUID();
+          positions.set(entry, { x: 0, y: target });
+        }
+        history.pushState(
+          isProject
+            ? { ...history.state, portfolioEntry: entry }
+            : history.state,
+          "",
+          section.link.hash,
+        );
+      }
       pending = {
         section,
         target,
@@ -182,7 +231,47 @@ export function SectionNavigation() {
     const historyChange = () => {
       interacted = true;
       cancel(false);
+      const nextEntry = history.state?.portfolioEntry;
+      const position =
+        isProject && nextEntry !== entry ? positions.get(nextEntry) : undefined;
+      if (position) {
+        entry = nextEntry;
+        restoring = true;
+        // Restore the reading offset after native fragment scrolling. Entries
+        // from another document continue to use the browser's restoration.
+        restoreFrame = requestAnimationFrame(() => {
+          restoreFrame = requestAnimationFrame(() => {
+            restoreFrame = 0;
+            if (disposed || !available) return;
+            window.scrollTo({
+              left: position.x,
+              top: position.y,
+              behavior: "instant",
+            });
+            restoring = false;
+            update();
+          });
+        });
+      }
       schedule();
+    };
+    const hashChange = () => {
+      interacted = true;
+      if (restoring) return;
+      cancel(false);
+      if (isProject) {
+        entry = crypto.randomUUID();
+        history.replaceState({ ...history.state, portfolioEntry: entry }, "");
+      }
+      // Old fragment entries are replaced, so they do not add a history step.
+      // Ordinary back/forward navigation keeps native scroll restoration.
+      const section = legacyAnchors[location.hash] ? hashSection() : undefined;
+      if (section) {
+        normalizeHash(section);
+        window.scrollTo({ top: destination(section), behavior: "instant" });
+        section.heading.focus({ preventScroll: true });
+      }
+      scroll();
     };
     const resize = () => {
       cancel();
@@ -221,10 +310,10 @@ export function SectionNavigation() {
     const main = shell.querySelector("main");
     if (main) observer.observe(main);
     nav.addEventListener("click", click);
-    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("scroll", scroll, { passive: true });
     window.addEventListener("resize", resize);
     window.addEventListener("popstate", historyChange);
-    window.addEventListener("hashchange", historyChange);
+    window.addEventListener("hashchange", hashChange);
     window.addEventListener("pagehide", hide);
     window.addEventListener("pageshow", show);
     document.addEventListener("visibilitychange", visibility);
@@ -242,12 +331,16 @@ export function SectionNavigation() {
         disposed ||
         !available ||
         interacted ||
-        navigation?.type !== "navigate"
+        (navigation?.type !== "navigate" &&
+          !(isProject && navigation?.type === "reload"))
       )
         return;
-      const section = sections.find((item) => item.link.hash === location.hash);
-      if (section)
+      const section = hashSection();
+      if (section) {
+        normalizeHash(section);
         window.scrollTo({ top: destination(section), behavior: "instant" });
+        if (isProject) section.heading.focus({ preventScroll: true });
+      }
       schedule();
     });
     return () => {
@@ -256,10 +349,10 @@ export function SectionNavigation() {
       observer.disconnect();
       identity.removeAttribute("data-sticky");
       nav.removeEventListener("click", click);
-      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("scroll", scroll);
       window.removeEventListener("resize", resize);
       window.removeEventListener("popstate", historyChange);
-      window.removeEventListener("hashchange", historyChange);
+      window.removeEventListener("hashchange", hashChange);
       window.removeEventListener("pagehide", hide);
       window.removeEventListener("pageshow", show);
       document.removeEventListener("visibilitychange", visibility);
