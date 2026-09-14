@@ -1,0 +1,9 @@
+- figure "인증과 내부 서비스 요청 흐름":
+    - heading "인증과 내부 서비스 요청 흐름" [level=3]
+    - paragraph: 담당 · 청록색 테두리와 역할 레이블
+    - list:
+        - listitem: 브라우저에서 API Gateway로 서비스 요청을 보냅니다.
+        - listitem: API Gateway는 토큰 검증·공통 인증·라우팅을 담당합니다. Auth Service로 로그인·토큰 처리를 전달합니다.
+        - listitem: Auth Service와 Google은 OIDC 로그인으로 연결됩니다.
+        - listitem: API Gateway가 User Service와 Group Service에 검증된 사용자 식별자를 전달합니다.
+        - listitem: API Gateway·Auth Service·User Service·Group Service는 제가 담당했습니다. 세 경로의 Gateway는 같은 진입점입니다.

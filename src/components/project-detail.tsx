@@ -1,4 +1,5 @@
 import { ProjectArrivalFocus } from "@/components/project-arrival-focus";
+import { SystemDiagram } from "@/components/system-diagram";
 import type { Project } from "@/content/portfolio";
 import {
   detailNavigation,
@@ -126,6 +127,7 @@ export function ProjectDetail({
           </ul>
         </DetailSection>
         <DetailSection id="architecture">
+          <SystemDiagram slug={project.slug} />
           <div className="architecture-description">
             {detail.architecture.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

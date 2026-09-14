@@ -497,6 +497,107 @@ svg {
 .detail-result-note p {
   margin-top: 1rem;
 }
+.system-diagram {
+  container-type: inline-size;
+  margin: 0 0 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 6px;
+}
+.diagram-legend {
+  margin-top: 1.25rem;
+  color: var(--color-accent);
+  font-size: var(--text-meta);
+}
+.diagram-visual {
+  margin-top: 1.5rem;
+}
+.diagram-node {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 6px;
+  text-align: center;
+  line-height: 1.5;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.diagram-node-owned {
+  border-color: var(--color-accent);
+}
+.diagram-node-name {
+  display: block;
+  color: var(--color-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.diagram-node-role {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--color-accent);
+  font-size: var(--text-meta);
+}
+.diagram-connection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-block: 1rem;
+  font-size: var(--text-meta);
+  line-height: 1.5;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.diagram-arrow {
+  color: var(--color-meta);
+  font-size: 1rem;
+  line-height: 1;
+}
+.diagram-branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1rem;
+}
+.diagram-branches-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.diagram-mobile-origin,
+.diagram-arrow-vertical {
+  display: none;
+}
+.diagram-message-route + .diagram-message-route {
+  margin-top: 1.5rem;
+}
+.diagram-route-title {
+  margin-bottom: 1rem;
+  color: var(--color-heading);
+  font-size: var(--text-meta);
+  font-weight: 600;
+}
+.diagram-message-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+@container (width < 26rem) {
+  .diagram-branches,
+  .diagram-message-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .diagram-message-flow {
+    gap: 0;
+  }
+  .diagram-mobile-origin,
+  .diagram-arrow-vertical {
+    display: block;
+  }
+  .diagram-arrow-horizontal {
+    display: none;
+  }
+}
 .case-navigation {
   display: flex;
   flex-direction: column;
@@ -525,6 +626,23 @@ svg {
   }
   .detail-results {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .system-diagram {
+    padding: 1rem;
+  }
+  .diagram-branches,
+  .diagram-message-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .diagram-message-flow {
+    gap: 0;
+  }
+  .diagram-mobile-origin,
+  .diagram-arrow-vertical {
+    display: block;
+  }
+  .diagram-arrow-horizontal {
+    display: none;
   }
 }
 
