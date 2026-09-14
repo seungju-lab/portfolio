@@ -1,0 +1,157 @@
+{
+  "date": "2026-09-14",
+  "kind": "pencil-static-design",
+  "designCommit": "6063b66e5dfd6088ee718497c9bc7b703414156c",
+  "pencilCommit": "753695ce393574f0796bd231a4f51bc8131e26ba",
+  "files": {
+    "docs/pen/portfolio.pen": "6dcc244ffd400a9953c250d3b794b333ebe1f1ddf692b47554ebccd4edc042bd",
+    "docs/pen/portfolio.lib.pen": "c61d7e8e1b18eb02bd47fa11477846feaea0e74740ab18fd121cbac156a98bd1",
+    "docs/design/pages/project-detail.md": "b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de"
+  },
+  "contentItems": 154,
+  "linkTargets": 22,
+  "sourceFrames": {
+    "DYzMp": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: ilog/1440",
+    "xfTNq": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: lorekeeper/1440",
+    "toznr": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: matching-ssafy/1440",
+    "G6zZve": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: ilog/390",
+    "w71qL": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: lorekeeper/390",
+    "tUysq": "Source: ../design/pages/project-detail.md; SHA256: b1e198111f9977be5f9b1c2a1e8210e8e9fcbfb511ac79b8187e84c31c0348de; viewKey: matching-ssafy/390"
+  },
+  "frames": [
+    {
+      "id": "DYzMp",
+      "name": "ILOG · 1440",
+      "bounds": {
+        "x": 0,
+        "y": 2600,
+        "width": 1440,
+        "height": 3738
+      }
+    },
+    {
+      "id": "G6zZve",
+      "name": "ILOG · 390",
+      "bounds": {
+        "x": 1600,
+        "y": 2600,
+        "width": 390,
+        "height": 4994
+      }
+    },
+    {
+      "id": "xfTNq",
+      "name": "Lorekeeper · 1440",
+      "bounds": {
+        "x": 0,
+        "y": 7754,
+        "width": 1440,
+        "height": 3116
+      }
+    },
+    {
+      "id": "w71qL",
+      "name": "Lorekeeper · 390",
+      "bounds": {
+        "x": 1600,
+        "y": 7754,
+        "width": 390,
+        "height": 4047
+      }
+    },
+    {
+      "id": "toznr",
+      "name": "Matching SSAFY · 1440",
+      "bounds": {
+        "x": 0,
+        "y": 11961,
+        "width": 1440,
+        "height": 2820
+      }
+    },
+    {
+      "id": "tUysq",
+      "name": "Matching SSAFY · 390",
+      "bounds": {
+        "x": 1600,
+        "y": 11961,
+        "width": 390,
+        "height": 3746
+      }
+    }
+  ],
+  "structuralResult": "passed",
+  "visualResult": "passed",
+  "visibleClippingProblems": 0,
+  "topLevelOverlaps": 0,
+  "preserved": {
+    "frames": 11,
+    "components": 9,
+    "variables": 38,
+    "originalUserChanges": true
+  },
+  "saveVerification": "Byte-identical copies of saved files reopened in Pencil and read through MCP. Content, refs, variables, context targets rechecked.",
+  "notVerified": [
+    "web code",
+    "browser interactions",
+    "320px",
+    "physical devices",
+    "PDF output",
+    "deployment",
+    "external reference same-size visual comparison"
+  ],
+  "screenshots": {
+    "ilog-1440": {
+      "identity": "ilog-1440-identity.png",
+      "diagram": "ilog-1440-diagram.png",
+      "case-1": "ilog-1440-case-1.png",
+      "case-2": "ilog-1440-case-2.png",
+      "case-3": "ilog-1440-case-3.png",
+      "results": "ilog-1440-results.png"
+    },
+    "ilog-390": {
+      "identity": "ilog-390-identity.png",
+      "auth-route": "ilog-390-auth-route.png",
+      "user-route": "ilog-390-user-route.png",
+      "group-route": "ilog-390-group-route.png",
+      "case-1": "ilog-390-case-1.png",
+      "case-2": "ilog-390-case-2.png",
+      "case-3": "ilog-390-case-3.png",
+      "results": "ilog-390-results.png"
+    },
+    "lorekeeper-1440": {
+      "identity": "lorekeeper-1440-identity.png",
+      "diagram": "lorekeeper-1440-diagram.png",
+      "case-1": "lorekeeper-1440-case-1.png",
+      "case-2": "lorekeeper-1440-case-2.png",
+      "results": "lorekeeper-1440-results.png",
+      "navigation": "lorekeeper-1440-navigation.png"
+    },
+    "lorekeeper-390": {
+      "identity": "lorekeeper-390-identity.png",
+      "storage-routes": "lorekeeper-390-storage-routes.png",
+      "duties": "lorekeeper-390-duties.png",
+      "case-1": "lorekeeper-390-case-1.png",
+      "case-2": "lorekeeper-390-case-2.png",
+      "results": "lorekeeper-390-results.png",
+      "navigation": "lorekeeper-390-navigation.png"
+    },
+    "matching-ssafy-1440": {
+      "identity": "matching-ssafy-1440-identity.png",
+      "diagram": "matching-ssafy-1440-diagram.png",
+      "case-1": "matching-ssafy-1440-case-1.png",
+      "case-2": "matching-ssafy-1440-case-2.png",
+      "results": "matching-ssafy-1440-results.png",
+      "navigation": "matching-ssafy-1440-navigation.png"
+    },
+    "matching-ssafy-390": {
+      "identity": "matching-ssafy-390-identity.png",
+      "api-route": "matching-ssafy-390-api-route.png",
+      "message-route": "matching-ssafy-390-message-route.png",
+      "case-1": "matching-ssafy-390-case-1.png",
+      "case-2": "matching-ssafy-390-case-2.png",
+      "results": "matching-ssafy-390-results.png",
+      "navigation": "matching-ssafy-390-navigation.png"
+    }
+  }
+}
