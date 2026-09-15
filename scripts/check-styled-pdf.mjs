@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   education,
   introduction,
@@ -12,23 +13,22 @@ import { projectDetails } from "../src/content/project-details.ts";
 const { chromium } = await import(
   process.env.PLAYWRIGHT_MODULE ?? "playwright"
 );
-const pdfjs = process.env.PDFJS_DIR;
-assert(pdfjs, "Set PDFJS_DIR to an installed pdfjs-dist directory");
+const pdfjs =
+  process.env.PDFJS_DIR ??
+  path.dirname(fileURLToPath(import.meta.resolve("pdfjs-dist/package.json")));
 const out = process.env.EVIDENCE_DIR ?? "/tmp/portfolio-styled-pdf";
 await fs.mkdir(out, { recursive: true });
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 1000 } });
-await page.goto((process.env.BASE_URL ?? "http://127.0.0.1:3002") + "/print/", {
-  waitUntil: "networkidle",
-});
-await page.evaluate(() => document.fonts.ready);
-await page.pdf({
-  path: path.join(out, "portfolio.pdf"),
-  preferCSSPageSize: true,
-  printBackground: true,
-  tagged: true,
-  outline: true,
-});
+const response = await fetch(
+  (process.env.BASE_URL ?? "http://127.0.0.1:3002") + "/portfolio.pdf",
+);
+assert.equal(response.status, 200);
+assert.match(response.headers.get("content-type"), /application\/pdf/);
+await fs.writeFile(
+  path.join(out, "portfolio.pdf"),
+  Buffer.from(await response.arrayBuffer()),
+);
 const html = `<!doctype html><html><head><link rel="stylesheet" href="/_pdfjs/web/pdf_viewer.css"><style>html,body{margin:0;height:100%}#viewerContainer{position:absolute;inset:0;overflow:auto}</style></head><body><div id="viewerContainer"><div id="viewer" class="pdfViewer"></div></div><script type="module">
 import * as pdfjsLib from '/_pdfjs/build/pdf.mjs';globalThis.pdfjsLib=pdfjsLib;
 const {EventBus,PDFLinkService,PDFFindController,PDFViewer}=await import('/_pdfjs/web/pdf_viewer.mjs');
@@ -112,8 +112,8 @@ try {
     return { pages, total: pdf.numPages };
   });
   assert(
-    structure.total >= 8 && structure.total <= 9,
-    `Expected the accepted 8–9 page layout, got ${structure.total}`,
+    structure.total === 8,
+    `Expected the accepted 8-page layout, got ${structure.total}`,
   );
   for (const p of structure.pages) {
     assert.deepEqual(

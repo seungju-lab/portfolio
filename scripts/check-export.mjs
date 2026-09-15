@@ -53,6 +53,11 @@ try {
     throw new Error("Exported _headers differs from public/_headers");
   }
 
+  const pdf = readRequired("portfolio.pdf");
+  if (!pdf.equals(readFileSync(resolve(projectRoot, "public/portfolio.pdf")))) {
+    throw new Error("Exported portfolio.pdf differs from public/portfolio.pdf");
+  }
+
   const assets = new Set();
   function verifyAsset(reference, base = "https://portfolio.invalid/") {
     const url = new URL(reference, base);

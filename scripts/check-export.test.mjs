@@ -52,7 +52,7 @@ const assets = [
   ),
 ];
 assert(assets.every(Boolean));
-for (const path of [...htmlPaths, "_headers", ...assets]) {
+for (const path of [...htmlPaths, "_headers", "portfolio.pdf", ...assets]) {
   for (const damage of ["missing", "empty", "changed"]) {
     test(`${path}: rejects ${damage} output`, () => {
       const temporary = mkdtempSync(
