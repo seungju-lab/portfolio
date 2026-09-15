@@ -142,7 +142,7 @@ try {
         ];
       }),
     );
-    assert.equal(await page.locator(".print-button").isEnabled(), true);
+    assert.equal(await page.locator(".print-button, .print-action").count(), 0);
     results.push({
       width,
       homeCopy: true,
@@ -168,7 +168,7 @@ try {
 
   await open("/print/");
   await page.evaluate(() => {
-    document.querySelector(".print-button").focus({ preventScroll: true });
+    document.querySelector(".print-toolbar a").focus({ preventScroll: true });
     scrollTo({ top: 850, behavior: "instant" });
     window.printEvents = [];
     addEventListener("beforeprint", () =>
@@ -186,7 +186,7 @@ try {
   await page.waitForFunction(
     () =>
       Math.abs(scrollY - 850) < 2 &&
-      document.activeElement?.classList.contains("print-button"),
+      document.activeElement?.matches(".print-toolbar a"),
   );
   const events = await page.evaluate(() => window.printEvents);
   assert.deepEqual(events, ["beforeprint", "afterprint"]);
@@ -241,29 +241,8 @@ try {
     paper: "A4",
     printEvents: events,
     restoredScrollY: await page.evaluate(() => scrollY),
-    restoredFocus: "print-button",
+    restoredFocus: "home-link",
   });
-  // Exercise the UI's exception/retry path without a native print dialog.
-  await page.evaluate(() => {
-    window.print = () => {
-      throw new Error("test unavailable");
-    };
-  });
-  await page.locator(".print-button").click();
-  assert.match(
-    await page.locator(".print-error").innerText(),
-    /인쇄 창을 열지 못했습니다/,
-  );
-  await page.evaluate(() => {
-    window.print = () => {
-      dispatchEvent(new Event("beforeprint"));
-      dispatchEvent(new Event("afterprint"));
-    };
-  });
-  await page.locator(".print-button").click();
-  await page.waitForFunction(
-    () => document.querySelector(".print-error").textContent === "",
-  );
   assert.deepEqual(errors, []);
   fs.writeFileSync(
     `${out}/results.json`,
@@ -272,14 +251,14 @@ try {
         browser: browser.version(),
         results,
         assetAndPageErrors: errors,
-        printExceptionRetry: true,
+        removedPrintButton: true,
       },
       null,
       2,
     ),
   );
   console.log(
-    "Passed: 15 text-200% views; home/print copy and navigation; styled A4 PDF, print events, reading restoration and error retry.",
+    "Passed: 15 text-200% views; home/print copy and navigation; styled A4 PDF, print events, reading restoration and removed print controls.",
   );
 } finally {
   await browser.close();

@@ -19,6 +19,8 @@ pnpm check:export:test
 
 생성 후 모든 페이지의 색·사진·도식·페이지 나눔을 검토한다. HTTP로 제공되는 파일을 `BASE_URL`로 지정하고 `node scripts/check-styled-pdf.mjs`를 실행하면 전체 본문, 내부 목차 클릭, 외부 링크 열기, 한글 선택·검색을 검사한다. 기본 주소는 `http://127.0.0.1:3002`이며 결과는 `EVIDENCE_DIR`에 남는다. PDF를 검토한 뒤 소스 변경, PDF, manifest를 함께 커밋한다.
 
+브라우저 링크 검사는 `BASE_URL=http://127.0.0.1:8787 node scripts/check-pdf-links.mjs`로 실행한다. PDF 뷰어가 포함된 Chromium과 UTF-8 로케일을 명시한다. 최소 headless shell은 PDF 새 탭을 표시하지 않으며, 로케일이 없는 Linux 환경은 한글 저장 파일명을 `download`로 대체할 수 있어 검증 환경과 실제 링크 오류를 구별해야 한다.
+
 ## 오래된 PDF 방지
 
 `pnpm build`는 먼저 `pdf:check`를 실행한다. manifest는 모든 `src`와 PDF를 제외한 `public` 파일, 패키지·잠금 파일·Next·TypeScript 설정 및 생성 코드의 해시와 PDF 바이트 해시를 기록한다. 파일 추가·삭제·수정이나 PDF 누락·변조 시 빌드가 실패한다. 홈처럼 PDF에 직접 보이지 않는 소스 변경도 보수적으로 갱신을 요구한다. 문서·검토 이미지 변경은 갱신을 요구하지 않는다.

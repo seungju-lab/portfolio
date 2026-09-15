@@ -20,7 +20,8 @@ function remote(session, method, params = {}) {
       const data = JSON.parse(event.message);
       if (data.id !== id) return;
       cdp.off("Target.receivedMessageFromTarget", receive);
-      data.error ? reject(data.error) : resolve(data.result);
+      if (data.error) reject(data.error);
+      else resolve(data.result);
     };
     cdp.on("Target.receivedMessageFromTarget", receive);
     await cdp.send("Target.sendMessageToTarget", {
@@ -35,7 +36,7 @@ try {
     { waitUntil: "networkidle" },
   );
   const results = [];
-  for (const mode of ["button", "keyboard"]) {
+  for (const mode of ["keyboard", "keyboard-repeat"]) {
     await page.evaluate(() => {
       window.events = [];
       window.addEventListener("beforeprint", () => events.push("beforeprint"), {
@@ -45,18 +46,12 @@ try {
         once: true,
       });
       scrollTo(0, 850);
-      document.querySelector(".print-button").focus({ preventScroll: true });
+      document.querySelector(".print-toolbar a").focus({ preventScroll: true });
     });
-    if (mode === "button")
-      await page.evaluate(() =>
-        setTimeout(() => document.querySelector(".print-button").click(), 50),
-      );
-    else {
-      await page.bringToFront();
-      execFileSync("xdotool", ["key", "--clearmodifiers", "ctrl+p"], {
-        env: { ...process.env, DISPLAY: process.env.DISPLAY ?? ":99" },
-      });
-    }
+    await page.bringToFront();
+    execFileSync("xdotool", ["key", "--clearmodifiers", "ctrl+p"], {
+      env: { ...process.env, DISPLAY: process.env.DISPLAY ?? ":99" },
+    });
     let target;
     for (let i = 0; i < 40; i++) {
       target = (await cdp.send("Target.getTargets")).targetInfos.find(
@@ -77,7 +72,7 @@ try {
     });
     console.log(mode, JSON.stringify(inspection.result.value));
     const cancel = await remote(sessionId, "Runtime.evaluate", {
-      expression: `(()=>{function walk(root){for(const el of root.querySelectorAll('*')){if(el.matches('.cancel-button')){el.click();return true;}if(el.shadowRoot&&walk(el.shadowRoot))return true;}return false;}return walk(document);})()`,
+      expression: `(()=>{function walk(root){for(const el of root.querySelectorAll('*')){if(el.matches('.cancel-button')){setTimeout(()=>el.click(),50);return true;}if(el.shadowRoot&&walk(el.shadowRoot))return true;}return false;}return walk(document);})()`,
       returnByValue: true,
     });
     assert(cancel.result.value, "native cancel clicked");
@@ -85,7 +80,7 @@ try {
       () =>
         events.includes("afterprint") &&
         Math.abs(scrollY - 850) < 2 &&
-        document.activeElement?.classList.contains("print-button"),
+        document.activeElement?.matches(".print-toolbar a"),
     );
     results.push({
       mode,
