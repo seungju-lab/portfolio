@@ -7,7 +7,7 @@
       "x": 0,
       "y": 0,
       "name": "Home · 1440",
-      "context": "Current design source: ../design/pages/home.md; SHA256: b91a079a2a224dd111dd5ab5a5c49ad583d2a659d3450c415c38d7d06c0ea109; viewKey: home/1440. This context records the current source revision; metadata.sourceRevision records the creation revision.",
+      "context": "Current source: ../design/pdf-serving-change-requirements.md; SHA256 b756efddf56bb82bcca2caa042f3f889d734ad46301cdd30f762b3baa03cb55d; Work #57. Existing viewKey preserved.",
       "theme": {
         "u:presentation": "desktop"
       },
@@ -32,7 +32,7 @@
           "id": "V9Kjl",
           "name": "Identity & navigation",
           "width": 448,
-          "height": 720,
+          "height": 824,
           "fill": "$u:color.canvas",
           "layout": "vertical",
           "justifyContent": "space_between",
@@ -131,7 +131,8 @@
               "id": "AEvAK",
               "name": "Profile links",
               "width": "fill_container",
-              "gap": "$u:space.lg",
+              "layout": "vertical",
+              "gap": "$u:space.sm",
               "children": [
                 {
                   "id": "ED44E",
@@ -149,17 +150,71 @@
                   }
                 },
                 {
-                  "id": "dE5ZG",
+                  "type": "frame",
+                  "id": "a0zlA",
+                  "name": "전체 열람 · PDF 다운로드",
+                  "height": 44,
+                  "gap": "$u:space.sm",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "dE5ZG",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "전체 열람",
+                      "height": 44,
+                      "context": "Same tab: /print/",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "file-text"
+                        },
+                        "u:A8C0m": {
+                          "content": "전체 열람"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZuCrE",
+                      "name": "장식 구분자",
+                      "context": "aria-hidden; two 8px gaps give 16px link separation excluding separator.",
+                      "fill": "$u:color.muted",
+                      "textGrowth": "fixed-width",
+                      "width": 4,
+                      "content": "·",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.meta",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "Bi2ZF",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "PDF 다운로드",
+                      "context": "Download /portfolio.pdf as 이승주-포트폴리오.pdf; no print dialog; stationary icon.",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "download"
+                        },
+                        "u:A8C0m": {
+                          "content": "PDF 다운로드"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "s3nq0q",
                   "type": "ref",
                   "ref": "u:sHYjZ",
-                  "name": "전체 열람 · PDF",
-                  "height": 44,
+                  "name": "PDF 보기",
+                  "context": "Open /portfolio.pdf in new tab; accessible name PDF 보기 새 탭.",
                   "descendants": {
                     "u:ain5n": {
-                      "icon": "file-text"
+                      "icon": "arrow-up-right"
                     },
                     "u:A8C0m": {
-                      "content": "전체 열람 · PDF"
+                      "content": "PDF 보기"
                     }
                   }
                 }
@@ -496,7 +551,7 @@
       "x": 1600,
       "y": 0,
       "name": "Home · 390",
-      "context": "Current design source: ../design/pages/home.md; SHA256: b91a079a2a224dd111dd5ab5a5c49ad583d2a659d3450c415c38d7d06c0ea109; viewKey: home/390. This context records the current source revision; metadata.sourceRevision records the creation revision.",
+      "context": "Source: ../design/pdf-serving-change-requirements.md; SHA256 b756efddf56bb82bcca2caa042f3f889d734ad46301cdd30f762b3baa03cb55d; Work #57; home/390.",
       "theme": {
         "u:presentation": "mobile"
       },
@@ -651,7 +706,8 @@
               "id": "uyT4G",
               "name": "Profile links",
               "width": "fill_container",
-              "gap": "$u:space.lg",
+              "layout": "vertical",
+              "gap": "$u:space.sm",
               "children": [
                 {
                   "id": "pGxo3",
@@ -669,17 +725,71 @@
                   }
                 },
                 {
-                  "id": "B3HlLA",
+                  "type": "frame",
+                  "id": "k6QmHx",
+                  "name": "전체 열람 · PDF 다운로드",
+                  "height": 44,
+                  "gap": "$u:space.sm",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "B3HlLA",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "전체 열람",
+                      "height": 44,
+                      "context": "Same tab: /print/",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "file-text"
+                        },
+                        "u:A8C0m": {
+                          "content": "전체 열람"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "CFQQ7",
+                      "name": "장식 구분자",
+                      "context": "aria-hidden",
+                      "fill": "$u:color.muted",
+                      "textGrowth": "fixed-width",
+                      "width": 4,
+                      "content": "·",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.meta",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "KrCFq",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "PDF 다운로드",
+                      "context": "Download /portfolio.pdf as 이승주-포트폴리오.pdf; stationary icon.",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "download"
+                        },
+                        "u:A8C0m": {
+                          "content": "PDF 다운로드"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Ie8yZ",
                   "type": "ref",
                   "ref": "u:sHYjZ",
-                  "name": "전체 열람 · PDF",
-                  "height": 44,
+                  "name": "PDF 보기",
+                  "context": "New tab /portfolio.pdf; accessible name PDF 보기 새 탭.",
                   "descendants": {
                     "u:ain5n": {
-                      "icon": "file-text"
+                      "icon": "arrow-up-right"
                     },
                     "u:A8C0m": {
-                      "content": "전체 열람 · PDF"
+                      "content": "PDF 보기"
                     }
                   }
                 }
@@ -1030,7 +1140,7 @@
       "x": 2070,
       "y": 0,
       "name": "Home · 320",
-      "context": "Current design source: ../design/pages/home.md; SHA256: b91a079a2a224dd111dd5ab5a5c49ad583d2a659d3450c415c38d7d06c0ea109; viewKey: home/320. This context records the current source revision; metadata.sourceRevision records the creation revision.",
+      "context": "Current source: ../design/pdf-serving-change-requirements.md; SHA256 b756efddf56bb82bcca2caa042f3f889d734ad46301cdd30f762b3baa03cb55d; Work #57. Existing viewKey preserved.",
       "theme": {
         "u:presentation": "mobile"
       },
@@ -1179,7 +1289,8 @@
               "id": "oPgM4",
               "name": "Profile links",
               "width": "fill_container",
-              "gap": "$u:space.lg",
+              "layout": "vertical",
+              "gap": "$u:space.sm",
               "children": [
                 {
                   "id": "A9iPQG",
@@ -1197,17 +1308,71 @@
                   }
                 },
                 {
-                  "id": "Xd0kZ",
+                  "type": "frame",
+                  "id": "S73IT",
+                  "name": "전체 열람 · PDF 다운로드",
+                  "height": 44,
+                  "gap": "$u:space.sm",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "Xd0kZ",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "전체 열람",
+                      "height": 44,
+                      "context": "Same tab: /print/",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "file-text"
+                        },
+                        "u:A8C0m": {
+                          "content": "전체 열람"
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "id": "H5KUb",
+                      "name": "장식 구분자",
+                      "context": "aria-hidden; two 8px gaps give 16px link separation excluding separator.",
+                      "fill": "$u:color.muted",
+                      "textGrowth": "fixed-width",
+                      "width": 4,
+                      "content": "·",
+                      "fontFamily": "$u:font.family",
+                      "fontSize": "$u:type.meta",
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "ipwKK",
+                      "type": "ref",
+                      "ref": "u:sHYjZ",
+                      "name": "PDF 다운로드",
+                      "context": "Download /portfolio.pdf as 이승주-포트폴리오.pdf; no print dialog; stationary icon.",
+                      "descendants": {
+                        "u:ain5n": {
+                          "icon": "download"
+                        },
+                        "u:A8C0m": {
+                          "content": "PDF 다운로드"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "tncoE",
                   "type": "ref",
                   "ref": "u:sHYjZ",
-                  "name": "전체 열람 · PDF",
-                  "height": 44,
+                  "name": "PDF 보기",
+                  "context": "Open /portfolio.pdf in new tab; accessible name PDF 보기 새 탭.",
                   "descendants": {
                     "u:ain5n": {
-                      "icon": "file-text"
+                      "icon": "arrow-up-right"
                     },
                     "u:A8C0m": {
-                      "content": "전체 열람 · PDF"
+                      "content": "PDF 보기"
                     }
                   }
                 }
@@ -9825,7 +9990,7 @@
       "x": 2600,
       "y": 0,
       "name": "전체 열람 · 1440",
-      "context": "Source: ../design/pages/print.md at a223584; Deliverable #43; viewKey: print/1440",
+      "context": "Source: ../design/pdf-serving-change-requirements.md; SHA256 b756efddf56bb82bcca2caa042f3f889d734ad46301cdd30f762b3baa03cb55d; Work #57. Home navigation only; no print button/help/error. Education follows TOC per current pages/print.md. Existing viewKey preserved.",
       "theme": {
         "u:presentation": "desktop"
       },
@@ -9849,7 +10014,7 @@
         {
           "type": "frame",
           "id": "q4AXh",
-          "name": "도구 모음과 저장 안내",
+          "name": "홈으로 이동",
           "width": "fill_container",
           "layout": "vertical",
           "gap": "$u:space.sm",
@@ -9857,10 +10022,10 @@
             {
               "type": "frame",
               "id": "wIBNF",
-              "name": "Print toolbar",
+              "name": "문서 탐색",
               "width": "fill_container",
+              "height": 44,
               "gap": "$u:space.xl",
-              "justifyContent": "space_between",
               "children": [
                 {
                   "id": "Vh3gg",
@@ -9876,36 +10041,8 @@
                       "content": "홈으로"
                     }
                   }
-                },
-                {
-                  "id": "nRopg",
-                  "type": "ref",
-                  "ref": "u:sHYjZ",
-                  "name": "PDF로 저장",
-                  "height": 44,
-                  "descendants": {
-                    "u:ain5n": {
-                      "icon": "printer"
-                    },
-                    "u:A8C0m": {
-                      "content": "PDF로 저장"
-                    }
-                  }
                 }
               ]
-            },
-            {
-              "type": "text",
-              "id": "p05MnR",
-              "name": "PDF 저장 안내",
-              "fill": "$u:color.body",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "브라우저 인쇄에서 PDF로 저장할 수 있습니다.\n남색 배경이 보이지 않으면 배경 그래픽을 켜 주세요.",
-              "lineHeight": "$u:line.body",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "$u:weight.body"
             }
           ]
         },
@@ -10189,6 +10326,111 @@
                   "fontWeight": "$u:weight.body"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "g3t6js",
+          "name": "Education & practice",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$u:space.xl",
+          "children": [
+            {
+              "type": "text",
+              "id": "JFPD6",
+              "name": "교육·활동",
+              "fill": "$u:color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "교육·활동",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.detail-section",
+              "fontWeight": "$u:weight.heading"
+            },
+            {
+              "id": "xAcjP",
+              "type": "ref",
+              "ref": "u:d0fFl",
+              "name": "SW마에스트로 17기",
+              "width": "fill_container",
+              "descendants": {
+                "u:zhQXL": {
+                  "content": "2026.05 — 2026.11 예정"
+                },
+                "u:a4w7p": {
+                  "content": "SW마에스트로 17기"
+                },
+                "u:iJBrv": {
+                  "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발"
+                }
+              }
+            },
+            {
+              "id": "Vns1d",
+              "type": "ref",
+              "ref": "u:d0fFl",
+              "name": "삼성 청년 SW·AI 아카데미 13기",
+              "width": "fill_container",
+              "descendants": {
+                "u:zhQXL": {
+                  "content": "2025.01 — 12"
+                },
+                "u:a4w7p": {
+                  "content": "삼성 청년 SW·AI 아카데미 13기"
+                },
+                "u:iJBrv": {
+                  "content": "Java 백엔드 개발과 팀 프로젝트"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "id": "k4PM42",
+              "name": "개발 환경과 작업 방식",
+              "fill": "$u:color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "개발 환경과 작업 방식",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.item",
+              "fontWeight": "$u:weight.heading"
+            },
+            {
+              "type": "text",
+              "id": "laE4m",
+              "name": "Practice",
+              "fill": "$u:color.body",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "개인 Linux 홈서버를 학습·개발에 활용합니다. AI 에이전트의 작업 분해와 완료 기준을 설계하고, 홈서버의 Terraform 전환 작업에 적용했습니다.",
+              "lineHeight": "$u:line.body",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.body",
+              "fontWeight": "$u:weight.body"
+            },
+            {
+              "id": "D2Ep8I",
+              "type": "ref",
+              "ref": "u:sHYjZ",
+              "name": "GitHub 연락 경로",
+              "width": "fill_container",
+              "height": 44,
+              "context": "External PDF link: https://github.com/ju1115",
+              "descendants": {
+                "u:ain5n": {
+                  "icon": "github"
+                },
+                "u:A8C0m": {
+                  "content": "github.com/ju1115",
+                  "fill": "$u:color.accent",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container"
+                }
+              }
             }
           ]
         },
@@ -14088,111 +14330,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "frame",
-          "id": "g3t6js",
-          "name": "Education & practice",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": "$u:space.xl",
-          "children": [
-            {
-              "type": "text",
-              "id": "JFPD6",
-              "name": "교육·활동",
-              "fill": "$u:color.text",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "교육·활동",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.detail-section",
-              "fontWeight": "$u:weight.heading"
-            },
-            {
-              "id": "xAcjP",
-              "type": "ref",
-              "ref": "u:d0fFl",
-              "name": "SW마에스트로 17기",
-              "width": "fill_container",
-              "descendants": {
-                "u:zhQXL": {
-                  "content": "2026.05 — 2026.11 예정"
-                },
-                "u:a4w7p": {
-                  "content": "SW마에스트로 17기"
-                },
-                "u:iJBrv": {
-                  "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발"
-                }
-              }
-            },
-            {
-              "id": "Vns1d",
-              "type": "ref",
-              "ref": "u:d0fFl",
-              "name": "삼성 청년 SW·AI 아카데미 13기",
-              "width": "fill_container",
-              "descendants": {
-                "u:zhQXL": {
-                  "content": "2025.01 — 12"
-                },
-                "u:a4w7p": {
-                  "content": "삼성 청년 SW·AI 아카데미 13기"
-                },
-                "u:iJBrv": {
-                  "content": "Java 백엔드 개발과 팀 프로젝트"
-                }
-              }
-            },
-            {
-              "type": "text",
-              "id": "k4PM42",
-              "name": "개발 환경과 작업 방식",
-              "fill": "$u:color.text",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "개발 환경과 작업 방식",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.item",
-              "fontWeight": "$u:weight.heading"
-            },
-            {
-              "type": "text",
-              "id": "laE4m",
-              "name": "Practice",
-              "fill": "$u:color.body",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "개인 Linux 홈서버를 학습·개발에 활용합니다. AI 에이전트의 작업 분해와 완료 기준을 설계하고, 홈서버의 Terraform 전환 작업에 적용했습니다.",
-              "lineHeight": "$u:line.body",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.body",
-              "fontWeight": "$u:weight.body"
-            },
-            {
-              "id": "D2Ep8I",
-              "type": "ref",
-              "ref": "u:sHYjZ",
-              "name": "GitHub 연락 경로",
-              "width": "fill_container",
-              "height": 44,
-              "context": "External PDF link: https://github.com/ju1115",
-              "descendants": {
-                "u:ain5n": {
-                  "icon": "github"
-                },
-                "u:A8C0m": {
-                  "content": "github.com/ju1115",
-                  "fill": "$u:color.accent",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container"
-                }
-              }
-            }
-          ]
         }
       ]
     },
@@ -14202,7 +14339,7 @@
       "x": 4200,
       "y": 0,
       "name": "전체 열람 · 390",
-      "context": "Source: ../design/pages/print.md at a223584; Deliverable #43; viewKey: print/390",
+      "context": "Source: ../design/pdf-serving-change-requirements.md; SHA256 b756efddf56bb82bcca2caa042f3f889d734ad46301cdd30f762b3baa03cb55d; Work #57. Home navigation only; no print button/help/error. Education follows TOC per current pages/print.md. Existing viewKey preserved.",
       "theme": {
         "u:presentation": "mobile"
       },
@@ -14226,7 +14363,7 @@
         {
           "type": "frame",
           "id": "xYZnK",
-          "name": "도구 모음과 저장 안내",
+          "name": "홈으로 이동",
           "width": "fill_container",
           "layout": "vertical",
           "gap": "$u:space.sm",
@@ -14234,11 +14371,11 @@
             {
               "type": "frame",
               "id": "Q6YMI",
-              "name": "Print toolbar",
+              "name": "문서 탐색",
               "width": "fill_container",
+              "height": 44,
               "layout": "vertical",
               "gap": "$u:space.sm",
-              "justifyContent": "space_between",
               "children": [
                 {
                   "id": "i6sraq",
@@ -14254,36 +14391,8 @@
                       "content": "홈으로"
                     }
                   }
-                },
-                {
-                  "id": "ICW1c",
-                  "type": "ref",
-                  "ref": "u:sHYjZ",
-                  "name": "PDF로 저장",
-                  "height": 44,
-                  "descendants": {
-                    "u:ain5n": {
-                      "icon": "printer"
-                    },
-                    "u:A8C0m": {
-                      "content": "PDF로 저장"
-                    }
-                  }
                 }
               ]
-            },
-            {
-              "type": "text",
-              "id": "F03tOP",
-              "name": "PDF 저장 안내",
-              "fill": "$u:color.body",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "브라우저 인쇄에서 PDF로 저장할 수 있습니다.\n남색 배경이 보이지 않으면 배경 그래픽을 켜 주세요.",
-              "lineHeight": "$u:line.body",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.meta",
-              "fontWeight": "$u:weight.body"
             }
           ]
         },
@@ -14567,6 +14676,111 @@
                   "fontWeight": "$u:weight.body"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "W7ocVs",
+          "name": "Education & practice",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$u:space.xl",
+          "children": [
+            {
+              "type": "text",
+              "id": "FCbw9",
+              "name": "교육·활동",
+              "fill": "$u:color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "교육·활동",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.detail-section",
+              "fontWeight": "$u:weight.heading"
+            },
+            {
+              "id": "b3u2W9",
+              "type": "ref",
+              "ref": "u:d0fFl",
+              "name": "SW마에스트로 17기",
+              "width": "fill_container",
+              "descendants": {
+                "u:zhQXL": {
+                  "content": "2026.05 — 2026.11 예정"
+                },
+                "u:a4w7p": {
+                  "content": "SW마에스트로 17기"
+                },
+                "u:iJBrv": {
+                  "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발"
+                }
+              }
+            },
+            {
+              "id": "lZlPm",
+              "type": "ref",
+              "ref": "u:d0fFl",
+              "name": "삼성 청년 SW·AI 아카데미 13기",
+              "width": "fill_container",
+              "descendants": {
+                "u:zhQXL": {
+                  "content": "2025.01 — 12"
+                },
+                "u:a4w7p": {
+                  "content": "삼성 청년 SW·AI 아카데미 13기"
+                },
+                "u:iJBrv": {
+                  "content": "Java 백엔드 개발과 팀 프로젝트"
+                }
+              }
+            },
+            {
+              "type": "text",
+              "id": "b83q1Q",
+              "name": "개발 환경과 작업 방식",
+              "fill": "$u:color.text",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "개발 환경과 작업 방식",
+              "lineHeight": "$u:line.meta",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.item",
+              "fontWeight": "$u:weight.heading"
+            },
+            {
+              "type": "text",
+              "id": "WZlVP",
+              "name": "Practice",
+              "fill": "$u:color.body",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "개인 Linux 홈서버를 학습·개발에 활용합니다. AI 에이전트의 작업 분해와 완료 기준을 설계하고, 홈서버의 Terraform 전환 작업에 적용했습니다.",
+              "lineHeight": "$u:line.body",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.body",
+              "fontWeight": "$u:weight.body"
+            },
+            {
+              "id": "IOyBY",
+              "type": "ref",
+              "ref": "u:sHYjZ",
+              "name": "GitHub 연락 경로",
+              "width": "fill_container",
+              "height": 44,
+              "context": "External PDF link: https://github.com/ju1115",
+              "descendants": {
+                "u:ain5n": {
+                  "icon": "github"
+                },
+                "u:A8C0m": {
+                  "content": "github.com/ju1115",
+                  "fill": "$u:color.accent",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container"
+                }
+              }
             }
           ]
         },
@@ -18435,111 +18649,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "frame",
-          "id": "W7ocVs",
-          "name": "Education & practice",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": "$u:space.xl",
-          "children": [
-            {
-              "type": "text",
-              "id": "FCbw9",
-              "name": "교육·활동",
-              "fill": "$u:color.text",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "교육·활동",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.detail-section",
-              "fontWeight": "$u:weight.heading"
-            },
-            {
-              "id": "b3u2W9",
-              "type": "ref",
-              "ref": "u:d0fFl",
-              "name": "SW마에스트로 17기",
-              "width": "fill_container",
-              "descendants": {
-                "u:zhQXL": {
-                  "content": "2026.05 — 2026.11 예정"
-                },
-                "u:a4w7p": {
-                  "content": "SW마에스트로 17기"
-                },
-                "u:iJBrv": {
-                  "content": "연수생 · 참여 중\nLorekeeper 로그인·Work·Episode 개발"
-                }
-              }
-            },
-            {
-              "id": "lZlPm",
-              "type": "ref",
-              "ref": "u:d0fFl",
-              "name": "삼성 청년 SW·AI 아카데미 13기",
-              "width": "fill_container",
-              "descendants": {
-                "u:zhQXL": {
-                  "content": "2025.01 — 12"
-                },
-                "u:a4w7p": {
-                  "content": "삼성 청년 SW·AI 아카데미 13기"
-                },
-                "u:iJBrv": {
-                  "content": "Java 백엔드 개발과 팀 프로젝트"
-                }
-              }
-            },
-            {
-              "type": "text",
-              "id": "b83q1Q",
-              "name": "개발 환경과 작업 방식",
-              "fill": "$u:color.text",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "개발 환경과 작업 방식",
-              "lineHeight": "$u:line.meta",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.item",
-              "fontWeight": "$u:weight.heading"
-            },
-            {
-              "type": "text",
-              "id": "WZlVP",
-              "name": "Practice",
-              "fill": "$u:color.body",
-              "textGrowth": "fixed-width",
-              "width": "fill_container",
-              "content": "개인 Linux 홈서버를 학습·개발에 활용합니다. AI 에이전트의 작업 분해와 완료 기준을 설계하고, 홈서버의 Terraform 전환 작업에 적용했습니다.",
-              "lineHeight": "$u:line.body",
-              "fontFamily": "$u:font.family",
-              "fontSize": "$u:type.body",
-              "fontWeight": "$u:weight.body"
-            },
-            {
-              "id": "IOyBY",
-              "type": "ref",
-              "ref": "u:sHYjZ",
-              "name": "GitHub 연락 경로",
-              "width": "fill_container",
-              "height": 44,
-              "context": "External PDF link: https://github.com/ju1115",
-              "descendants": {
-                "u:ain5n": {
-                  "icon": "github"
-                },
-                "u:A8C0m": {
-                  "content": "github.com/ju1115",
-                  "fill": "$u:color.accent",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container"
-                }
-              }
-            }
-          ]
         }
       ]
     },
@@ -20510,8 +20619,8 @@
       "id": "EaQJZ",
       "x": 6454,
       "y": 1400,
-      "name": "인쇄 기능 미지원 · 390",
-      "context": "Current design source: ../design/pages/print.md; SHA256: 8bd36ba331650b83924a05aa9eed84d84f266a9391f573c6bf90daf597317bf4; viewKey: states/print-unavailable. This context records the current source revision; metadata.sourceRevision records the creation revision.",
+      "name": "문서 링크 · hover & focus",
+      "context": "Source ../design/pdf-serving-change-requirements.md; SHA256 b756efddf56bb82bcca2caa042f3f889d734ad46301cdd30f762b3baa03cb55d; Work #57; states/pdf-links. Replaces removed print-error UI.",
       "theme": {
         "u:presentation": "mobile"
       },
@@ -20526,64 +20635,236 @@
       "width": 390,
       "fill": "$u:color.canvas",
       "layout": "vertical",
-      "gap": "$u:space.paragraph",
+      "gap": "$u:space.lg",
       "padding": 24,
       "children": [
         {
-          "id": "TbPpZ",
-          "type": "ref",
-          "ref": "u:sHYjZ",
-          "name": "홈으로",
-          "height": 44,
-          "descendants": {
-            "u:ain5n": {
-              "icon": "arrow-left"
-            },
-            "u:A8C0m": {
-              "content": "홈으로"
-            }
-          }
-        },
-        {
           "type": "text",
-          "id": "ijpbe",
-          "name": "Heading",
-          "fill": "$u:color.text",
-          "textGrowth": "fixed-width",
-          "width": "fill_container",
-          "content": "브라우저에서 인쇄하기",
-          "lineHeight": "$u:line.body",
-          "fontFamily": "$u:font.family",
-          "fontSize": "$u:type.section",
-          "fontWeight": "$u:weight.label"
-        },
-        {
-          "type": "text",
-          "id": "gpz3z",
-          "name": "Instructions",
+          "id": "vfAG8",
+          "name": "문서 링크 · hover / 키보드 focus",
           "fill": "$u:color.body",
           "textGrowth": "fixed-width",
           "width": "fill_container",
-          "content": "이 환경에서는 인쇄 창을 바로 열 수 없습니다. 브라우저 메뉴의 ‘인쇄’를 선택한 뒤, 대상에서 ‘PDF로 저장’을 선택해 주세요.",
-          "lineHeight": "$u:line.body",
+          "content": "문서 링크 · hover / 키보드 focus",
           "fontFamily": "$u:font.family",
-          "fontSize": "$u:type.body",
-          "fontWeight": "$u:weight.body"
+          "fontSize": "$u:type.meta",
+          "fontWeight": "normal"
         },
         {
-          "id": "Q6ko0K",
-          "type": "ref",
-          "ref": "u:sHYjZ",
-          "name": "전체 내용으로 돌아가기",
-          "height": 44,
-          "descendants": {
-            "u:ain5n": {
-              "icon": "arrow-left"
+          "type": "frame",
+          "id": "cuOTI",
+          "name": "전체 열람 상태",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$u:space.sm",
+          "children": [
+            {
+              "type": "text",
+              "id": "QwsLg",
+              "name": "전체 열람",
+              "fill": "$u:color.body",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "전체 열람",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.meta",
+              "fontWeight": "normal"
             },
-            "u:A8C0m": {
-              "content": "전체 내용으로 돌아가기"
+            {
+              "type": "frame",
+              "id": "yfpcF",
+              "name": "hover · focus",
+              "width": "fill_container",
+              "gap": "$u:space.lg",
+              "padding": "$u:space.xs",
+              "children": [
+                {
+                  "id": "X6wtc",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "전체 열람 hover",
+                  "context": "Same TextLink; hover",
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "file-text",
+                      "fill": "$u:color.accent"
+                    },
+                    "u:A8C0m": {
+                      "content": "전체 열람",
+                      "fill": "$u:color.accent"
+                    }
+                  }
+                },
+                {
+                  "id": "qm33i",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "전체 열람 focus",
+                  "context": "Keyboard focus: 2px accent outline at 4px offset; padding here visualizes the browser outline offset.",
+                  "stroke": "$u:color.accent",
+                  "strokeWidth": "$u:stroke.focus",
+                  "strokeAlignment": "outer",
+                  "cornerRadius": "$u:radius.hover",
+                  "padding": "$u:space.xs",
+                  "height": 52,
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "file-text",
+                      "fill": "$u:color.accent"
+                    },
+                    "u:A8C0m": {
+                      "content": "전체 열람",
+                      "fill": "$u:color.accent"
+                    }
+                  }
+                }
+              ]
             }
-          }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rsDgi",
+          "name": "PDF 다운로드 상태",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$u:space.sm",
+          "children": [
+            {
+              "type": "text",
+              "id": "oQxzz",
+              "name": "PDF 다운로드",
+              "fill": "$u:color.body",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "PDF 다운로드",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.meta",
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "hMd9H",
+              "name": "hover · focus",
+              "width": "fill_container",
+              "gap": "$u:space.lg",
+              "padding": "$u:space.xs",
+              "children": [
+                {
+                  "id": "P3iLUb",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "PDF 다운로드 hover",
+                  "context": "Same TextLink; hover; icon remains stationary",
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "download",
+                      "fill": "$u:color.accent"
+                    },
+                    "u:A8C0m": {
+                      "content": "PDF 다운로드",
+                      "fill": "$u:color.accent"
+                    }
+                  }
+                },
+                {
+                  "id": "Z5nl4",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "PDF 다운로드 focus",
+                  "context": "Keyboard focus: 2px accent outline at 4px offset; padding here visualizes the browser outline offset.",
+                  "stroke": "$u:color.accent",
+                  "strokeWidth": "$u:stroke.focus",
+                  "strokeAlignment": "outer",
+                  "cornerRadius": "$u:radius.hover",
+                  "padding": "$u:space.xs",
+                  "height": 52,
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "download",
+                      "fill": "$u:color.accent"
+                    },
+                    "u:A8C0m": {
+                      "content": "PDF 다운로드",
+                      "fill": "$u:color.accent"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pTNOd",
+          "name": "PDF 보기 상태",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$u:space.sm",
+          "children": [
+            {
+              "type": "text",
+              "id": "a3uwU0",
+              "name": "PDF 보기",
+              "fill": "$u:color.body",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "PDF 보기",
+              "fontFamily": "$u:font.family",
+              "fontSize": "$u:type.meta",
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "BUUu9",
+              "name": "hover · focus",
+              "width": "fill_container",
+              "gap": "$u:space.lg",
+              "padding": "$u:space.xs",
+              "children": [
+                {
+                  "id": "d8KZ9n",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "PDF 보기 hover",
+                  "context": "Same TextLink; hover",
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "arrow-up-right",
+                      "fill": "$u:color.accent"
+                    },
+                    "u:A8C0m": {
+                      "content": "PDF 보기",
+                      "fill": "$u:color.accent"
+                    }
+                  }
+                },
+                {
+                  "id": "rKgM8",
+                  "type": "ref",
+                  "ref": "u:sHYjZ",
+                  "name": "PDF 보기 focus",
+                  "context": "Keyboard focus: 2px accent outline at 4px offset; padding here visualizes the browser outline offset.",
+                  "stroke": "$u:color.accent",
+                  "strokeWidth": "$u:stroke.focus",
+                  "strokeAlignment": "outer",
+                  "cornerRadius": "$u:radius.hover",
+                  "padding": "$u:space.xs",
+                  "height": 52,
+                  "descendants": {
+                    "u:ain5n": {
+                      "icon": "arrow-up-right",
+                      "fill": "$u:color.accent"
+                    },
+                    "u:A8C0m": {
+                      "content": "PDF 보기",
+                      "fill": "$u:color.accent"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -28708,6 +28989,103 @@
               "fontWeight": "normal"
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "omBiB",
+      "x": 6924,
+      "y": 1400,
+      "name": "문서 링크 · 320 · 텍스트 200%",
+      "context": "Isolated document links at 200% text scale: 13px × 2 = 26px, icons unchanged; second row wraps without horizontal overflow. Browser validation follows in Work #62.",
+      "theme": {
+        "u:presentation": "mobile"
+      },
+      "metadata": {
+        "type": "design-source",
+        "source": "../design/pdf-serving-change-requirements.md",
+        "sourceRevision": "b756efddf56bb82bcca2caa042f3f889d734ad46301cdd30f762b3baa03cb55d",
+        "viewKey": "home/320/text-200"
+      },
+      "clip": true,
+      "width": 320,
+      "fill": "$u:color.canvas",
+      "layout": "vertical",
+      "gap": "$u:space.sm",
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "y83bnO",
+          "name": "320px · 텍스트 200%",
+          "fill": "$u:color.body",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "320px · 텍스트 200%",
+          "fontFamily": "$u:font.family",
+          "fontSize": "$u:type.meta",
+          "fontWeight": "normal"
+        },
+        {
+          "id": "px5HS",
+          "type": "ref",
+          "ref": "u:sHYjZ",
+          "name": "GitHub",
+          "descendants": {
+            "u:ain5n": {
+              "icon": "github"
+            },
+            "u:A8C0m": {
+              "content": "GitHub",
+              "fontSize": 26
+            }
+          }
+        },
+        {
+          "id": "f10le",
+          "type": "ref",
+          "ref": "u:sHYjZ",
+          "name": "전체 열람 ·",
+          "descendants": {
+            "u:ain5n": {
+              "icon": "file-text"
+            },
+            "u:A8C0m": {
+              "content": "전체 열람 ·",
+              "fontSize": 26
+            }
+          }
+        },
+        {
+          "id": "l3Wdr",
+          "type": "ref",
+          "ref": "u:sHYjZ",
+          "name": "PDF 다운로드",
+          "descendants": {
+            "u:ain5n": {
+              "icon": "download"
+            },
+            "u:A8C0m": {
+              "content": "PDF 다운로드",
+              "fontSize": 26
+            }
+          }
+        },
+        {
+          "id": "R3yD2",
+          "type": "ref",
+          "ref": "u:sHYjZ",
+          "name": "PDF 보기",
+          "descendants": {
+            "u:ain5n": {
+              "icon": "arrow-up-right"
+            },
+            "u:A8C0m": {
+              "content": "PDF 보기",
+              "fontSize": 26
+            }
+          }
         }
       ]
     }
