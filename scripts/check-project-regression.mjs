@@ -223,8 +223,15 @@ try {
         combined.includes(normalize(expected)),
         `${project.slug}: missing PDF text: ${expected}`,
       );
-    for (const repository of detail.repositories)
-      assert(combined.includes(normalize(repository.href)));
+    for (const repository of detail.repositories) {
+      assert(combined.includes(normalize(repository.label)));
+      assert.equal(
+        await page
+          .locator(`#${project.slug} a[href="${repository.href}"]`)
+          .count(),
+        1,
+      );
+    }
   }
   fs.writeFileSync(`${out}/pdfinfo.txt`, info);
   fs.writeFileSync(`${out}/pdf-text.txt`, pdfText);

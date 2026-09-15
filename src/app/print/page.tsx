@@ -64,6 +64,30 @@ export default function PrintPage() {
             ))}
           </ol>
         </nav>
+        <section
+          className="print-education"
+          aria-labelledby="education-heading"
+        >
+          <h2 id="education-heading">교육·활동</h2>
+          <ul className="entry-list">
+            {education.map((entry) => (
+              <li key={entry.title}>
+                <EducationEntry period={entry.period} title={entry.title}>
+                  {entry.description.join("\n")}
+                </EducationEntry>
+              </li>
+            ))}
+          </ul>
+          <div className="working-note">
+            <h3>{workingPractice.title}</h3>
+            <p>{workingPractice.description}</p>
+          </div>
+          <p className="print-contact">
+            <TextLink href={profile.github} external icon="github">
+              {profile.github.replace("https://", "")}
+            </TextLink>
+          </p>
+        </section>
         {projects.map((project) => {
           const detail = projectDetails[project.slug];
           return (
@@ -108,30 +132,6 @@ export default function PrintPage() {
             </article>
           );
         })}
-        <section
-          className="print-education"
-          aria-labelledby="education-heading"
-        >
-          <h2 id="education-heading">교육·활동</h2>
-          <ul className="entry-list">
-            {education.map((entry) => (
-              <li key={entry.title}>
-                <EducationEntry period={entry.period} title={entry.title}>
-                  {entry.description.join("\n")}
-                </EducationEntry>
-              </li>
-            ))}
-          </ul>
-          <div className="working-note">
-            <h3>{workingPractice.title}</h3>
-            <p>{workingPractice.description}</p>
-          </div>
-          <p className="print-contact">
-            <TextLink href={profile.github} external icon="github">
-              {profile.github.replace("https://", "")}
-            </TextLink>
-          </p>
-        </section>
       </main>
     </div>
   );

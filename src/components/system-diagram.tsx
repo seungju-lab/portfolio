@@ -86,12 +86,14 @@ function Connection({
 function IlogDiagram() {
   return (
     <>
-      <DiagramNode name="브라우저" />
-      <Connection>서비스 요청</Connection>
-      <DiagramNode
-        name="API Gateway"
-        responsibility="담당 · 토큰 검증 · 공통 인증 · 라우팅"
-      />
+      <div className="diagram-entry">
+        <DiagramNode name="브라우저" />
+        <Connection>서비스 요청</Connection>
+        <DiagramNode
+          name="API Gateway"
+          responsibility="담당 · 토큰 검증 · 공통 인증 · 라우팅"
+        />
+      </div>
       <div className="diagram-branches diagram-branches-three">
         <div>
           <Connection mobileOrigin="Gateway → Auth Service">

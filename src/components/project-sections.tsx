@@ -13,9 +13,11 @@ function DetailSection({
   children,
   headingLevel,
   prefix,
+  projectTitle,
 }: {
   headingLevel: 2 | 3;
   prefix: string;
+  projectTitle?: string;
   id: DetailSectionId;
   children: ReactNode;
 }) {
@@ -24,6 +26,7 @@ function DetailSection({
   return (
     <section
       className="detail-section"
+      data-project={projectTitle}
       id={anchor}
       aria-labelledby={`${anchor}-heading`}
     >
@@ -113,9 +116,14 @@ export function ProjectSections({
         headingLevel={headingLevel}
         prefix={prefix}
         id="challenges"
+        projectTitle={project.title}
       >
         {detail.challenges.map((challenge) => (
-          <section className="challenge-block" key={challenge.title}>
+          <section
+            className="challenge-block"
+            data-project={project.title}
+            key={challenge.title}
+          >
             <Subheading className="detail-subheading">
               {challenge.title}
             </Subheading>

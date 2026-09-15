@@ -1,0 +1,82 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "textScale": 1,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 1440,
+      "textScale": 2,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "textScale": 1,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 1024,
+      "textScale": 2,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 1023,
+      "textScale": 1,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 1023,
+      "textScale": 2,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "textScale": 1,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 768,
+      "textScale": 2,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "textScale": 1,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 390,
+      "textScale": 2,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "textScale": 1,
+      "overflow": false,
+      "clipped": []
+    },
+    {
+      "width": 320,
+      "textScale": 2,
+      "overflow": false,
+      "clipped": []
+    }
+  ],
+  "contentParity": true,
+  "uniqueAnchors": true,
+  "keyboardHistoryReload": true,
+  "touchContents": true,
+  "detailHeadingRegression": true,
+  "errors": []
+}

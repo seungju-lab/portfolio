@@ -2,6 +2,13 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
+import {
+  education,
+  introduction,
+  projects,
+  workingPractice,
+} from "../src/content/portfolio.ts";
+import { projectDetails } from "../src/content/project-details.ts";
 const { chromium } = await import(
   process.env.PLAYWRIGHT_MODULE ?? "playwright"
 );
@@ -81,10 +88,22 @@ try {
       canvas.height = v.height;
       await p.render({ canvasContext: canvas.getContext("2d"), viewport: v })
         .promise;
+      const text = await p.getTextContent();
+      const size = p.getViewport({ scale: 1 });
       pages.push({
         number: n,
         corner: [...canvas.getContext("2d").getImageData(2, 2, 1, 1).data],
-        text: (await p.getTextContent()).items.map((i) => i.str).join(""),
+        text: text.items.map((i) => i.str).join(""),
+        overflowingText: text.items
+          .filter((i) => i.str?.trim())
+          .filter(
+            (i) =>
+              i.transform[4] < -1 ||
+              i.transform[4] + i.width > size.width + 1 ||
+              i.transform[5] < -1 ||
+              i.transform[5] > size.height + 1,
+          )
+          .map((i) => i.str),
         links: a
           .filter((i) => i.subtype === "Link")
           .map((i) => ({ id: i.id, url: i.url, dest: i.dest })),
@@ -92,7 +111,10 @@ try {
     }
     return { pages, total: pdf.numPages };
   });
-  assert(structure.total >= 4);
+  assert(
+    structure.total >= 8 && structure.total <= 9,
+    `Expected the accepted 8–9 page layout, got ${structure.total}`,
+  );
   for (const p of structure.pages) {
     assert.deepEqual(
       p.corner,
@@ -100,6 +122,31 @@ try {
       `page ${p.number} background`,
     );
     assert(p.text.length > 50, `blank page ${p.number}`);
+    assert.deepEqual(p.overflowingText, [], `page ${p.number} text bounds`);
+  }
+  const normalize = (s) => s.replace(/[\s\u00ad]/g, "");
+  const strings = (value) =>
+    typeof value === "string"
+      ? [value]
+      : Object.values(value ?? {}).flatMap(strings);
+  const fullText = normalize(structure.pages.map((p) => p.text).join(""));
+  for (const expected of strings([
+    introduction,
+    education,
+    workingPractice,
+    ...projects.map(({ slug }) => {
+      const d = projectDetails[slug];
+      return [
+        d.overview,
+        d.architecture,
+        d.challenges,
+        d.results,
+        d.limitations,
+        d.reflection,
+      ];
+    }),
+  ])) {
+    assert(fullText.includes(normalize(expected)), `PDF missing: ${expected}`);
   }
   const links = structure.pages.flatMap((p) => p.links);
   for (const url of [
@@ -107,6 +154,9 @@ try {
     "https://portfolio.seungju.dev/projects/lorekeeper/",
     "https://portfolio.seungju.dev/projects/matching-ssafy/",
     "https://github.com/ju1115",
+    ...projects.flatMap(({ slug }) =>
+      projectDetails[slug].repositories.map((r) => r.href),
+    ),
   ])
     assert(
       links.some((a) => a.url === url),
@@ -131,11 +181,14 @@ try {
     navigation.push({ dest: annotation.dest, page: destination });
   }
   const externalClicks = [];
-  for (const [number, url] of [
-    [2, "https://portfolio.seungju.dev/projects/ilog/"],
-    [2, "https://github.com/ju1115/ilog"],
-    [structure.total, "https://github.com/ju1115"],
+  for (const url of [
+    "https://portfolio.seungju.dev/projects/ilog/",
+    "https://github.com/ju1115/ilog",
+    "https://github.com/ju1115",
   ]) {
+    const number = structure.pages.find((p) =>
+      p.links.some((a) => a.url === url),
+    ).number;
     await page.evaluate((n) => (viewer.currentPageNumber = n), number);
     const external = page.locator(`.annotationLayer a[href="${url}"]`);
     const popupWait = page.waitForEvent("popup");
@@ -202,6 +255,8 @@ try {
         externalClicks,
         search: matches,
         textSelection: true,
+        fullContentPreserved: true,
+        textWithinPageBounds: true,
         pageBackgrounds: structure.pages.map((p) => p.corner),
         annotations: links,
       },
