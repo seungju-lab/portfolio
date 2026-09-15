@@ -1,0 +1,97 @@
+{
+  "pdfjsVersion": "6.3.289",
+  "pages": 8,
+  "navigation": [
+    {
+      "dest": "ilog",
+      "page": 2
+    },
+    {
+      "dest": "lorekeeper",
+      "page": 5
+    },
+    {
+      "dest": "matching-ssafy",
+      "page": 7
+    }
+  ],
+  "externalClicks": [
+    {
+      "href": "https://portfolio.seungju.dev/projects/ilog/",
+      "resolved": "https://portfolio.seungju.dev/projects/ilog/"
+    },
+    {
+      "href": "https://github.com/ju1115/ilog",
+      "resolved": "https://github.com/seungju-lab/ilog"
+    },
+    {
+      "href": "https://github.com/ju1115",
+      "resolved": "https://github.com/ju1115"
+    }
+  ],
+  "search": [
+    {
+      "page": 4,
+      "count": 1
+    }
+  ],
+  "textSelection": true,
+  "fullContentPreserved": true,
+  "textWithinPageBounds": true,
+  "pageBackgrounds": [
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255],
+    [15, 23, 42, 255]
+  ],
+  "annotations": [
+    {
+      "id": "106R",
+      "dest": "ilog"
+    },
+    {
+      "id": "107R",
+      "dest": "lorekeeper"
+    },
+    {
+      "id": "108R",
+      "dest": "matching-ssafy"
+    },
+    {
+      "id": "109R",
+      "url": "https://github.com/ju1115"
+    },
+    {
+      "id": "176R",
+      "url": "https://github.com/ju1115/ilog"
+    },
+    {
+      "id": "177R",
+      "url": "https://portfolio.seungju.dev/projects/ilog/"
+    },
+    {
+      "id": "224R",
+      "url": "https://github.com/soma-lorekeeper/lorekeeper-backend"
+    },
+    {
+      "id": "225R",
+      "url": "https://github.com/soma-lorekeeper/lorekeeper-frontend"
+    },
+    {
+      "id": "226R",
+      "url": "https://portfolio.seungju.dev/projects/lorekeeper/"
+    },
+    {
+      "id": "246R",
+      "url": "https://github.com/ju1115/Matching_SSAFY"
+    },
+    {
+      "id": "247R",
+      "url": "https://portfolio.seungju.dev/projects/matching-ssafy/"
+    }
+  ]
+}

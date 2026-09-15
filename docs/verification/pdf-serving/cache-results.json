@@ -1,0 +1,11 @@
+{
+  "environment": "Wrangler local Workers Assets; server restart models an asset version replacement",
+  "originalSha256": "ec0ec3161263cc17b6340e271f631cad7e3530c7dbbfe9f8ca34785b74458e28",
+  "fixtureSha256": "868fef06eb7abba909f40d9077d043dc0e0e3ba5b1a76a5fab9197bb345df0c4",
+  "oldEtag": "\"903fa73203943ad8f8ab5d0844742f9c\"",
+  "newEtag": "\"7e77076dbc9568fa8ea92228e059ecea\"",
+  "unchangedStatus": 304,
+  "updatedStatus": 200,
+  "revalidatedStatus": 304,
+  "publicArtifactUntouched": true
+}

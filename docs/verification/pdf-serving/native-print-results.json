@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "keyboard",
+    "events": ["beforeprint", "afterprint"],
+    "scroll": 850,
+    "focus": "text-link"
+  },
+  {
+    "mode": "keyboard-repeat",
+    "events": ["beforeprint", "afterprint"],
+    "scroll": 850,
+    "focus": "text-link"
+  }
+]

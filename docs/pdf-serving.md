@@ -33,4 +33,4 @@ pnpm check:export:test
 
 `public/_headers`에서 PDF 경로에 `Content-Type: application/pdf`와 `Cache-Control: public, max-age=0, must-revalidate`를 지정한다. 강제 다운로드용 `Content-Disposition: attachment`는 지정하지 않는다. 보기 링크는 새 탭으로 열고 다운로드 링크의 `download` 속성이 `이승주-포트폴리오.pdf` 파일명을 지정한다. [Cloudflare 정적 자산 헤더 규칙](https://developers.cloudflare.com/workers/static-assets/headers/)에 따라 기존 Workers Assets 경로로 제공한다.
 
-`pnpm exec wrangler dev --local --port 8787`로 같은 자산 제공 계층을 실행해 200, MIME, 캐시 헤더, ETag 재검증과 파일 갱신을 검사한다. 이 로컬 확인과 `https://portfolio.seungju.dev/portfolio.pdf`의 배포 후 확인은 구별한다. 메인 병합·공개 배포는 별도 전달 단계다.
+`pnpm exec wrangler dev --local --port 8787`로 같은 자산 제공 계층을 실행해 200, MIME, 캐시 헤더, ETag 재검증과 파일 갱신을 검사한다. `node scripts/check-pdf-cache.mjs`는 8791 포트의 자체 로컬 서버에서 ETag 재검증과 자산 버전 교체를 검사하고 원래 내보낸 PDF를 복원한다. 빌드로 `out`을 다시 만들었다면 실행 중인 Wrangler 개발 서버를 재시작한다. 이 로컬 확인과 `https://portfolio.seungju.dev/portfolio.pdf`의 배포 후 확인은 구별한다. 메인 병합·공개 배포는 별도 전달 단계다.
