@@ -34,6 +34,7 @@ Java 백엔드 개발자를 검토하는 채용 담당자와 기술 면접관이
 
 - [공통 규칙](foundations.md), [컴포넌트](components.md)
 - [홈](pages/home.md), [프로젝트 상세](pages/project-detail.md), [전체 열람과 인쇄](pages/print.md)
+- [정적 PDF 보기·다운로드](pdf-serving-change-requirements.md): 홈의 세 줄 링크와 동일 파일의 열람·저장·갱신 계약
 - 공통 변수·원본: `../pen/portfolio.lib.pen`
 - 화면: `../pen/portfolio.pen`
 
