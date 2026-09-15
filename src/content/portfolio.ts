@@ -20,7 +20,6 @@ export const profile = {
   github: "https://github.com/ju1115",
   printHref: "/print/",
   pdfHref: "/portfolio.pdf",
-  pdfFilename: "이승주-포트폴리오.pdf",
 } as const;
 
 export const homeNavigation = [

@@ -18,7 +18,7 @@ export async function generateMetadata({
   const project = projects.find((entry) => entry.slug === slug);
   if (!project) notFound();
   return {
-    title: `${project.title} | 이승주`,
+    title: project.title,
     description: project.summary,
   };
 }

@@ -48,11 +48,10 @@ try {
           for (const [el, size] of sizes) el.style.fontSize = `${size * 2}px`;
         });
       const links = page.locator(".profile-links a");
-      assert.equal(await links.count(), 4);
+      assert.equal(await links.count(), 3);
       assert.deepEqual(await links.allTextContents(), [
         "GitHub (새 탭)",
         "전체 열람",
-        "PDF 다운로드",
         "PDF 보기 (새 탭)",
       ]);
       const layout = await page.evaluate(() => ({
@@ -78,14 +77,14 @@ try {
         assert(link.height >= 44);
         assert(link.x >= 0 && link.right <= width + 1);
       }
-      if (scale === 1)
-        assert.equal(
-          layout.links[1].y,
-          layout.links[2].y,
-          "second row remains together",
+      for (let i = 1; i < layout.links.length; i++)
+        assert(
+          layout.links[i].y >=
+            layout.links[i - 1].y + layout.links[i - 1].height,
         );
+      assert.equal(await page.locator(".profile-links a[download]").count(), 0);
       await links.first().focus();
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 3; i++) {
         assert(
           await links.nth(i).evaluate((el) => el === document.activeElement),
         );
@@ -95,14 +94,8 @@ try {
             .evaluate((el) => getComputedStyle(el).outlineStyle),
           "solid",
         );
-        if (i < 3) await page.keyboard.press("Tab");
+        if (i < 2) await page.keyboard.press("Tab");
       }
-      const icon = page.locator(".icon-download");
-      await links.nth(2).hover();
-      assert.equal(
-        await icon.evaluate((el) => getComputedStyle(el).transform),
-        "none",
-      );
       if ([1440, 390, 320].includes(width)) {
         await page.mouse.move(0, 0);
         await page.evaluate(() => document.activeElement?.blur());
@@ -134,23 +127,8 @@ try {
     });
     const p = await ctx.newPage();
     await p.goto(base, { waitUntil: "networkidle" });
-    await p.evaluate(() => {
-      window.print = () => {
-        throw new Error("Download must not print");
-      };
-    });
     const activate = (locator) =>
       touch ? locator.tap() : locator.press("Enter");
-    const downloadWait = p.waitForEvent("download");
-    await activate(p.getByRole("link", { name: "PDF 다운로드", exact: true }));
-    const download = await downloadWait;
-    assert.equal(download.suggestedFilename(), "이승주-포트폴리오.pdf");
-    const destination = path.join(
-      out,
-      `download-${touch ? "touch" : "keyboard"}.pdf`,
-    );
-    await download.saveAs(destination);
-    assert.equal(sha256(await readFile(destination)), sha256(bytes));
     const popupWait = p.waitForEvent("popup");
     await activate(
       p.getByRole("link", { name: "PDF 보기 (새 탭)", exact: true }),
@@ -184,7 +162,6 @@ try {
     assert.equal(await p.locator(".print-document").isVisible(), true);
     actions.push({
       input: touch ? "touch" : "keyboard",
-      filename: download.suggestedFilename(),
       pdfSha256: sha256(bytes),
       pdfNewTab: true,
       githubNewTab: true,
@@ -209,7 +186,7 @@ try {
     ) + "\n",
   );
   console.log(
-    "Passed: 12 responsive views, 4-link keyboard order, keyboard/touch actions, same PDF bytes and filename, PDF 200/MIME/cache/304.",
+    "Passed: 12 responsive views, 3-link keyboard order, keyboard/touch actions, served PDF bytes, PDF 200/MIME/cache/304.",
   );
 } finally {
   await browser.close();

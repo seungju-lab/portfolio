@@ -1,6 +1,6 @@
 # PDF 제공과 갱신
 
-홈의 보기와 다운로드는 같은 `/portfolio.pdf`를 사용한다. 파일은 `public/portfolio.pdf`에 커밋하고 Next.js 정적 빌드가 `out/portfolio.pdf`로 복사한다. 별도 서버나 뷰어는 필요하지 않다.
+홈의 `PDF 보기`는 `/portfolio.pdf`를 열며 파일 저장은 PDF 뷰어에서 제공한다. 파일은 `public/portfolio.pdf`에 커밋하고 Next.js 정적 빌드가 `out/portfolio.pdf`로 복사한다. 별도 서버나 뷰어는 필요하지 않다.
 
 ## 콘텐츠를 바꿀 때
 
@@ -19,7 +19,7 @@ pnpm check:export:test
 
 생성 후 모든 페이지의 색·사진·도식·페이지 나눔을 검토한다. HTTP로 제공되는 파일을 `BASE_URL`로 지정하고 `node scripts/check-styled-pdf.mjs`를 실행하면 전체 본문, 내부 목차 클릭, 외부 링크 열기, 한글 선택·검색을 검사한다. 기본 주소는 `http://127.0.0.1:3002`이며 결과는 `EVIDENCE_DIR`에 남는다. PDF를 검토한 뒤 소스 변경, PDF, manifest를 함께 커밋한다.
 
-브라우저 링크 검사는 `BASE_URL=http://127.0.0.1:8787 node scripts/check-pdf-links.mjs`로 실행한다. PDF 뷰어가 포함된 Chromium과 UTF-8 로케일을 명시한다. 최소 headless shell은 PDF 새 탭을 표시하지 않으며, 로케일이 없는 Linux 환경은 한글 저장 파일명을 `download`로 대체할 수 있어 검증 환경과 실제 링크 오류를 구별해야 한다.
+브라우저 링크 검사는 `BASE_URL=http://127.0.0.1:8787 node scripts/check-pdf-links.mjs`로 실행한다. PDF 뷰어가 포함된 Chromium과 UTF-8 로케일을 명시한다. 최소 headless shell은 PDF 새 탭을 표시하지 않으므로 전체 Chromium으로 검사한다.
 
 ## 오래된 PDF 방지
 
@@ -31,6 +31,6 @@ pnpm check:export:test
 
 ## HTTP와 캐시
 
-`public/_headers`에서 PDF 경로에 `Content-Type: application/pdf`와 `Cache-Control: public, max-age=0, must-revalidate`를 지정한다. 강제 다운로드용 `Content-Disposition: attachment`는 지정하지 않는다. 보기 링크는 새 탭으로 열고 다운로드 링크의 `download` 속성이 `이승주-포트폴리오.pdf` 파일명을 지정한다. [Cloudflare 정적 자산 헤더 규칙](https://developers.cloudflare.com/workers/static-assets/headers/)에 따라 기존 Workers Assets 경로로 제공한다.
+`public/_headers`에서 PDF 경로에 `Content-Type: application/pdf`와 `Cache-Control: public, max-age=0, must-revalidate`를 지정한다. 강제 다운로드용 `Content-Disposition: attachment`는 지정하지 않는다. 보기 링크는 새 탭으로 열고 저장 동작과 파일명은 브라우저·PDF 뷰어에 맡긴다. [Cloudflare 정적 자산 헤더 규칙](https://developers.cloudflare.com/workers/static-assets/headers/)에 따라 기존 Workers Assets 경로로 제공한다.
 
 `pnpm exec wrangler dev --local --port 8787`로 같은 자산 제공 계층을 실행해 200, MIME, 캐시 헤더, ETag 재검증과 파일 갱신을 검사한다. `node scripts/check-pdf-cache.mjs`는 8791 포트의 자체 로컬 서버에서 ETag 재검증과 자산 버전 교체를 검사하고 원래 내보낸 PDF를 복원한다. 빌드로 `out`을 다시 만들었다면 실행 중인 Wrangler 개발 서버를 재시작한다. 이 로컬 확인과 `https://portfolio.seungju.dev/portfolio.pdf`의 배포 후 확인은 구별한다. 메인 병합·공개 배포는 별도 전달 단계다.

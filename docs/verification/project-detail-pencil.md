@@ -1,7 +1,7 @@
 # 프로젝트 상세 문서·Pencil 검증
 
 2026-09-14, ILOG·Lorekeeper·Matching SSAFY의 1440px·390px 상세 시안을
-[요구사항](../design/project-detail-change-requirements.md)과 대조했다.
+[요구사항](https://github.com/seungju-lab/portfolio/blob/82bc5993d5332c39cf2efff4cd3d29032d1f4537/docs/design/project-detail-change-requirements.md)과 대조했다.
 네 섹션, 실제 프로젝트 콘텐츠, 도식, 링크 구성과 기존 스타일을 확인했다.
 [Work #32](https://github.com/seungju-lab/portfolio/issues/32)의 최종 대조 기록이며,
 정적 시안과 문서의 검증 결과다.

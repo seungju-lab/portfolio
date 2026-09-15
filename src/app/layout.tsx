@@ -18,7 +18,10 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "이승주 | Backend Developer",
+  title: {
+    default: "이승주",
+    template: "이승주 | %s",
+  },
   description: "백엔드 개발자 이승주의 포트폴리오",
 };
 

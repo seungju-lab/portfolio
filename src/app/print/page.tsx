@@ -14,7 +14,7 @@ import {
 } from "@/content/portfolio";
 
 export const metadata: Metadata = {
-  title: "전체 열람 · PDF | 이승주",
+  title: "전체 열람",
   description:
     "이승주의 소개와 세 프로젝트의 담당 범위·아키텍처·문제 해결·결과를 한 문서로 읽습니다.",
 };

@@ -182,18 +182,6 @@ svg {
   margin-top: auto;
   padding-top: 2.5rem;
 }
-.profile-document-links,
-.profile-read-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.profile-document-links {
-  flex-wrap: wrap;
-}
-.profile-read-link > span {
-  color: var(--color-meta);
-}
 .profile-links .text-link {
   padding-right: 0;
 }

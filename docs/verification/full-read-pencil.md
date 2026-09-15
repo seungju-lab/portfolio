@@ -1,6 +1,6 @@
 # 전체 열람·PDF Pencil 검증
 
-Deliverable #43의 Pencil Work #46 기록이다. 기준은 [변경 요구사항](../design/full-read-pdf-change-requirements.md)과 [전체 열람 명세](../design/pages/print.md)다.
+Deliverable #43의 Pencil Work #46 기록이다. 기준은 [변경 요구사항](https://github.com/seungju-lab/portfolio/blob/82bc5993d5332c39cf2efff4cd3d29032d1f4537/docs/design/full-read-pdf-change-requirements.md)과 [전체 열람 명세](../design/pages/print.md)다.
 
 ## 전체 열람 — Atomic #47
 

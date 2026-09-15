@@ -1,6 +1,6 @@
 # 8장 압축 PDF 구현 검증
 
-2026-09-15 사용자가 저장한 [Pencil 압축안](../design/pdf-compact-comparison.md)을 코드에 반영했다. [최종 PDF](compact-pdf/portfolio.pdf)는 기존 12장에서 8장으로 줄었다. 소개·교육과 프로젝트 전체 본문을 유지하며 본문은 14px·행간 1.7이다. 남색·청록색, 사진, 세 도식과 클릭 가능한 링크를 유지했다.
+2026-09-15 사용자가 저장한 [Pencil 압축안](https://github.com/seungju-lab/portfolio/blob/82bc5993d5332c39cf2efff4cd3d29032d1f4537/docs/design/pdf-compact-comparison.md)을 코드에 반영했다. [최종 PDF](compact-pdf/portfolio.pdf)는 기존 12장에서 8장으로 줄었다. 소개·교육과 프로젝트 전체 본문을 유지하며 본문은 14px·행간 1.7이다. 남색·청록색, 사진, 세 도식과 클릭 가능한 링크를 유지했다.
 
 ## 구현과 실제 배치
 

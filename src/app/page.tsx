@@ -43,19 +43,9 @@ export default function Home() {
                 GitHub
               </TextLink>
             </li>
-            <li className="profile-document-links">
-              <span className="profile-read-link">
-                <TextLink href={profile.printHref} icon="print">
-                  전체 열람
-                </TextLink>
-                <span aria-hidden="true">·</span>
-              </span>
-              <TextLink
-                href={profile.pdfHref}
-                download={profile.pdfFilename}
-                icon="download"
-              >
-                PDF 다운로드
+            <li>
+              <TextLink href={profile.printHref} icon="print">
+                전체 열람
               </TextLink>
             </li>
             <li>
